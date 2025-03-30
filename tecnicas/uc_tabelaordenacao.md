@@ -1,6 +1,7 @@
 # COLUNAS ORDENADAS
 Um questão interessante diz respeito a termos tabelas com ordenação de colunas.
 
+![Alt text](uc_tabelaordenacao.md)
 A imagem apresenta um simbolo ao lado do titulo, para indicar que a coluna pode ser ordenada.
 
 ## Como fazer?
