@@ -1,12 +1,13 @@
 # COLUNAS ORDENADAS
-Um questão interessante diz respeito a termos tabelas com ordenação de colunas.
+As pessoas estão acostumadas a encontrar as coisas em uma tabela lendo o conteúdo apresentado linha-a-linha, e a ordenação da coluna é importante para facilitar a localização.
 
 [ordenação](uc_tabela_ordenacao.PNG)
 A imagem apresenta um simbolo ao lado do titulo, para indicar que a coluna pode ser ordenada.
 
 ## Como fazer?
-Não é um conceito tão elementar, mas a implementação é bem estruturada.
-Primeiramente, a interface não necessita de recargas na base de dados para ordenar os dados, principalmente quando o conjunto de registros não é grande o suficiente para ser apresentado de uma só vez na tela.
+Ordenar as colunas pode ser mais simples, como apresentado aqui neste documento, para um conjunto pequeno de registros, ou muito dificil, caso se tenha que recorrer a leitura ordenada dos registros no banco de dados.
+
+Nesse modelo os dados serão carregados uma única vez, e sobre esses ocorrerá a ordenação.
 
 1) Esta tecnica vai necessitar que os dados sejam carregados em um SDT
 2) A operação vai utilizar uma ação Sort('<nome da coluna>') para ordenar
@@ -182,5 +183,12 @@ Event BootstrapClick1.Click
 	endcase
 endevent
 ```
->[!NOTE]
+>[!NOTA]
 >Observação importante: nesse modelo o dado fica armazenado no &sdt e não é recarregado o tempo todo do banco de dados. O que se usa é um sort no SDT para gerar a ordenação. Como resultado, temos uma operação muito rápida, porém somente é indicado para um conjunto pequeno de registros.
+
+## Ordenação descrescente
+
+Para obter ordenação decrescente é necessário agregar [ e ] ao nome da coluna.
+
+* sort("colunaA") = ordenação crescente
+* sort("[colunaA]")  = ordenação decrescente
