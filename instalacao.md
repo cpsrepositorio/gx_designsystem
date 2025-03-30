@@ -32,7 +32,7 @@ Obtenha a última versão do pacote de modulos e o instale a partir dos seguinte
 6) Uma pasta aparecerá no KB EXPLORER - REFERENCES - UC, que conterá os elementos (readonly) importados do arquivo OPC.
 
 
-
+##CRIAR KB DE TESTE##
 7) 
 
 
