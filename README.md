@@ -15,13 +15,21 @@ Este módulo é criado através de uma KB chamada CEETEPS_DESIGNSYSTEM, que defi
 
 O objetivo deste pacote é acelerar ao máximo a obtenção de componentes, sem que seja necessário programação excessiva, além de promover a padronização da interface para auxiliar o usuário.
 
-Seguindo a filosofia Gx, de automatizar ao máximo os recursos para se alcançar resultados rápidos e satisfatórios, o pacote entrega uma parte importante que é a automação das interfaces.
+Seguindo a filosofia Gx de automatizar ao máximo os recursos para se alcançar resultados rápidos e satisfatórios, o pacote entrega uma parte importante que é a automação das interfaces.
 
-1) Genexus cuida da operação de banco, com a recuperação, inserção, manutenção dos registros.
+1) Genexus cuida da operação de banco de dados, da modelagem, relacionamento, estrutura da operação, com a recuperação, inserção, manutenção dos registros.
 
 2) UC cuida da construção das interfaces.
 
+
+##INFORMAÇÕES IMPORTANTES
 Para saber mais a respeito deste pacote sugerimos:
 
+**Para utilizar o componente** 
+Acesse a documentação da estrutura de user controls disponiveis, instale o pacote de componentes na sua KB e inicie a operação. Informações aqui.
 
+**Para participar da construção**
+Baixe a KB CEETEPS_DESIGNSYSTEM no Genexus 18 e auxilie na construção dos recursos. Informações aqui.
 
+**Para atuar na modelagem visual (css)**
+Altere o conteúdo dos arquivos CSS da pasta style e publique no repositório de estilos. Informações aqui.
