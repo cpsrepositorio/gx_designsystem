@@ -26,4 +26,18 @@ Event BootstrapClick1.Click
  endif
 EndEvent
 ```
-A 
+O retorno deste procedimento será a variável &uc_btclickparms com os valores decriptados e sequencializados para que possamos utilizar.
+```
+	&uc_interface = &uc_btclickparms.Item(uc_btitem.interface).ToUpper().Trim()
+	&uc_controle = &uc_btclickparms.Item(uc_btitem.controle).ToUpper().Trim()
+	&uc_acao = &uc_btclickparms.Item(uc_btitem.acao).ToUpper().Trim()
+ &uc_parm = &uc_btclickparms.Item(uc_btitem.parm1).ToUpper().Trim() 
+```
+Em seguida basta testar os valores para entender de onde o click partiu.
+```
+do case
+				case &uc_acao='ORDERSEMESTRE'
+					  &order = 'ACD_AlunoHistoricoConjuntoId'
+					  do 'ui_grid'
+endcase
+```
