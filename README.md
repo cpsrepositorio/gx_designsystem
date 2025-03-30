@@ -41,3 +41,6 @@ Você também pode optar por aprender a operação de cada controle. Um caminho 
 
 ## TECNICAS 
 Em seguida, será interessante você aprender algumas técnicas mais avançadas para integrar controles, estratégias para apresentação. Um caminho é acompanhar o [índice de técnicas](/doc/tecnicas/indicetecnica.md) 
+
+## RECURSOS 
+Montamos uma pagina para incluir os recursos necessários para trabalhar no pacote UC. [Lista de Recursos](/doc/recursos/indicerecursos.md) 
