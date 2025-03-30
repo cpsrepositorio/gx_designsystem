@@ -18,7 +18,7 @@ Esta construção será ignorada pelo BootstrapClick que espera que o evento est
 O melhor caminho para gerar esse evento seria chamar uma função do próprio UC que produz esta ação de forma encriptada.
 ```
 &key = &websession.get("SECURITYPARMKEY")
-&click = uc.uc_uc_clickENC('OBJETO:GRID:CLIQUEAQUI', &key, &click, &evento)
+&click = uc.uc_clickENC('OBJETO:GRID:CLIQUEAQUI', &key, &click, &evento)
 
 textblock.caption = '<div '+&click.trim()+'>clique aqui</div>'
 ```
