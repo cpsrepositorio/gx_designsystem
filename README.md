@@ -35,3 +35,9 @@ Baixe a KB CEETEPS_DESIGNSYSTEM no Genexus 18 e auxilie na construção dos recu
 
 **Para atuar na modelagem visual (css)**
 Altere o conteúdo dos arquivos CSS da pasta style e publique no repositório de estilos. Informações aqui.
+
+## APRENDENDO CADA COMPONENTE 
+Você também pode optar por aprender a operação de cada controle. Um caminho é acompanhar o [índice de componentes](componentes/indexcontrole.md)
+
+## TECNICAS 
+Em seguida, será interessante você aprender algumas técnicas mais avançadas para integrar controles, estratégias para apresentação. Um caminho é acompanhar o [índice de técnicas](indicetecnica.md) 
