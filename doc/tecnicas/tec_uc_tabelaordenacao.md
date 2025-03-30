@@ -91,16 +91,13 @@ A procedure primeiro trata se a ordenação foi informada ou não. Neste caso, s
 
     /* 3) cria a tabela */
 
-	&tabela 					= new()
-	&tabela.interface 		= &Pgmname
-	&tabela.id 				= 'GRID'
-	&tabela.class 			= 'minimalistBlack'
-	&tabela.buttonclass		= 'uc_bt uc_btdefault uc_btspace'
-	&tabela.pagging 			= false
-	&tabela.card 				= false
-	&tabela.cardcontainer 	= 'uc_flex-r uc_flex-w uc_flex-jcc'
-	&tabela.cardclass 		= 'uc_card uc_card300'	
-	&tabela.headerclass 		= ''//uc_headingsticky'
+	&tabela  = new()
+	&tabela.interface = &Pgmname
+	&tabela.id = 'GRID'
+	&tabela.class = 'minimalistBlack'
+	&tabela.buttonclass = 'uc_bt uc_btdefault uc_btspace'
+	&tabela.pagging  = false
+	&tabela.card = false
 	&tabela.header.Clear()
 	&tabela.lines.Clear()
 		
