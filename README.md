@@ -26,7 +26,7 @@ Seguindo a filosofia Gx de automatizar ao máximo os recursos para se alcançar 
 Para saber mais a respeito deste pacote sugerimos, e iniciar nos primeiros passos no uso dos componentes, sugerimos as seguintes leituras:
 
 **Para utilizar o componente** 
-1) Acesse a documentação da estrutura de user controls disponiveis, instale o pacote de componentes na sua KB e inicie a operação. [Informações aqui](instalacao.md).
+1) Acesse a documentação da estrutura de user controls disponiveis, instale o pacote de componentes na sua KB e inicie a operação. [Informações aqui](/doc/instalacao.md).
 2) Crie um painel de testes e comece a utilizar [Painel de teste](/doc/primeiropainel.md)
 3) Se tiver interesse em saber o que é um componente, temos este texto [O que é?](oquee.md)
 
