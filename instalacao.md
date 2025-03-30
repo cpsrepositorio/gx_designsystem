@@ -2,7 +2,7 @@ PROCEDIMENTO DE INSTALAÇÃO
 
 Para utilizar os componentes será necessário instalar o pacote UC em sua última versão disponível. 
 
-##BootstrapClick
+## BootstrapClick
 As interceptações dos cliques na interface é por meio do UserControl BootstrapClick.
 
 Para utilizar será necessário instalar no Genexus, através do procedimento a seguir.
@@ -15,13 +15,13 @@ Para utilizar será necessário instalar no Genexus, através do procedimento a 
 5. Retorne a pasta C:\Program Files (x86)\GeneXus\GeneXus18\ e em seguida executar o instalador: genexus -install
 
 
-##CRIAR KB DE TESTE
+## CRIAR KB DE TESTE
 Para utilizar o pacote você pode optar por criar um projeto do zero (criando uma kb), e em seguida o configurando para receber o pacote de componentes.
 
 1) Ligue o Genexus
 2) Crie uma Kb, File – New knowledge base, dando o nome de GrupoEstudosGx18, selecionando em Prototyping: .Net Framework e Sql Server
 
-##INSTALAR O PACOTE UC
+## INSTALAR O PACOTE UC
 Obtenha a última versão do pacote de modulos e o instale a partir dos seguintes procedimentos.
 
 1) Abra no Gx o Knowledge Manager->Manage Module References.
@@ -32,7 +32,7 @@ Obtenha a última versão do pacote de modulos e o instale a partir dos seguinte
 6) Uma pasta aparecerá no KB EXPLORER - REFERENCES - UC, que conterá os elementos (readonly) importados do arquivo OPC.
 
 
-##CRIAR KB DE TESTE##
+## CRIAR KB DE TESTE
 7) 
 
 
