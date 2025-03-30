@@ -28,6 +28,7 @@ Para saber mais a respeito deste pacote sugerimos, e iniciar nos primeiros passo
 **Para utilizar o componente** 
 1) Acesse a documentação da estrutura de user controls disponiveis, instale o pacote de componentes na sua KB e inicie a operação. [Informações aqui](instalacao.md).
 2) Crie um painel de testes e comece a utilizar [Painel de teste](primeiropainel.md)
+3) Se tiver interesse em saber o que é um componente, temos este texto [O que é?](oquee.md)
 
 **Para participar da construção**
 Baixe a KB CEETEPS_DESIGNSYSTEM no Genexus 18 e auxilie na construção dos recursos. Informações aqui.
