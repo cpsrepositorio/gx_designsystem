@@ -182,5 +182,5 @@ Event BootstrapClick1.Click
 	endcase
 endevent
 ```
-
-Observação importante: nesse modelo o dado fica armazenado no &sdt e não é recarregado o tempo todo do banco de dados. O que se usa é um sort no SDT para gerar a ordenação. Como resultado, temos uma operação muito rápida, porém somente é indicado para um conjunto pequeno de registros.
+>[!NOTE]
+>Observação importante: nesse modelo o dado fica armazenado no &sdt e não é recarregado o tempo todo do banco de dados. O que se usa é um sort no SDT para gerar a ordenação. Como resultado, temos uma operação muito rápida, porém somente é indicado para um conjunto pequeno de registros.
