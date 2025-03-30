@@ -8,6 +8,9 @@ Este tema é muito importante e não deve ser neglicenciado. Não deixe nada exp
 ### Encriptação manual
 A encriptação manual é necessária em algumas circunstâncias e deve ser utilizada quando a encriptação de parametros estiver ligada. [encriptando manualmente](tec_encriptacaomanual.md)
 
+### Interceptando eventos encriptados
+Não basta ligar o ENCRIPTPARMON no login, é necessário interceptar e tratar todos os parametros enviados ao BootstrapClick. [interceptando eventos encriptados](tec_encriptacaobootstrapclick.md)
+
 
 ## ESTRATÉGIAS DE UI/UX
 
