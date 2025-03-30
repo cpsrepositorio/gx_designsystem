@@ -40,4 +40,4 @@ Altere o conteúdo dos arquivos CSS da pasta style e publique no repositório de
 Você também pode optar por aprender a operação de cada controle. Um caminho é acompanhar o [índice de componentes](componentes/indexcontrole.md)
 
 ## TECNICAS 
-Em seguida, será interessante você aprender algumas técnicas mais avançadas para integrar controles, estratégias para apresentação. Um caminho é acompanhar o [índice de técnicas](indicetecnica.md) 
+Em seguida, será interessante você aprender algumas técnicas mais avançadas para integrar controles, estratégias para apresentação. Um caminho é acompanhar o [índice de técnicas](doc/tecnicas/indicetecnica.md) 
