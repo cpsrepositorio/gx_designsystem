@@ -27,7 +27,7 @@ Para saber mais a respeito deste pacote sugerimos, e iniciar nos primeiros passo
 
 **Para utilizar o componente** 
 1) Acesse a documentação da estrutura de user controls disponiveis, instale o pacote de componentes na sua KB e inicie a operação. [Informações aqui](instalacao.md).
-2) Crie um painel de testes e comece a utilizar [Painel de teste](primeiropainel.md)
+2) Crie um painel de testes e comece a utilizar [Painel de teste](/doc/primeiropainel.md)
 3) Se tiver interesse em saber o que é um componente, temos este texto [O que é?](oquee.md)
 
 **Para participar da construção**
@@ -36,8 +36,8 @@ Baixe a KB CEETEPS_DESIGNSYSTEM no Genexus 18 e auxilie na construção dos recu
 **Para atuar na modelagem visual (css)**
 Altere o conteúdo dos arquivos CSS da pasta style e publique no repositório de estilos. Informações aqui.
 
-## APRENDENDO CADA COMPONENTE 
-Você também pode optar por aprender a operação de cada controle. Um caminho é acompanhar o [índice de componentes](componentes/indexcontrole.md)
+## APRENDENDO CADA CONTROLE 
+Você também pode optar por aprender a operação de cada controle. Um caminho é acompanhar o [índice de controles](/doc/controles/indexcontrole.md)
 
 ## TECNICAS 
-Em seguida, será interessante você aprender algumas técnicas mais avançadas para integrar controles, estratégias para apresentação. Um caminho é acompanhar o [índice de técnicas](doc/tecnicas/indicetecnica.md) 
+Em seguida, será interessante você aprender algumas técnicas mais avançadas para integrar controles, estratégias para apresentação. Um caminho é acompanhar o [índice de técnicas](/doc/tecnicas/indicetecnica.md) 
