@@ -22,11 +22,12 @@ Seguindo a filosofia Gx de automatizar ao máximo os recursos para se alcançar 
 2) UC cuida da construção das interfaces.
 
 
-##INFORMAÇÕES IMPORTANTES
-Para saber mais a respeito deste pacote sugerimos:
+## PRIMEIROS PASSOS
+Para saber mais a respeito deste pacote sugerimos, e iniciar nos primeiros passos no uso dos componentes, sugerimos as seguintes leituras:
 
 **Para utilizar o componente** 
-Acesse a documentação da estrutura de user controls disponiveis, instale o pacote de componentes na sua KB e inicie a operação. [Informações aqui](instalacao.md).
+1) Acesse a documentação da estrutura de user controls disponiveis, instale o pacote de componentes na sua KB e inicie a operação. [Informações aqui](instalacao.md).
+2) Crie um painel de testes e comece a utilizar [Painel de teste](primeiropainel.md)
 
 **Para participar da construção**
 Baixe a KB CEETEPS_DESIGNSYSTEM no Genexus 18 e auxilie na construção dos recursos. Informações aqui.
