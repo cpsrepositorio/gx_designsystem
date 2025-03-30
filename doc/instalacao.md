@@ -24,7 +24,7 @@ Obtenha a última versão do pacote de modulos e o instale a partir dos seguinte
 
 1) Abra no Gx o Knowledge Manager->Manage Module References.
 2) Selecione do lado esquerdo a opção LOCAL, e com o botão direito do mouse, selecione UPLOAD FROM FILE
-3) Aponte para o arquivo OPC do pacote de controles. O arquivo possui um nome similar a UC_nn.nnn.nn onde os valores de n refletem a versão do componente, como por exemplo: UC_18.1.9.20.opc
+3) Aponte para o arquivo OPC do pacote de controles. O arquivo possui um nome similar a UC_nn.nnn.nn onde os valores de n refletem a versão do componente, como por exemplo: UC_18.1.9.20.opc. Neste documento você encontrará a última versão do pacote: [uc distribuição](/recursos/uc.md)
 4) Uma vez selecionado pressione INSTALL
 5) Aguardar o término da instalação.
 6) Uma pasta aparecerá no KB EXPLORER - REFERENCES - UC, que conterá os elementos (readonly) importados do arquivo OPC.
