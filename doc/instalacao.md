@@ -40,7 +40,7 @@ Obtenha a última versão do pacote de modulos e o instale a partir dos seguinte
 ## Atualização do pacote UC_nn.nn
 
 O pacote de componentes passa por atualizações constantes para incrementar sua capacidade e é sempre importante manter a última versão instalada.
-1) Obter o pacote mais atual de componentes, que é um arquivo OPC
+1) Obter o pacote mais atual de componentes, que é um arquivo OPC. Neste documento você encontrará a última versão do pacote: [uc distribuição](/recursos/uc.md)
 2)	Em Knowledge Manager, selecione Manage Module References.
 3)	Selecione Local e com o botão direito do mouse, selecione Upload from file
 4)	Localize o arquivo mais recente do pacote de componentes (opc) em seu compudador.
