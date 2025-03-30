@@ -26,4 +26,7 @@ Endevent
 
 Voce deve ter observado que é possivel a partir de um Textblock simples apresentar comandos HTML na interface. Pois o pacote UC é baseado nesta capacidade.
 
+Parece ser um modelo tão elementar, mas na prática, todo conteúdo baseado na internet parte da estrutura HTML incluido informações texto. O pacote UC utiliza desta capacidade para inserir na interface padrão Genexus as tags HTML que apresentarão recursos complexos.
+
+
 
