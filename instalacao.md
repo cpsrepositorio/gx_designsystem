@@ -1,9 +1,9 @@
 PROCEDIMENTO DE INSTALAÇÃO
 
 Para utilizar os componentes será necessário instalar o pacote UC em sua última versão disponível. 
-O pacote pode ser obtido aqui: ______
 
-1) BootstrapClick
+##BootstrapClick
+
 As interceptações dos cliques na interface é por meio do UserControl BootstrapClick.
 Componente para tratamento de eventos nos objetos da tela.
 1. Descompactar o arquivo bootstrapclick.zip em uma pasta
@@ -12,6 +12,8 @@ Componente para tratamento de eventos nos objetos da tela.
 4. Abrir um CMD do Windows e posicionar na pasta C:\Program Files (x86)\GeneXus\GeneXus18\UserControls
 5. Copiar a pasta BootstrapClick com os arquivos dentro da pasta C:\Program Files (x86)\GeneXus\GeneXus18\UserControls
 5. Retorne a pasta C:\Program Files (x86)\GeneXus\GeneXus18\ e em seguida executar o instalador: genexus -install
+
+
 1.2. Criando uma Kb com o pacote de componentes
 Criar uma KB para poder realizar os testes
 1. Ligue o Genexus
