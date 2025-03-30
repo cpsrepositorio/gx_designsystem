@@ -8,18 +8,22 @@ Voce vai precisar de um Webpanel.
 2) Altere a propriedade do objeto colocando em Master Page o valor nulo (em branco)
 3) Selecione Toolbox e inclua um controle Textblock na aba WebLayout.
 4) Em seguida clique sobre este e pressione F4 para alterar a propriedade para Format: HTML
-4. Na área Events do objeto, crie um Event Start.
-5. 
+5) Na área Events do objeto, crie um Event Start.
+
 ```
 Event Start
    …	
 Endevent
 ```
-5) Dentro deste evento programe:
+6) Dentro deste evento programe:
 ```
 Event Start
  textblock1.caption = '<div style="border:1px solid red;">teste</div>'
 Endevent
 ```
-6. Salve o objeto
-7. Execute o Genexus
+7) Salve o objeto
+8) Execute o Genexus
+
+Voce deve ter observado que é possivel a partir de um Textblock simples apresentar comandos HTML na interface. Pois o pacote UC é baseado nesta capacidade.
+
+
