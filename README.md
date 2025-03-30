@@ -26,7 +26,7 @@ Seguindo a filosofia Gx de automatizar ao máximo os recursos para se alcançar 
 Para saber mais a respeito deste pacote sugerimos:
 
 **Para utilizar o componente** 
-Acesse a documentação da estrutura de user controls disponiveis, instale o pacote de componentes na sua KB e inicie a operação. Informações aqui.
+Acesse a documentação da estrutura de user controls disponiveis, instale o pacote de componentes na sua KB e inicie a operação. [Informações aqui](instalacao.md).
 
 **Para participar da construção**
 Baixe a KB CEETEPS_DESIGNSYSTEM no Genexus 18 e auxilie na construção dos recursos. Informações aqui.
