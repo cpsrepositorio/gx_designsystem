@@ -29,9 +29,6 @@ Carga de registros
    CARGA
    -------------------------------------------------------------------------------- */
 sub 'load'
- /* valores default */
- &order = 'ACD_AlunoHistoricoConjuntoId'
-
  /* serviço */
  &ws_siga.parametro  = '471853;175;43;3;894'
  &ws_siga.servico    = 'historico'
@@ -45,10 +42,6 @@ sub 'ws_service'
  &texto = serviceGET(&ws_siga)
  ws_limparetorno(&texto)
  &ALU_AlunoHistorico_SDT.FromJson(&texto.Trim())
- if &primeira
-  do 'ui_status'
-  do 'ui_periodo'
- endif
 endsub
 ```
 Montagem da interface.
@@ -57,8 +50,8 @@ Montagem da interface.
    UI
    -------------------------------------------------------------------------------- */
 sub 'ui_grid'
- &grid  = historicoGRID(&ALU_AlunoHistorico_SDT, &status, &periodo, &order)	
- grid.Caption  = '<div class="uc_w100 uc_p30">'+UC.uc_tabela(&grid.ToJson())+'</div>'
+ &grid = historicoGRID(&ALU_AlunoHistorico_SDT, &status, &periodo, &order)	
+ grid.Caption = '<div class="uc_w100 uc_p30">'+UC.uc_tabela(&grid.ToJson())+'</div>'
 endsub
 ```
 Tratamento de eventos 
@@ -74,8 +67,8 @@ Event BootstrapClick1.Click
   alerta.Caption = '<script>window.location.assign("'+&url.Trim()+'");</script>'
  endif
  /* tratamento dos eventos */
- &uc_interface 	= &uc_btclickparms.Item(uc_btitem.interface).ToUpper().Trim()
- &uc_controle 	= &uc_btclickparms.Item(uc_btitem.controle).ToUpper().Trim()
+ &uc_interface = &uc_btclickparms.Item(uc_btitem.interface).ToUpper().Trim()
+ &uc_controle = &uc_btclickparms.Item(uc_btitem.controle).ToUpper().Trim()
  &uc_aca = &uc_btclickparms.Item(uc_btitem.acao).ToUpper().Trim()
 	
  do case
