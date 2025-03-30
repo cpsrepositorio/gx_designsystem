@@ -57,6 +57,20 @@ sdt{
     colunaD    
 }
 ```
+## CargaDP()
+O objeto de carga é comum, apontando para uma tabela e carregando o SDT. A operação de filtro acontece posteriormente.
+
+```
+output: collection
+sdt
+where colunaA...
+{
+   colunaA = colunaA
+   colunaB = colunaB
+   colunaC = colunaC
+
+}
+```
 
 ## Criando a Tabela
 
