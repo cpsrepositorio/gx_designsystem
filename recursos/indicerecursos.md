@@ -3,4 +3,4 @@
 ## Estilo
 
 ## UC
-O pacote de componentes encontra-se publicado neste documento. [uc](uc.md)
+O pacote de componentes encontra-se publicado nesse documento: [uc distribuição](uc.md) Sempre instale a última versão.
