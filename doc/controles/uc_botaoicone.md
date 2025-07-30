@@ -11,24 +11,24 @@ A estrutura possui um cabeçalho simples (id e interface) e uma coleção de bot
 5.	Inclua os arquivos de estilo, com a programação de **form.HeaderRawHTML = UC.uc_cssGET_bot523()**
 6.	E a definição da barra e do botão, conforme o exemplo abaixo:	
 
-```Genexus
+```
 Event Start
-	/* 1 */
-	form.HeaderRawHTML = UC.uc_cssGET_bot523()
+ /* 1 */
+ form.HeaderRawHTML = UC.uc_cssGET_bot523()
 
-	/* 2 */
-	do 'iconebar'
+ /* 2 */
+ do 'iconebar'
 	
   /* 3 */
-	html.Caption = UC.uc_botaoicone(&uc_botaoiconeIN.ToJson())
+ html.Caption = UC.uc_botaoicone(&uc_botaoiconeIN.ToJson())
 Endevent
 
 sub 'iconebar'
-	&uc_botaoiconeIN.id 			    = 'id'
-	&uc_botaoiconeIN.interface 		= 'interface'	
-	&uc_botaoiconeIN.classebar 		= 'uc_flex-r uc_flex-nowrap'
-	&uc_botaoiconeIN.classebotao  = 'uc_btspace'
-	&uc_botaoiconeIN.classeicon   = 'uc_bticon'
+	&uc_botaoiconeIN.id = 'id'
+	&uc_botaoiconeIN.interface = 'interface'	
+	&uc_botaoiconeIN.classebar = 'uc_flex-r uc_flex-nowrap'
+	&uc_botaoiconeIN.classebotao = 'uc_btspace'
+	&uc_botaoiconeIN.classeicon = 'uc_bticon'
 	
 	&botoes.add('[ABRIR:1]')
 	&botoes.add('[EDITAR:1]')
