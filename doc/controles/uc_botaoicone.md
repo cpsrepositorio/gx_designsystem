@@ -43,3 +43,13 @@ A variável &botoes é uma varchar(40) do tipo collection. Observe que ao se car
 Fique atento aos eventos, pois o controle segue de forma rígida as palavras previamente programadas e para cada palavra, se tem um icone e tooltip associado.
 O controle é preparado para montar uma barra de botões, para isso adicione vários eventos na variável &botoes. Se desejar apenas um único botão, execute o &botoes.add, apenas uma vez.
 
+##### Eventos padrões
+Os eventos padrões definidos no controle são apresentados a seguir
+
+| Evento        | Tooltip           | icone  |
+| ------------- |:-------------:| -----:|
+| ABRIR      | Abre o registro | <i class="fas fa-eye"></i> |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+
