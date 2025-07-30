@@ -76,4 +76,17 @@ O controle ainda permite que certa linha, ou linhas, sejam apresentadas como sel
 
 
 ### Alternativa 
-\["1","2","3","4","5"\]
+Criar uma coleção para carregar os itens do cabeçalho, widths e células da linha.
+
+ &titulos = new()
+ &titulos.add("SIGLA")
+ &titulos.add("DISCIPLINA")
+ &titulos.add("TIPO")
+ &titulos.add("CH")
+ &titulos.add("EXT")
+ &grupo.titulos = &titulos.ToJson()
+
+Nesse caso &titulos deve ser uma colection de caracteres.
+Ou escrever os elementos diretamente na variável.
+
+&grupo.titulos = '["SIGLA","DISCIPLINA","TIPO","CH","EXT"]'
