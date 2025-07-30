@@ -58,10 +58,16 @@ Os eventos padrões definidos no controle são apresentados a seguir
 |ANEXAR | Anexar arquivo|  `<i class="fas fa-paperclip"></i>` |
 |EXCEL | Exportar em formato Excel| `<i class="fas fa-file-excel"></i>`  |
 |PDF |Exportar em formato PDF | `<i class="fas fa-file-pdf"></i>`  |
+| IMPRIMIR| Imprimir|  `<i class="fas fa-print"></i>` |
 | EMAIL| Enviar email| `<i class="fas fa-envelope"></i>`  |
 |PRIMEIRO | Retorna ao primeiro da lista|  `<i class="fas fa-angle-double-left"></i>` |
 |ANTERIOR | Retorna ao anterior|  `<i class="fas fa-angle-left"></i>` |
 | PROXIMO| Avança para o proximo|  `<i class="fas fa-angle-right"></i>` |
 |ULTIMO |Avança para o último |  `<i class="fas fa-angle-double-right"></i>` |
-
-
+|PESSOANOVO |Insere pessoa | `<i class="fas fa-user-plus"></i>`  |
+| BLOQUEAR|Bloqueia			 |  `<i class="fas fa-lock"></i>` |
+| DESBLOQUEAR|Desbloqueia | `<i class="fas fa-lock-open"></i>`  |
+| CREDENCIAL| Credencial  | `<i class="fas fa-id-card"></i>`  |
+| COMENTAR| Comentar |  `<i class="far fa-comment-dots"></i>` |
+|COLAR |Colar registro copiado  | `<i class="far fa-paste"></i>`  |
+|COPIAR | Copiar registro| `<i class="fas fa-copy"></i>`  |
