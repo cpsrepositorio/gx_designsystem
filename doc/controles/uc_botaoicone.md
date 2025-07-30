@@ -48,7 +48,7 @@ Os eventos padrões definidos no controle são apresentados a seguir
 
 | Evento        | Tooltip           | icone  |
 | ------------- |:-------------:| -----:|
-| ABRIR      | Abre o registro | <i class="fas fa-eye"></i> |
+| ABRIR      | Abre o registro | `<i class="fas fa-eye"></i>` |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
