@@ -46,10 +46,22 @@ O controle é preparado para montar uma barra de botões, para isso adicione vá
 ##### Eventos padrões
 Os eventos padrões definidos no controle são apresentados a seguir
 
+
 | Evento        | Tooltip           | icone  |
 | ------------- |:-------------:| -----:|
-| ABRIR      | Abre o registro | `<i class="fas fa-eye"></i>` |
-| EDITAR      | Atualiza o registro      |   `<i class="fas fa-pen"></i>`  |
+| NOVO|Insere novo registro | `<i class="fas fa-plus"></i>`  |
+| ABRIR | Abre o registro | `<i class="fas fa-eye"></i>` |
+| EDITAR | Atualiza o registro      |   `<i class="fas fa-pen"></i>`  |
 | APAGAR | Apaga o registro|    `<i class="fas fa-trash"></i>`  |
+| ABRIRPASTA|Abrir a pasta |  `<i class="fas fa-folder-open"></i>` |
+| FECHARPASTA| Fechar a pasta ou sair |  `<i class="fas fa-folder"></i>` |
+|ANEXAR | Anexar arquivo|  `<i class="fas fa-paperclip"></i>` |
+|EXCEL | Exportar em formato Excel| `<i class="fas fa-file-excel"></i>`  |
+|PDF |Exportar em formato PDF | `<i class="fas fa-file-pdf"></i>`  |
+| EMAIL| Enviar email| `<i class="fas fa-envelope"></i>`  |
+|PRIMEIRO | Retorna ao primeiro da lista|  `<i class="fas fa-angle-double-left"></i>` |
+|ANTERIOR | Retorna ao anterior|  `<i class="fas fa-angle-left"></i>` |
+| PROXIMO| Avança para o proximo|  `<i class="fas fa-angle-right"></i>` |
+|ULTIMO |Avança para o último |  `<i class="fas fa-angle-double-right"></i>` |
 
 
