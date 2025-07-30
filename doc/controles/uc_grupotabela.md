@@ -40,15 +40,15 @@ Sub 'tabela'
  for &i = 1 to 2
   &grupo = new()
   &grupo.titulo  = 'SEMESTRE '+&i.ToString()
-  &grupo.titulos = '["SIGLA","DISCIPLINA","TIPO","CH","EXT"]'
-  &grupo.widths  =  '["10%","55%","15%","5%","5%","10%"]'
+  &grupo.titulos = '\["SIGLA","DISCIPLINA","TIPO","CH","EXT"\]'
+  &grupo.widths  =  '\["10%","55%","15%","5%","5%","10%"\]'
 		
   for &n = 1 to 2
    &linha = new()
    if &n=1
-    &linha.linha = 	'["#D'+&n.ToString().Trim()+'","Nome da DI","obrigatoria","10","0"]'
+    &linha.linha = 	'\["#D'+&n.ToString().Trim()+'","Nome da DI","obrigatoria","10","0"\]'
    else
-    &linha.linha = 	'["D'+&n.ToString().Trim()+'","Nome da DI","obrigatoria","10","0"]'
+    &linha.linha = 	'\["D'+&n.ToString().Trim()+'","Nome da DI","obrigatoria","10","0"\]'
    endif
 
    /* toolbar */
@@ -76,4 +76,4 @@ O controle ainda permite que certa linha, ou linhas, sejam apresentadas como sel
 
 
 ### Alternativa 
-["1","2","3","4","5"]
+\["1","2","3","4","5"\]
