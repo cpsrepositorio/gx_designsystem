@@ -40,8 +40,8 @@ Sub 'tabela'
  for &i = 1 to 2
   &grupo = new()
   &grupo.titulo  = 'SEMESTRE '+&i.ToString()
-  &grupo.titulos = \'\["SIGLA","DISCIPLINA","TIPO","CH","EXT"\]\'
-  &grupo.widths  =  \'\["10%","55%","15%","5%","5%","10%"\]\'
+  &grupo.titulos = ["SIGLA","DISCIPLINA","TIPO","CH","EXT"]
+  &grupo.widths  =  ["10%","55%","15%","5%","5%","10%"]
 		
   for &n = 1 to 2
    &linha = new()
