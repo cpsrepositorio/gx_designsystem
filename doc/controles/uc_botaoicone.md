@@ -46,6 +46,7 @@ O controle é preparado para montar uma barra de botões, para isso adicione vá
 ##### Eventos padrões
 Os eventos padrões definidos no controle são apresentados a seguir
 
+![alt text](https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/uc_botaoicone1.PNG "Icone")
 
 | Evento        | Tooltip           | icone  |
 | ------------- |:-------------:| -----:|
