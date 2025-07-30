@@ -1,4 +1,5 @@
 # uc_botaoicone
+![alt text](https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/uc_botaoicone.PNG "Icone")
 Os botões do tipo icone são elementos em HTML criados a partir do controle **uc.uc_botaoicone(&uc_botaoiconeIN.ToJson())**, que constroem uma barra de icones, permitindo que as classes que definem o formato do botão sejam definidas.
 O processo de criação da barra de botões é simplificado, pois segue o conceito de que os eventos foram definidos de forma padrão, e para cada tipo de evento, um icone, também padrão, é associado. Portanto, a unica coisa que precisa ser fornecida para o controle é um array de eventos.
 
