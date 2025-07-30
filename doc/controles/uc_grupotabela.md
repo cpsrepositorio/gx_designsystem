@@ -40,15 +40,15 @@ Sub 'tabela'
  for &i = 1 to 2
   &grupo = new()
   &grupo.titulo  = 'SEMESTRE '+&i.ToString()
-  &grupo.titulos = 'SIGLA;DISCIPLINA;TIPO;CH;EXT'
-  &grupo.widths  =  '10%;55%;15%;5%;5%;10%'
+  &grupo.titulos = '["SIGLA","DISCIPLINA","TIPO","CH","EXT"]'
+  &grupo.widths  =  '["10%","55%","15%","5%","5%","10%"]'
 		
   for &n = 1 to 2
    &linha = new()
    if &n=1
-    &linha.linha = 	'D'+&n.ToString().Trim()+';Nome da DI;obrigatoria;10;0'
+    &linha.linha = 	'["#D'+&n.ToString().Trim()+'","Nome da DI","obrigatoria","10","0"]'
    else
-    &linha.linha = 	'D'+&n.ToString().Trim()+';Nome da DI;obrigatoria;10;0'
+    &linha.linha = 	'["D'+&n.ToString().Trim()+'","Nome da DI","obrigatoria","10","0"]'
    endif
 
    /* toolbar */
@@ -65,12 +65,15 @@ EndSub
 ```
 A variável **&grupo** é do tipo **uc_grupotabelaIN.grupo**, e **&linha** do tipo **uc_grupotabelaIN.grupo.linha**. A primeira representa uma tabela inteira, e a segunda as linhas desta tabela.
 
-**&grupo.titulos** representa um conjunto de TITULO de cabeçalho separados por vírgula. Nesse exemplo, **'SIGLA;DISCIPLINA;TIPO;CH;EXT'**, forma uma tabela com 5 colunas.
+**&grupo.titulos** representa um conjunto de TITULO de cabeçalho. Nesse exemplo, **'["SIGLA","DISCIPLINA","TIPO","CH","EXT"]'**, forma uma tabela com 5 colunas.
 
-Caso tenha interesse em definir as larguras das colunas, é possível com **&grupo.widths**, porem, como se deseja incluir uma barra de botões na última coluna, observe que foram definidos, no exemplo, 6 larguras: **'10%;55%;15%;5%;5%;10%'**
+Caso tenha interesse em definir as larguras das colunas, é possível com **&grupo.widths**, porem, como se deseja incluir uma barra de botões na última coluna, observe que foram definidos, no exemplo, 6 larguras: **'["10%","55%","15%","5%","5%","10%"]'**
 
 Finalmente o controle permite ligar botões de controle na linha a partir de **&linha.toolbar**
 
 O controle ainda permite que certa linha, ou linhas, sejam apresentadas como selecionadas a partir da definição de uma cor de fundo **&uc_grupotabelaIN.selected_color 	= '#f7e8e8'**. Para isso, será necessário apenas incluir um caracter **#** em qualquer célula na linha. Por exemplo:
-**&linha.linha = 	'#D'+&n.ToString().Trim()+';Nome da DI;obrigatoria;10;0'**
+**&linha.linha =  '["#D'+&n.ToString().Trim()+'","Nome da DI","obrigatoria","10","0"]'**
 
+
+### Alternativa 
+["1","2","3","4","5"]
