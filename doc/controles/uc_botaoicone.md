@@ -65,8 +65,8 @@ Os eventos padrões definidos no controle são apresentados a seguir
 | PROXIMO| Avança para o proximo|  `<i class="fas fa-angle-right"></i>` |
 |ULTIMO |Avança para o último |  `<i class="fas fa-angle-double-right"></i>` |
 |PESSOANOVO |Insere pessoa | `<i class="fas fa-user-plus"></i>`  |
-| BLOQUEAR|Bloqueia			 |  `<i class="fas fa-lock"></i>` |
-| DESBLOQUEAR|Desbloqueia | `<i class="fas fa-lock-open"></i>`  |
+| BLOQUEAR|Bloqueia |  `<i class="fas fa-lock"></i>` |
+| UNLOCK|Desbloqueia | `<i class="fas fa-unlock"></i>`  |
 | CREDENCIAL| Credencial  | `<i class="fas fa-id-card"></i>`  |
 | COMENTAR| Comentar |  `<i class="far fa-comment-dots"></i>` |
 |COLAR |Colar registro copiado  | `<i class="far fa-paste"></i>`  |
