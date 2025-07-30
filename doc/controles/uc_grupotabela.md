@@ -79,11 +79,17 @@ O controle ainda permite que certa linha, ou linhas, sejam apresentadas como sel
 Criar uma coleção para carregar os itens do cabeçalho, widths e células da linha.
 
  &titulos = new()
+ 
  &titulos.add("SIGLA")
+ 
  &titulos.add("DISCIPLINA")
+ 
  &titulos.add("TIPO")
+ 
  &titulos.add("CH")
+ 
  &titulos.add("EXT")
+ 
  &grupo.titulos = &titulos.ToJson()
 
 Nesse caso &titulos deve ser uma colection de caracteres.
