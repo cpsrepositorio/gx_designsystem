@@ -11,6 +11,7 @@ A estrutura possui um cabeçalho simples (id e interface) e uma coleção de bot
 5.	Inclua os arquivos de estilo, com a programação de **form.HeaderRawHTML = UC.uc_cssGET_bot523()**
 6.	E a definição da barra e do botão, conforme o exemplo abaixo:	
 
+```Genexus
 Event Start
 	/* 1 */
 	form.HeaderRawHTML = UC.uc_cssGET_bot523()
@@ -34,6 +35,7 @@ sub 'iconebar'
 	&botoes.add('[APAGAR:1]')
 	&uc_botaoiconeIN.botoes = &botoes.ToJson()
 endsub
+```
 
 A variável &botoes é uma varchar(40) do tipo collection. Observe que ao se carregar no SDT &uc_botaoiconeIN.botoes a mesma é convertida para Json, &botoes.ToJson()
 Fique atento aos eventos, pois o controle segue de forma rígida as palavras previamente programadas e para cada palavra, se tem um icone e tooltip associado.
