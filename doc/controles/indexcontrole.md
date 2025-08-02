@@ -5,10 +5,10 @@ Grid é um controle importante no Genexus, pois de forma quase 'automatica' perm
 Na biblioteca UC temos alguns controles que poderão ser considerados para substituir os GRIDS:
 
 * [uc_lista]()
-* [uc_listapagging]
-* [uc_tabela]
-* [uc_grupotabelas]
-* [uc_matriz]
+* [uc_listapagging]()
+* [uc_tabela]()
+* [uc_grupotabelas]()
+* [uc_matriz]()
 
 ### BOTÕES
 * [uc_botao](/doc/controles/uc_botao.md)
