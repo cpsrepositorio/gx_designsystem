@@ -4,7 +4,8 @@ A evolução foi significativa, porém, ainda complexa, de tal forma que uma nov
 
 De forma reduzida, a construção de uma interface em Genexus exige que se incluam controles na interface e em seguida, ocorra a 'programação' do conteúdo, ação, forma, desses controles. Flexível sob o ponto de se permitir fazer qualquer coisa, porém, dificil pois exige várias abas, propriedades e mecanismos para sua programação.
 
-Desta forma, este repositório oferece uma alternativa para se construir interfaces, 
+Desta forma, este repositório oferece uma alternativa para se construir interfaces, de forma totalmente 'programativa', ou seja, deixou-se de lado a preocupação visual da inclusão do controle na interface, e em contrapartida, objetivou-se que apenas um único TEXTBLOCK fosse suficiente para construir praticamente a interface inteira.
+
 
 Repositório de componentes para construção de interfaces em Genexus
 
