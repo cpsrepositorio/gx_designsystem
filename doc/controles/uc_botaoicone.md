@@ -60,7 +60,9 @@ Os eventos padrões definidos no controle são apresentados a seguir
 |EXCEL | Exportar em formato Excel| `<i class="fas fa-file-excel"></i>`  |
 |PDF |Exportar em formato PDF | `<i class="fas fa-file-pdf"></i>`  |
 | IMPRIMIR| Imprimir|  `<i class="fas fa-print"></i>` |
-| EMAIL| Enviar email| `<i class="fas fa-envelope"></i>`  |
+|EMAIL|Enviar email|`<i class="fas fa-envelope"></i>`|
+|EMAILENVIADO|Email enviado|`<i class="fas fa-paper-plane"></i>`|
+|EMAILENVIAR|Email enviar|`<i class="far fa-paper-plane"></i>`|
 |PRIMEIRO | Retorna ao primeiro da lista|  `<i class="fas fa-angle-double-left"></i>` |
 |ANTERIOR | Retorna ao anterior|  `<i class="fas fa-angle-left"></i>` |
 | PROXIMO| Avança para o proximo|  `<i class="fas fa-angle-right"></i>` |
@@ -72,3 +74,22 @@ Os eventos padrões definidos no controle são apresentados a seguir
 | COMENTAR| Comentar |  `<i class="far fa-comment-dots"></i>` |
 |COLAR |Colar registro copiado  | `<i class="far fa-paste"></i>`  |
 |COPIAR | Copiar registro| `<i class="fas fa-copy"></i>`  |
+|LIGADO|Ligado|`<i class="fas fa-toggle-on"></i>`|
+|DESLIGADO|Desigado|`<i class="fas fa-toggle-off"></i>`|
+|HISTORICO|Historico de operações|`<i class="fas fa-history"></i>`|
+|PIZZA|Estatistica (pizza)|`<i class="fas fa-chart-pie"></i>`|
+
+|BARRA|Estatistica (barra)|`<i class="far fa-chart-bar"></i>`|
+|THUMBSUP|Aprovado|`<i class="fas fa-thumbs-up"></i>`|
+|THUMBSDOWN|Reprovado|`<i class="fas fa-thumbs-down"></i>`|
+
+
+
+
+
+
+
+
+
+
+
