@@ -78,7 +78,6 @@ Os eventos padrões definidos no controle são apresentados a seguir
 |DESLIGADO|Desigado|`<i class="fas fa-toggle-off"></i>`|
 |HISTORICO|Historico de operações|`<i class="fas fa-history"></i>`|
 |PIZZA|Estatistica (pizza)|`<i class="fas fa-chart-pie"></i>`|
-
 |BARRA|Estatistica (barra)|`<i class="far fa-chart-bar"></i>`|
 |THUMBSUP|Aprovado|`<i class="fas fa-thumbs-up"></i>`|
 |THUMBSDOWN|Reprovado|`<i class="fas fa-thumbs-down"></i>`|
