@@ -6,6 +6,7 @@ Na biblioteca UC temos alguns controles que poderão ser considerados para subst
 
 #### UC_LISTA
 [uc_lista]: https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/uc_lista.PNG
+![alt text][uc_lista]
 
 * [uc_listapagging]()
 * [uc_tabela]()
