@@ -11,16 +11,17 @@ Na biblioteca UC temos alguns controles que poderão ser considerados para subst
 * [uc_listapagging]()
 
 #### Tabelas
-[uc_tabela]: https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/uc_grupotabela.PNG
+[uc_grupotabela]: https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/uc_grupotabela.PNG
 [alt text][uc_grupotabela]
 * [uc_tabela]()
 * [uc_grupotabelas]()
 
-
+### Matriz
 * [uc_matriz]()
 
-### BOTÕES
+### Botões
+[uc_botooes]: https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/uc_botaoicone.PNG
+[alt text][uc_botooes]
 * [uc_botao](/doc/controles/uc_botao.md)
 * [uc_botaoicone](/doc/controles/uc_botaoicone.md)
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
