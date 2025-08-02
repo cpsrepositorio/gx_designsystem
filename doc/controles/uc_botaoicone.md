@@ -74,8 +74,8 @@ Os eventos padrões definidos no controle são apresentados a seguir
 | COMENTAR| Comentar |  `<i class="far fa-comment-dots"></i>` |
 |COLAR |Colar registro copiado  | `<i class="far fa-paste"></i>`  |
 |COPIAR | Copiar registro| `<i class="fas fa-copy"></i>`  |
-|LIGADO|Ligado|`<i class="fas fa-toggle-on"></i>`|
-|DESLIGADO|Desigado|`<i class="fas fa-toggle-off"></i>`|
+|TURNON|Ligado|`<i class="fas fa-toggle-on"></i>`|
+|TURNOFF|Desigado|`<i class="fas fa-toggle-off"></i>`|
 |HISTORICO|Historico de operações|`<i class="fas fa-history"></i>`|
 |PIZZA|Estatistica (pizza)|`<i class="fas fa-chart-pie"></i>`|
 |BARRA|Estatistica (barra)|`<i class="far fa-chart-bar"></i>`|
