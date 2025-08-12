@@ -32,7 +32,22 @@ Seguindo a filosofia Gx de automatizar ao máximo os recursos para se alcançar 
 2) UC cuida da construção das interfaces.
 
 ## ESTILO
-Os controles são formados por elementos tradicionais de HTML + CSS e 
+Os controles são desenvolvidos através de elementos tradicionais de HTML + CSS. Para compatibilizar as versões das folhas de estilo (CSS), de maneira que todas as soluções utilizem as mesmas definições, adotou-se a publicação dos diversos arquivos em um repositório centralizado. E neste local encontram-se todos os arquivos na sua última versão.
+
+Para realizar a carga das folhas de estilo é necessário chamar um procedimento:
+
+	`form.HeaderRawHTML  = uc_css()`
+
+E neste 
+
+´&stylepath = &websession.get('STYLEPATH')
+if &stylepath.IsEmpty()
+	&stylepath = Config_STYLEPATH_GET()
+	&websession.Set("STYLEPATH", &stylepath.Trim())
+endif
+
+&html  = UC.uc_cssCARGA(&stylepath) 
+´
 
 ## PRIMEIROS PASSOS
 Para saber mais a respeito deste pacote sugerimos, e iniciar nos primeiros passos no uso dos componentes, sugerimos as seguintes leituras:
