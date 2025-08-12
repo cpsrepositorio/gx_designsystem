@@ -34,7 +34,7 @@ Seguindo a filosofia Gx de automatizar ao máximo os recursos para se alcançar 
 ## ESTILO
 Os controles são desenvolvidos através de elementos tradicionais de HTML + CSS. Para compatibilizar as versões das folhas de estilo (CSS), de maneira que todas as soluções utilizem as mesmas definições, adotou-se a publicação dos diversos arquivos em um repositório centralizado. E neste local encontram-se todos os arquivos na sua última versão.
 
-[aqui](recursos/uc.md) você encontra infomações para realizar a carga dos estilos.
+[aqui](/recursos/uc.md) você encontra infomações para realizar a carga dos estilos.
 
 ## PRIMEIROS PASSOS
 Para saber mais a respeito deste pacote sugerimos, e iniciar nos primeiros passos no uso dos componentes, sugerimos as seguintes leituras:
