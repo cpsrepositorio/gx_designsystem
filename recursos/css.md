@@ -21,4 +21,6 @@ Para que o navegador não bloqueie a carga com mensagem de CORS, será necessár
 <add key="GX_CORS_ALLOW_ORIGIN" value="https://siga.cps.sp.gov.br" />
 </appSettings>
 ```
+ Cross-Origin Resource Sharing (CORS) é uma caracteristica que permite controlar o local de origem de onde os recursos são carregados na pagina. [Owasp](https://blog.securelayer7.net/owasp-top-10-security-misconfiguration-5-cors-vulnerability-patch/)
+ 
 
