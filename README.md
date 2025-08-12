@@ -31,6 +31,8 @@ Seguindo a filosofia Gx de automatizar ao máximo os recursos para se alcançar 
 
 2) UC cuida da construção das interfaces.
 
+## ESTILO
+Os controles são formados por elementos tradicionais de HTML + CSS e 
 
 ## PRIMEIROS PASSOS
 Para saber mais a respeito deste pacote sugerimos, e iniciar nos primeiros passos no uso dos componentes, sugerimos as seguintes leituras:
