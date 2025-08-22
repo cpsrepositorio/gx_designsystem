@@ -81,8 +81,9 @@ Os eventos padrões definidos no controle são apresentados a seguir
 |BARRA|Estatistica (barra)|`<i class="far fa-chart-bar"></i>`|
 |THUMBSUP|Aprovado|`<i class="fas fa-thumbs-up"></i>`|
 |THUMBSDOWN|Reprovado|`<i class="fas fa-thumbs-down"></i>`|
-
-
+|PLAY|Executar|`<i class="fas fa-play"></i>`|
+|INFO|Informações|`<i class="fas fa-info"></i>`|
+|POWER|Ligar|`<i class="fas fa-power-off"></i>`|
 
 
 
