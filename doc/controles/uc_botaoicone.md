@@ -32,9 +32,9 @@ sub 'iconebar'
 	&uc_botaoiconeIN.classebotao = 'uc_btspace'
 	&uc_botaoiconeIN.classeicon = 'uc_bticon'
 	
-	&botoes.add('[ABRIR:1]')
-	&botoes.add('[EDITAR:1]')
-	&botoes.add('[APAGAR:1]')
+	&botoes.add('ABRIR:1')
+	&botoes.add('EDITAR:1')
+	&botoes.add('APAGAR:1')
 	&uc_botaoiconeIN.botoes = &botoes.ToJson()
 endsub
 ```
