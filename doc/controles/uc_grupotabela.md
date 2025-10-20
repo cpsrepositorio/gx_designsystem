@@ -40,8 +40,22 @@ Sub 'tabela'
  for &i = 1 to 2
   &grupo = new()
   &grupo.titulo  = 'SEMESTRE '+&i.ToString()
-  &grupo.titulos = \'["SIGLA","DISCIPLINA","TIPO","CH","EXT"]\'
-  &grupo.widths  =  \'["10%","55%","15%","5%","5%","10%"]\'
+  &titulos.clear()
+  &titulos.add("SIGLA")
+  &titulos.add("DISCIPLINA")
+  &titulos.add("TIPO")
+  &titulos.add("CH")
+  &titulos.add("EXT")
+  &grupo.titulos = &titulos
+
+  &widths.clear()
+  &widths.add("10%")
+  &widths.add("55%") 
+  &widths.add("15%") 
+  &widths.add("5%") 
+  &widths.add("5%") 
+  &widths.add("10%") 
+  &grupo.widths  =  &widths
 		
   for &n = 1 to 2
    &linha = new()
