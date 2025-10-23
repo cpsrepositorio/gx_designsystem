@@ -1,7 +1,5 @@
 # gx_usercontrol
 
-
-##Interfaces Genexus
 Tradicionalmente a construção de interfaces no Genexus são baseadas em controles padrões [Genexus Controls](https://wiki.genexus.com/commwiki/wiki?5925,Category%3AGeneXus+Controls), que permitem fazer o básico em termos de apresentar informações, obter dados dos usuários, interceptar eventos. Porém, de certa maneira esse conjunto básico limita absurdamente a capacidade do que a ferramenta poderia fazer. A partir da versao Geneus X um novo recurso chamado UserControl passou a oferecer uma ampliação significativa da capacidade da interface, porém sob um custo alto de complexidade para sua produção. Nas versoes mais recentes um novo objeto [UserControl](https://wiki.genexus.com/commwiki/wiki?39356,Category%3AUser+Control+object) foi apresentado como uma forma de reduzir a complexidade.
 A evolução foi significativa, porém, ainda complexa. Uma outra tecnologia interessante [Pattern](https://wiki.genexus.com/commwiki/wiki?2814,Category%3APatterns) completa o time, e foi criada para gerar de forma automática objetos Genexus segundo padrões desejados, normalmente um GRID que abre um registro e suas relações, e vários 'parceiros' comerciais começaram a apresentar soluções para esta tecnologia. Pattern é um gerador de objetos de um gerador de fontes, ou seja, um cenário de fortissima capacidade de produção de interfaces.
 
