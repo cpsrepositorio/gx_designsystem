@@ -5,11 +5,13 @@ A evolução foi significativa, porém, ainda complexa. Uma outra tecnologia int
 
 De forma reduzida, a construção de uma interface em Genexus exige que se incluam controles na interface e em seguida, ocorra a 'programação' do conteúdo, ação, forma, desses controles. Flexível sob o ponto de se permitir fazer qualquer coisa, porém, dificil pois exige várias abas, propriedades e mecanismos para sua programação.
 
-Desta forma, este repositório oferece uma alternativa para se construir interfaces, de forma totalmente 'programativa', ou seja, deixou-se de lado a preocupação visual da inclusão do controle na interface, e em contrapartida, objetivou-se que apenas um único TEXTBLOCK fosse suficiente para construir praticamente a interface inteira. Pode haver um certo exagero nesta frase, me desculpe. Mas na prática, temos um modelo em que temos controles com certo nivel de padronização, que se constrói a partir de propriedades fornecidas em um formato JSON.
+O ponto favorável é que Genexus busca o nivel hard de automatização para o desenvolvedor e já realiza a maioria do trabalho, o desfavorável é a baixa flexibilidade.
 
-De todos os modelos que estudei até este momento, e que programei ao longo de tantos anos com a ferramenta, me parece que este cenário é o mais eficiente e rápido. Porém, compreendo que seria muito bom se tivessemos associado a este cenário um modelo de produção de objetos automatizados com o Pattern. Fica a dica para a próxima evolução.
+Como alternativa a este nivel de restrição, atuamos na criação de controles que poderiam ser facilmente incorporados nos projetos, que atuem de forma integrada e que permitam construir interfaces com o minimo de esforço (porém, com algum esforço), e desse trabalho, chegamos a um Package (chamado UC) que oferece uma alternativa para se construir interfaces de forma totalmente 'programativa', ou seja, deixou-se de lado a preocupação visual da inclusão do controle no editor de interfaces, e em contrapartida, objetivou-se que apenas um único TEXTBLOCK fosse suficiente para construir praticamente a interface inteira. Pode haver um certo exagero nesta frase, me desculpe. Mas na prática, temos um modelo em que temos controles com certo nivel de padronização, que se constrói a partir de propriedades fornecidas em um formato JSON.
 
-Neste repositório voce encontrara informações para construir interfaces interessantes utilizando este modelo difernte.
+De todos os modelos que estudei até este momento, e que programei ao longo de tantos anos no Genexus, me parece que este cenário é o mais eficiente e rápido. Porém, compreendo que seria muito bom se tivessemos associado a este cenário um modelo de produção de objetos automatizados com o Pattern. Fica a dica para a próxima evolução.
+
+Neste documento voce encontrara informações para construir interfaces interessantes utilizando este modelo diferentão.
 
 ## UC
 É o nome pouco criativo que escolhemos para denominar esse pacote de componentes, para fazer um minimo de referencia ao termo User Control da ferramenta, mas na prática, as semelhanças terminam no nome. O modelo utiliza um único UserControl para interceptar eventos de Click. Uma KB é utilizada para programar os componentes chamada de CEETEPS_DESIGNSYSTEM, que pode ser baixada e manipulada para ajustar os controles, e produzir o Package.
