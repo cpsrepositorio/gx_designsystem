@@ -2,61 +2,28 @@
 
 De forma reduzida, a construção de uma interface em Genexus exige que se incluam controles na interface e em seguida, ocorra a 'programação' do conteúdo, ação, forma, desses controles. Flexível sob o ponto de se permitir fazer qualquer coisa, porém, dificil pois exige várias abas, propriedades e mecanismos para sua programação.
 
-O ponto favorável é que Genexus busca o nivel hard de automatização para o desenvolvedor e já realiza a maioria do trabalho, o desfavorável é a baixa flexibilidade.
+O ponto favorável é que Genexus busca o nivel hard de automatização para o desenvolvedor e já realiza a maioria do trabalho, o desfavorável é a baixa flexibilidade. Porém, ao longo do tempo, várias características foram incorporadas para aumentar o nivel de liberdade dos desenvolvedores.A história de Genexus é bem interessante e sob o ponto de vista das interfaces, temos aqui uma [pequena referencia](doc/genexus.md).
 
-A história de Genexus é bem interessante e sob o ponto de vista das interfaces, temos aqui uma [pequena referencia](doc/genexus.md).
 
-Como alternativa a este nivel de restrição, atuamos na criação de controles que poderiam ser facilmente incorporados nos projetos, que atuem de forma integrada e que permitam construir interfaces com o minimo de esforço (porém, com algum esforço), e desse trabalho, chegamos a um Package (chamado UC) que oferece uma alternativa para se construir interfaces de forma totalmente 'programativa', ou seja, deixou-se de lado a preocupação visual da inclusão do controle no editor de interfaces, e em contrapartida, objetivou-se que apenas um único TEXTBLOCK fosse suficiente para construir praticamente a interface inteira. Pode haver um certo exagero nesta frase, me desculpe. Mas na prática, temos um modelo em que temos controles com certo nivel de padronização, que se constrói a partir de propriedades fornecidas em um formato JSON.
+## Package UC
+É dificil para uma ferramenta como o Genexus, que objetiva criar tudo, trabalhar com a flexibilidade necessária para permitir que o desenvolvedor faça 'alguma coisa diferente', os mundos se chocam, pois para criar a ferramenta precisa partir de um conhecimento prévio, normalmente sob os objetos 'padrões'. Infelizmente é um cenário que reduz bastante a inovação.
 
-De todos os modelos que estudei até este momento, e que programei ao longo de tantos anos no Genexus, me parece que este cenário é o mais eficiente e rápido. Porém, compreendo que seria muito bom se tivessemos associado a este cenário um modelo de produção de objetos automatizados com o Pattern. Fica a dica para a próxima evolução.
+Porém, nem tudo está perdido. Como alternativa a este nivel de restrição, construímos um pacote de controles que podem ser facilmente incorporados nos projetos, objetivando sempre a simplicidade de uso e flexibilidade. O objetivo foi o de permitir construir interfaces com o minimo de esforço (porém, com algum esforço).
+
+Este pacote foi construído a partir de uma KB chamada DESIGN_SYSTEM18, que reune os controles, exemplos, SDTs, dominios e demais recursos utilizados.
+
+A diferença fundamental dos modelos, no UC os controles são criados de uma forma 'mais programativa', seguindo um modelo de carregar as propriedades desejadas em um SDT e em seguida, passando-se para que uma Procedure execute e construa o objeto desejado, e buscamos um cenário minimalista onde apenas é necessário um TEXTBLOCK e um User Control para interceptar os eventos de click (veja o capitulo SETUP).
+
+De forma bastante simplificada, este modelo constrói os codigos HTML + JS necessários para executar um componente na interface, em tempo de execução, mas no final das contas, pela simplificação e otimização dos recursos, acaba produzindo um desempenho muito superior à interface Genexus tradicional.
+
+Pode parecer simplista, mas este modelo, de todos que utilizei até este momento, me parece que é o mais eficiente e rápido. 
+
+- User Control: dificil de desenvolver, testar e manter
+- User Control Object: simples de desenvolver, mas não contribui muito com a padronização
+- UC: um pacote com todos os controles padronizados melhora a dinamica da equipe na construção e manutenção. O pacote agrega o controle, a gestão de dados, segurança, baixa exposição na interface.
+
+Ou seja, o pacote traz não apenas a preocupação dos controles, mas também uma forma de padronizar as interfaces para buscar um nivel de produtividade maior. Porém, compreendo que seria muito bom se um dia pudermos associar a este cenário um modelo de produção de objetos automatizados com o Pattern. Fica a dica para a próxima evolução do pacote.
 
 Neste documento voce encontrara informações para construir interfaces interessantes utilizando este modelo diferentão.
 
-## UC
-É o nome pouco criativo que escolhemos para denominar esse pacote de componentes, para fazer um minimo de referencia ao termo User Control da ferramenta, mas na prática, as semelhanças terminam no nome. O modelo utiliza um único UserControl para interceptar eventos de Click. Uma KB é utilizada para programar os componentes chamada de CEETEPS_DESIGNSYSTEM, que pode ser baixada e manipulada para ajustar os controles, e produzir o Package.
 
-O Package ao ser instalado em qualquer KB permitirá:
-
-1) Geração de componentes em formato simples baseado na definição de SDT, buscando reduzir ao máximo a necessidade de inserção de elementos HTML, CSS. 
-
-2) Entrega de recursos para a montagem de interfaces leves, sem a necessidade de variáveis, ou dados estruturados em tela.
-
-3) Manutenção de uma biblioteca de estilos padronizada e em acordo com o CPS_Elements
-
-4) Encriptação de parametros nas interfaces por meio da definição de uma chave pelo próprio desenvolvedor que poderá ser estatica ou dinamica.
-
-O objetivo deste pacote é acelerar ao máximo a obtenção de componentes, sem que seja necessário programação excessiva, além de promover a padronização da interface para auxiliar o usuário.
-
-Seguindo a filosofia Gx de automatizar ao máximo os recursos para se alcançar resultados rápidos e satisfatórios, o pacote entrega uma parte importante que é a automação das interfaces.
-
-1) Genexus cuida da operação de banco de dados, da modelagem, relacionamento, estrutura da operação, com a recuperação, inserção, manutenção dos registros.
-
-2) UC cuida da construção das interfaces.
-
-## ESTILO
-Os controles são desenvolvidos através de elementos tradicionais de HTML + CSS. Para compatibilizar as versões das folhas de estilo (CSS), de maneira que todas as soluções utilizem as mesmas definições, adotou-se a publicação dos diversos arquivos em um repositório centralizado. E neste local encontram-se todos os arquivos na sua última versão.
-
-[Aqui](/recursos/css.md) você encontra infomações para realizar a carga dos estilos.
-
-## PRIMEIROS PASSOS
-Para saber mais a respeito deste pacote sugerimos, e iniciar nos primeiros passos no uso dos componentes, sugerimos as seguintes leituras:
-
-**Para utilizar o componente** 
-1) Acesse a documentação da estrutura de user controls disponiveis, instale o pacote de componentes na sua KB e inicie a operação. [Informações aqui](/doc/instalacao.md).
-2) Crie um painel de testes e comece a utilizar [Painel de teste](/doc/primeiropainel.md)
-3) Se tiver interesse em saber o que é um componente, temos este texto [O que é?](oquee.md)
-
-**Para participar da construção**
-Baixe a KB CEETEPS_DESIGNSYSTEM no Genexus 18 e auxilie na construção dos recursos. Informações aqui.
-
-**Para atuar na modelagem visual (css)**
-Altere o conteúdo dos arquivos CSS da pasta style e publique no repositório de estilos. Informações aqui.
-
-## APRENDENDO CADA CONTROLE 
-Você também pode optar por aprender a operação de cada controle. Um caminho é acompanhar o [índice de controles](/doc/controles/indexcontrole.md)
-
-## TECNICAS 
-Em seguida, será interessante você aprender algumas técnicas mais avançadas para integrar controles, estratégias para apresentação. Um caminho é acompanhar o [índice de técnicas](/doc/tecnicas/indextecnica.md) 
-
-## RECURSOS 
-Montamos uma pagina para incluir os recursos necessários para trabalhar no pacote UC. [Lista de Recursos](/recursos/indicerecursos.md) 
