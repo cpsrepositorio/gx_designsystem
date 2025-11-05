@@ -1,5 +1,8 @@
 # uc_menuhorizontal
 O pacote UC inclui um controle de menu horizontal que apresenta uma lista de itens clicáveis contendo uma imagem/icone e um texto.
+
+[img](/doc/imagens/uc_menu.png)
+
 É um controle simples que objetiva oferecer opções de acesso ao usuário.
 
 
