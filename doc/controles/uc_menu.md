@@ -1,10 +1,9 @@
 # uc_menu
-Um menu consiste em uma barra com opções posicionadas na horizontal, normalmqnete contendo uma imagem e um texto para representar uma ação de interesse do usuário.
-Pressupõe que ao clicar sobre a imagem ou texto, o menu causará o efeito de abrir alguma coisa.
+Um menu consiste em uma barra com opções posicionadas na horizontal, normalmente contendo uma imagem e um texto que representam uma certa ação de interesse do usuário. Pressupõe-se que ao clicar sobre a imagem ou texto, o menu causará o efeito de abrir alguma coisa.
 
-[img](/doc/imagens/uc_menu.png)
+![alt text](https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/uc_menu.png "Icone")
 
-É um controle simples que objetiva oferecer opções de acesso ao usuário.
+No pacote de controles, o uc_menu é um controle simples que oferece a construção desta barra horizontal com icones.
 
 
 ## UC_MenuIN
