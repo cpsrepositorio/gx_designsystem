@@ -1,5 +1,7 @@
 # gx_usercontrol
-De forma reduzida, a construção de uma interface em Genexus exige que se incluam controles na interface e em seguida, ocorra a 'programação' do conteúdo, ação, forma, desses controles. Flexível sob o ponto de se permitir fazer qualquer coisa, porém, dificil pois exige várias abas, propriedades e mecanismos para sua programação.
+Com um olhar excessivamente simplista, a construção de uma interface em Genexus segue um ritual no qual em um editor se incluiem controles que são configurados em uma janela de propriedades. O conteúdo, as ações, formas, são, de certa maneira, limitados pelas caracteristicas do proprio controle. 
+
+Para se obter interfaces diferentes, é necessário produzir novos 'controles', que nesse caso se chamam 'user controls'. Mas este é um cenário pouco flexível e bastante complexo.
 
 O ponto favorável é que Genexus busca o nivel hard de automatização para o desenvolvedor e já realiza a maioria do trabalho, o desfavorável é a baixa flexibilidade. Porém, ao longo do tempo, várias características foram incorporadas para aumentar o nivel de liberdade dos desenvolvedores.A história de Genexus é bem interessante e sob o ponto de vista das interfaces, temos aqui uma [pequena referencia](doc/genexus.md).
 
