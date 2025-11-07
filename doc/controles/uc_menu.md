@@ -3,8 +3,9 @@ Um menu consiste em uma barra com opções posicionadas na horizontal, normalmen
 
 No pacote temos um objeto uc_menu que permite construir menus na horizontal ou vertical.
 
+()[]
 
-## UC_MenuIN
+## uc_menuin
 Um objeto **uc_menuin** deve ser utilizado para adicionar itens ao menu. Caso necessite de mais de um menu ao mesmo tempo na mesma interface, utilize um segundo **uc_menuin**.
 
 Para incluir uma lista de itens no menu, uma segunda variável será necessária, do tipo **uc_menuin.item**, e uma ação **uc_menuin.itens.add(&menuitem)** para inserir. 
@@ -67,15 +68,15 @@ O estilo do menu é definido no arquivo **uc_menu.css**, que contém uma série 
 
 A seguir apresentamos uma pequena explicação dessas classes:
 
-/* menu horizontal */    
-.uc_menu-h          menu horizontal
-.uc_menu-hl         alinhado a esquerda
-.uc_menu-hc         alinhado ao centro
-.uc_menu-hr         alinhado a direita
-
-/* menu vertical */
-.uc_menu-v          menu vertical
-.uc_menu-vl         alinhado a esquerda
-.uc_menu-vc         alinhado ao centro
-.uc_menu-vr         alinhado a direita
-
++------+--------+ 
+| classe | significado |
++------+--------+ 
+|uc_menu-h |         menu horizontal|
+|uc_menu-hl|         alinhado a esquerda|
+|uc_menu-hc|         alinhado ao centro|
+|uc_menu-hr|         alinhado a direita|
+|uc_menu-v |         menu vertical|
+|uc_menu-vl|         alinhado a esquerda|
+|uc_menu-vc|         alinhado ao centro|
+|uc_menu-vr|         alinhado a direita|
++------+--------+
