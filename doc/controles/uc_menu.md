@@ -1,21 +1,81 @@
 # uc_menu
 Um menu consiste em uma barra com opções posicionadas na horizontal, normalmente contendo uma imagem e um texto que representam uma certa ação de interesse do usuário. Pressupõe-se que ao clicar sobre a imagem ou texto, o menu causará o efeito de abrir alguma coisa.
 
-![alt text](https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/uc_menu.png)
-
-No pacote de controles, o uc_menu é um controle simples que oferece a construção desta barra horizontal com icones.
+No pacote temos um objeto uc_menu que permite construir menus na horizontal ou vertical.
 
 
 ## UC_MenuIN
-Um SDT é utilizado para adicionar itens ao menu, seguindo o mesmo principio dos demais controles.
-Uma parte superior permite identificar o controle na tela (ID e INTERFACE)
-E uma lista ITENS é utilizada para inserir os elementos no menu.
+Um objeto **uc_menuin** deve ser utilizado para adicionar itens ao menu. Caso necessite de mais de um menu ao mesmo tempo na mesma interface, utilize um segundo **uc_menuin**.
+
+Para incluir uma lista de itens no menu, uma segunda variável será necessária, do tipo **uc_menuin.item**, e uma ação **uc_menuin.itens.add(&menuitem)** para inserir. 
+
+
+### Exemplo:
+A seguir um exemplo de um menu horizontal.
+
+```
+sub 'menu'
+	
+	&uc_menuin.classe = 'uc_menu-h uc_menu-hc'
+	&uc_menuin.itens.Clear()
+
+	&menuitem = new()
+	&menuitem.evento = &Pgmname.Trim()+':MENU:HOME:1'
+	&menuitem.icone  = '<i class="fas fa-house-damage uc_pointer"></i>'
+	&menuitem.titulo = 'relatorio'
+	&uc_menuin.itens.Add(&menuitem)
+
+	&menuitem = new()
+	&menuitem.evento = &Pgmname.Trim()+':MENU:FOLLOW:1'
+	&menuitem.icone  = '<i class="fas fa-running uc_pointer"></i>'
+	&menuitem.titulo = 'follow-up'
+	&uc_menuin.itens.Add(&menuitem)
+
+	&menuitem = new()
+	&menuitem.evento = &Pgmname.Trim()+':MENU:PRODUTO:1'
+	&menuitem.icone  = '<i class="fab fa-windows uc_pointer"></i>'
+	&menuitem.titulo = 'produto'
+	&uc_menuin.itens.Add(&menuitem)
+
+	&menuitem = new()
+	&menuitem.evento = &Pgmname.Trim()+':MENU:CVE:1'
+	&menuitem.icone  = '<i class="fas fa-shield-alt uc_pointer"></i>'
+	&menuitem.titulo = 'cve'
+	&uc_menuin.itens.Add(&menuitem)
+
+	&menuitem = new()
+	&menuitem.evento = &Pgmname.Trim()+':MENU:UNIDADE:1'
+	&menuitem.icone  = '<i class="fas fa-school uc_pointer"></i>'
+	&menuitem.titulo = 'unidade'
+	&uc_menuin.itens.Add(&menuitem)
+
+	&menuitem = new()
+	&menuitem.evento = &Pgmname.Trim()+':MENU:IP:1'
+	&menuitem.icone  = '<i class="fas fa-network-wired uc_pointer"></i>'
+	&menuitem.titulo = 'ip'
+	&uc_menuin.itens.Add(&menuitem)
+
+	html.Caption  = UC.uc_menu(&uc_menuIN.ToJson())
+endsub
+```
+
+A linha **html.Caption  = UC.uc_menu(&uc_menuIN.ToJson())**, inclui o menu num textblock na interface.
+
 
 ### Estilo
-O estilo do menu é definido no arquivo uc_menu.css.
+O estilo do menu é definido no arquivo **uc_menu.css**, que contém uma série de classes que permitem configurar o objeto.
 
-Mas otimizações são possíveis por meio da determinação da classe que determina o menu, e sua definição incorporada manualmente na interface.
+A seguir apresentamos uma pequena explicação dessas classes:
 
-`
-&uc_menuin.classe = 'uc_menu'
-`
+/* menu horizontal */    
+.uc_menu-h          menu horizontal
+.uc_menu-hl         alinhado a esquerda
+.uc_menu-hc         alinhado ao centro
+.uc_menu-hr         alinhado a direita
+
+/* menu vertical */
+.uc_menu-v          menu vertical
+.uc_menu-vl         alinhado a esquerda
+.uc_menu-vc         alinhado ao centro
+.uc_menu-vr         alinhado a direita
+
