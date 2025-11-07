@@ -30,6 +30,8 @@ Neste documento voce encontrara informações para construir interfaces interess
 
 ## como começar?
 
-* Começe entendendo ![o que é](oquee.md)
-* Depois entenda ![o que falta fazer](oquefalta.md)
-* Como instalo o pacote e começo a utilizar ![instalacao](instalacao.md)
+* Começe entendendo ![o que é](/doc/oquee.md)
+* Depois entenda ![o que falta fazer](/doc/oquefalta.md)
+* Instale o pacote na sua kb Genexus ![instalacao](/doc/instalacao.md)
+* Vamos para o ![alomamae](/doc/alomamae.md)
+* Precisa aprender sobre ![eventos](/doc/eventos.md) 
