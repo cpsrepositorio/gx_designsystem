@@ -30,8 +30,16 @@ Neste documento voce encontrara informações para construir interfaces interess
 
 ## como começar?
 
-* Começe entendendo ![o que é](/doc/oquee.md)
-* Depois entenda ![o que falta fazer](/doc/oquefalta.md)
-* Instale o pacote na sua kb Genexus ![instalacao](/doc/instalacao.md)
-* Vamos para o ![alomamae](/doc/alomamae.md)
-* Precisa aprender sobre ![eventos](/doc/eventos.md) 
+* Começe entendendo [o que é](/doc/oquee.md)
+* Depois entenda [o que falta fazer](/doc/oquefalta.md)
+* Instale o pacote na sua kb Genexus [instalacao](/doc/instalacao.md)
+* Vamos para o [alomamae](/doc/alomamae.md)
+* Infelizmente tem coisas esquisitas para aprender como [eventos](/doc/eventos.md), por exemplo.
+
+## agora vamos ao nivel master
+Depois de feitas as devidas apresentações, vamos evoluir para um nivel superior, tratando carga de registros, estratégias de interface, estratégias de encriptação.
+
+*  [Estratégias](/doc/tecnicas/tec_estrategias.md)
+*  [Estratégias de carga de registros](/doc/tecnicas/tec_estrategiascarga.md)
+*  [Estratégias de interface](/doc/tecnicas/tec_estrategiasinterface.md)
+*  [Estratégias de controle de eventos](/doc/tecnicas/tec_estrategiaseventos.md)
