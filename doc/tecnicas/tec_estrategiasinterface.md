@@ -115,6 +115,8 @@ endsub
 ### menu
 Deve apresentar os módulos que a pessoa possui acesso.
 
+![menu](https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/tec_menu.PNG "")
+
 O exemplo é apenas orientativo, uma vez que os itens devem ser definidos com base em analise de segurança e privilégio do usuário.
 
 ```
@@ -160,6 +162,8 @@ endsub
 
 ### sidebar
 Deve apresentar os programas associados ao módulo selecionado pelo usuário.
+
+![sidebar](https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/tec_sidebar.PNG)
 
 A seguir um exemplo.
 
