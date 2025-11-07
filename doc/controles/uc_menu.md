@@ -68,15 +68,13 @@ O estilo do menu é definido no arquivo **uc_menu.css**, que contém uma série 
 
 A seguir apresentamos uma pequena explicação dessas classes:
 
-+------+--------+ 
 | classe | significado |
-+------+--------+ 
-|uc_menu-h |         menu horizontal|
-|uc_menu-hl|         alinhado a esquerda|
-|uc_menu-hc|         alinhado ao centro|
-|uc_menu-hr|         alinhado a direita|
-|uc_menu-v |         menu vertical|
-|uc_menu-vl|         alinhado a esquerda|
-|uc_menu-vc|         alinhado ao centro|
-|uc_menu-vr|         alinhado a direita|
-+------+--------+
+|uc_menu-h | menu horizontal|
+|uc_menu-hl| alinhado a esquerda|
+|uc_menu-hc| alinhado ao centro|
+|uc_menu-hr| alinhado a direita|
+|uc_menu-v | menu vertical|
+|uc_menu-vl| alinhado a esquerda|
+|uc_menu-vc| alinhado ao centro|
+|uc_menu-vr| alinhado a direita|
+
