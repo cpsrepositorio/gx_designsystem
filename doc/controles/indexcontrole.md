@@ -8,21 +8,23 @@ Na biblioteca UC temos alguns controles que poderão ser considerados para subst
 [tabela]: https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/uc_grupotabela.PNG
 [botao]: https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/uc_botaoicone.PNG
 
-#### Listas
-[alt text][lista]
+#### LISTA
 * [uc_lista]()
 * [uc_listapagging]()
 
-#### Tabelas
-[alt text][tabela]
-* [uc_tabela]()
-* [uc_grupotabelas]()
+#### TABELA
+* [uc_tabela](/doc/controles/uc_tabela.md)
+* [uc_grupotabelas](/doc/controles/uc_grupotabelas.md)
 
-#### Matriz
-* [uc_matriz]()
+#### MATRIZ
+* [uc_matriz](/doc/controles/uc_matriz.md)
 
-#### Botões
-[alt text][botao]
+#### BOTÃO
 * [uc_botao](/doc/controles/uc_botao.md)
 * [uc_botaoicone](/doc/controles/uc_botaoicone.md)
+
+#### MENU
+* [uc_menu](/doc/controles/uc_menu.md)
+* [uc_menuapp](/doc/controles/uc_menuapp.md)
+* [uc_sidebar](/doc/controles/uc_sidebar.md)
 

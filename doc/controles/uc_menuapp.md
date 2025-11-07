@@ -1,10 +1,7 @@
-# uc_menuapp
-Um menu app é um modelo de menu baseado em cards com certas caracteristicas como uma imagem ou icone à esquerda, titulo, subtitulo e uma toolbox com botões, para abrir o registro, por exemplo.
+# uc_menuapp | uc_appmenu
+Um controle do tipo **uc_menuapp** ou **uc_appmenu**, é um modelo de menu baseado em cards com certas caracteristicas como uma imagem ou icone à esquerda, titulo, subtitulo e uma toolbox com botões, para abrir o registro, por exemplo.
 
-| horizontal     | vertical |
-|----------------|----------|
-||
-
+Pode ser apresentado 
 
 ## uc_menuin
 Um controle **uc_menuapp** utiliza o mesmo SDT **uc_menuin** para adicionar itens ao menu.
