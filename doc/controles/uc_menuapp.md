@@ -1,16 +1,13 @@
-# uc_menu
-Um menu consiste em uma barra com opções posicionadas na horizontal, normalmente contendo uma imagem e um texto que representam uma certa ação de interesse do usuário. Pressupõe-se que ao clicar sobre a imagem ou texto, o menu causará o efeito de abrir alguma coisa.
-
-No pacote temos um objeto uc_menu que permite construir menus na horizontal ou vertical.
+# uc_menuapp
+Um menu app é um modelo de menu baseado em cards com certas caracteristicas como uma imagem ou icone à esquerda, titulo, subtitulo e uma toolbox com botões, para abrir o registro, por exemplo.
 
 | horizontal     | vertical |
 |----------------|----------|
-|![menu horizontal](https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/uc_menu.png)|![menu vertical](https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/uc_menuv.png)|
+||
 
 
 ## uc_menuin
-Um objeto **uc_menuin** deve ser utilizado para adicionar itens ao menu. Caso necessite de mais de um menu ao mesmo tempo na mesma interface, utilize um segundo **uc_menuin**.
-
+Um controle **uc_menuapp** utiliza o mesmo SDT **uc_menuin** para adicionar itens ao menu.
 Para incluir uma lista de itens no menu, uma segunda variável será necessária, do tipo **uc_menuin.item**, e uma ação **uc_menuin.itens.add(&menuitem)** para inserir. 
 
 
@@ -20,9 +17,7 @@ A seguir um exemplo de um menu horizontal.
 ```
 sub 'menu'
 	
-	&uc_menuin.id 			= 'MENU'
-	&uc_menuin.interface 	= 'interface'
-    &uc_menuin.classe       = 'uc_menu-h uc_menu-hc'
+	&uc_menuin.classe = 'uc_menu-h uc_menu-hc'
 	&uc_menuin.itens.Clear()
 
 	&menuitem = new()
