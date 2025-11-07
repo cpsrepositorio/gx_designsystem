@@ -6,10 +6,28 @@ Os recursos para produzir uma interface são:
 2) Webpanel: ponto de entrada de um programa.
 3) Webcomponent: recurso complementar para a execução de certo programa.
 
-
-Para produzir um bom sistema não basta uma tela bonita e rápida, outros elementos fundamentais são importantes.
+Para produzir um bom sistema não basta uma tela bonita e rápida, outros elementos fundamentais são importantes, e também uma estrutura que permita agrupar as coisas.
 
 Basicamente a interface deve apresentar o conteúdo que o usuário deseja, mas também, deve apresentar recursos de navegação que permita ao mesmo trocar de página, de acordo com seus privilégios.
+
+
+## estrutura da interface
+A estrutura não é muito simples, são diversas Sections estruturadas. A MainTable deve ser do tipo Flex com direction=row.
+
+![navbar](/doc/imagens/tec_estruturatela.PNG "")
+
+A seguir uma tabela com as Sections e TextBlocks necessários.
+
+| Seção        | Classe seção         | Objeto (*)                 |
+|--------------|----------------------|----------------------------|
+| secnavbar    | uc_w100              | navbar                     |
+| seclinha     | uc_flex-row uc_w100  | secnavegacao, secconteudo  |
+| secnavegacao | uc_flex-r uc_mt60    | secmenu, secsidebar        |
+| secconteudo  | uc_w100 uc_mt60      | contentplaceholder         |
+| secmenu      | uc_flex-c            | menu                       |
+| secsidebar   | uc_flex-c            | sidebar                    |
+
+(*) Textblock
 
 ## masterpage
 A master page deve ser criada com duas linhas (seções), sendo que na primeira deverá ser apresentada a navbar e na segunda uma linha com duas colunas, esquerda para os menus de navegação e direita para conteúdo.
