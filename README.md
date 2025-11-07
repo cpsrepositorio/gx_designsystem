@@ -1,4 +1,4 @@
-# gx_usercontrol
+# gx_designsystem
 Com um olhar excessivamente simplista, a construção de uma interface em Genexus segue um ritual no qual em um editor se incluiem controles que são configurados em uma janela de propriedades. O conteúdo, as ações, formas, são, de certa maneira, limitados pelas caracteristicas do proprio controle. 
 
 
@@ -30,6 +30,6 @@ Neste documento voce encontrara informações para construir interfaces interess
 
 ## como começar?
 
-* Começe entendendo o que é: [uc_tabela](/oquee.md)
-* Depois entenda o que falta fazer: [uc_tabela](/oquefalta.md)
-* 
+* Começe entendendo ![o que é](oquee.md)
+* Depois entenda ![o que falta fazer](oquefalta.md)
+* Como instalo o pacote e começo a utilizar ![instalacao](instalacao.md)
