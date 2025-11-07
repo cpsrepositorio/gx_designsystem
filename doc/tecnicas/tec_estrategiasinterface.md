@@ -14,7 +14,7 @@ Basicamente a interface deve apresentar o conteúdo que o usuário deseja, mas t
 ## estrutura da interface
 A estrutura não é muito simples, são diversas Sections estruturadas. A MainTable deve ser do tipo Flex com direction=row.
 
-![](/../imagens/tec_estruturatela.PNG)
+![estrutura da tela](/../imagens/tec_estruturatela.PNG)
 
 A seguir uma tabela com as Sections e TextBlocks necessários.
 
