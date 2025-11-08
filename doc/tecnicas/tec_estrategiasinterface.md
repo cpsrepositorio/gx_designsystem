@@ -1,14 +1,14 @@
 # estratégia de interface
 
-Os recursos para produzir uma interface são:
+Temos tres objetos para construir uma interface:
 
-1) Master page: definem o formato e a navegação do sistema como um todo, padroniza e determina a identidade visual.
-2) Webpanel: ponto de entrada de um programa.
-3) Webcomponent: recurso complementar para a execução de certo programa.
+* **Master page** definem o formato e a navegação do sistema como um todo, padroniza e determina a identidade visual.
+* **Webpanel** ponto de entrada de um programa.
+* **Webcomponent** recurso complementar para a execução de certo programa.
 
-Para produzir um bom sistema não basta uma tela bonita e rápida, outros elementos fundamentais são importantes, e também uma estrutura que permita agrupar as coisas.
+Utilizaremos a **Master page** para definir a navegação, com o navbar na parte superior, menu e lista de programas na parte esquerda. 
 
-Basicamente a interface deve apresentar o conteúdo que o usuário deseja, mas também, deve apresentar recursos de navegação que permita ao mesmo trocar de página, de acordo com seus privilégios.
+O **Webpanel** será livre para que o desenvolvedor monte a interface para o usuário. E os **Webcomponents** poderão ser utilizados para complementar a operação dos webpanels.
 
 
 ## estrutura da interface
@@ -29,6 +29,8 @@ A seguir uma tabela com as Sections e TextBlocks necessários.
 
 (*) Textblock
 
+No objeto contentplaceholder teremos a apresentação do **Webpanel**.
+
 ## masterpage
 A master page deve ser criada com duas linhas (seções), sendo que na primeira deverá ser apresentada a navbar e na segunda uma linha com duas colunas, esquerda para os menus de navegação e direita para conteúdo.
 
@@ -36,7 +38,8 @@ A master page deve ser criada com duas linhas (seções), sendo que na primeira 
 
 A maintable deve ser definida como Flex Layout do tipo Column.
 
-Para que funcione adequadamente, a masterpage deve, além das seções apresentadas,apresentar o navbar e menu padrão.
+Para que funcio
+ne adequadamente, a masterpage deve, além das seções apresentadas,apresentar o navbar e menu padrão.
 
 ```
 Event Start
