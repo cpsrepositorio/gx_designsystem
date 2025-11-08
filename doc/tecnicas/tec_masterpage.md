@@ -29,16 +29,19 @@ Event Start
 	do 'ui_sidebar'
 Endevent
 
+// 1
 sub 'ui_menu'
 	&uc_menuin 	    = navMenuGET(&Pgmname.ToUpper().Trim())
 	menu.Caption  	= UC.uc_menu(&uc_menuIN.ToJson())	
 endsub
 
+// 2
 sub 'ui_navbar'
 	&uc_navbarin    = navGET(&Pgmname.ToUpper().Trim())
 	navbar.Caption  = UC.uc_navbar(&uc_navbarin.ToJson())
 endsub
 
+// 3
 sub 'ui_sidebar'
 	sidebar.Caption = ''
 	&modulo = &websession.get('MODULO')
@@ -50,6 +53,7 @@ sub 'ui_sidebar'
 	endif
 endsub
 
+// 4
 Event GlobalEvents.MPHOME(&uc_btclickparms)
 	do 'ui_navbar'
 	do 'ui_sidebar'
@@ -58,3 +62,9 @@ Event GlobalEvents.MPHOME(&uc_btclickparms)
 	endif
 EndEvent
 ```
+(1) Temos a chamada a um procedimento que cria o menu lateral **navMenuGET**
+(2) Temos a chamada ao navbar que cria a imagem na parte superior da interface
+(3) Temos a chamada ao procedimento que cria o sidebar, **sidebarGET**, mas somente se existe algum módulo previamente selecionado que se encontra na &websession.
+(4) Temos o tratamento de eventos, sendo que neste caso, já aciona a reconstrução do navbar (para se incluir o nome do módulo) e do sidebar para se recriar os itens do sidebar que foram perdidos no refresh. Se o evento foi oriundo de NAV se recarrega a página home, e aqui tem uma pegadinha, porque utilizamos o nome NAV para referir aos objetos do menu.
+
+
