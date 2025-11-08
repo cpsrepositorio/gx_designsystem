@@ -48,6 +48,13 @@ endevent
 ```
 Na rotina **modulo** o programa obtém os dados do módulo selecionado (armazenado na &websession) e apresenta um card com as informações.
 
+![card](/doc/imagens/tec_homecard.png)
+
+Nesse cartão pode ser adicionado imagem e também sua apresentação pode ocupar toda largura da tela.
+
+![card](/doc/imagens/tec_homecardlong.png)
+
+
 ## event BootstrapClick1.Click	
 Esse é o evento importante no home, pois intercepta todos os clicks que estão acontecendo na interface. E uma vez que a home sempre vai direcionar o controle da operação para a masterpage, o evento global **GlobalEvents.MPHOME(&uc_btclickparms)** é acionado.
 
