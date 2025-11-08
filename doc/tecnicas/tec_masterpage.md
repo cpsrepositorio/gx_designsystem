@@ -125,5 +125,5 @@ Event GlobalEvents.MPHOME(&uc_btclickparms)
 	endif
 EndEvent
 ```
-Neste exemplo, somente ocorre um tratamento neste modelo, pois se é um do tipo 'NAV', a página home é novamente recarregada.
+Neste exemplo, somente ocorre um tratamento neste modelo, pois se é um do tipo 'NAV', a página [home](/doc/tecnicas/tec_home.md) é novamente recarregada.
 
