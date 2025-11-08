@@ -86,7 +86,7 @@ order ModuloSeq
 endfor
 ```
 > [!WARNING]
-> Atenção! É necessário limitar o acesso aos perfis que não possuem privilégios aos módulos, que não foi programado neste exemplo.
+> É necessário limitar o acesso aos perfis que não possuem privilégios aos módulos, que não foi programado neste exemplo.
 
 Este programa devolve um objeto &uc_menuin que é apresentado na masterpage.
 
@@ -112,7 +112,7 @@ where HelpActive
 endfor
 ```
 > [!WARNING]
-> Atenção! É necessário limitar o acesso aos perfis que não possuem privilégios aos programas, que não foi programado neste exemplo.
+> É necessário limitar o acesso aos perfis que não possuem privilégios aos programas, que não foi programado neste exemplo.
 
 ## Evento
 A masterpage não é um objeto que admite eventos com o controle BootstrapClick,  portanto, recebe o evento de outro WebPanel que ao perceber que a ação é da masterpage, retorna o controle a esta por meio do **GlobalEvents.MPHOME(&uc_btclickparms)**. Os parametros do evento são recebidos e tratados.
