@@ -15,6 +15,7 @@ O **Webpanel** será livre para que o desenvolvedor monte a interface para o usu
 A estrutura não é muito simples, são diversas Sections estruturadas. A MainTable deve ser do tipo Flex com direction=row.
 
 ![estrutura da tela](/doc/imagens/tec_estruturatela.png)
+![estrutura da tela](/doc/imagens/tec_estrutura.png)
 
 A seguir uma tabela com as Sections e TextBlocks necessários.
 
