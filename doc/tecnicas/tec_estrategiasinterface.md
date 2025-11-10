@@ -14,7 +14,6 @@ O **Webpanel** será livre para que o desenvolvedor monte a interface para o usu
 ## estrutura da interface
 A estrutura não é muito simples, são diversas Sections estruturadas. A MainTable deve ser do tipo Flex com direction=row.
 
-![estrutura da tela](/doc/imagens/tec_estruturatela.png)
 ![estrutura da tela](/doc/imagens/tec_estrutura.png)
 
 A seguir uma tabela com as Sections e TextBlocks necessários.
@@ -32,11 +31,13 @@ A seguir uma tabela com as Sections e TextBlocks necessários.
 
 No objeto contentplaceholder teremos a apresentação do **Webpanel**.
 
+A estrutura na interface Abstract Editor não fica tão clara.
+![estrutura da tela](/doc/imagens/tec_estruturatela.png)
 
 ## masterpage
 A master page deve ser criada com duas linhas (seções), sendo que na primeira deverá ser apresentada a navbar e na segunda uma linha com duas colunas, esquerda para os menus de navegação e direita para conteúdo.
 
-![navbar](https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/tec_navbar.PNG)
+![navbar](/doc/imagens/tec_navbar.png)
 
 A maintable deve ser definida como Flex Layout do tipo Column.
 
@@ -138,7 +139,7 @@ endsub
 ### menu
 Deve apresentar os módulos que a pessoa possui acesso.
 
-![menu](https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/tec_menu.PNG "")
+![menu](/doc/imagens/tec_menu.png "")
 
 O exemplo é apenas orientativo, uma vez que os itens devem ser definidos com base em analise de segurança e privilégio do usuário.
 
@@ -186,7 +187,7 @@ endsub
 ### sidebar
 Deve apresentar os programas associados ao módulo selecionado pelo usuário.
 
-![sidebar](https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/tec_sidebar.PNG)
+![sidebar](/doc/imagens/tec_sidebar.png)
 
 A seguir um exemplo.
 
