@@ -67,5 +67,8 @@ event BootstrapClick1.Click
 	endif
 endevent
 ```
+A operação **navEvent** deve ser inserida em todos os Webpanels do sistema, pois trata dos eventos que acontecem na MasterPage, ou seja, nos controles de navegação do sistema.
+
+A parte referente ao if &isok é acionada quando o click ocorreu em controle da masterpage, portanto, um **GlobalEvents.MPHOME(&uc_btclickparms)** transfere o controle para o objeto MasterPage.
 
 O evento é tratado na própria [master page](/doc/tecnicas/tec_masterpage.md) 
