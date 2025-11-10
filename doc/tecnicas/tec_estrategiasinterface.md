@@ -1,10 +1,10 @@
 # estratégia de interface
 
-Temos tres objetos para construir uma interface:
+Temos três objetos para construir uma interface:
 
-* **Master page** definem o formato e a navegação do sistema como um todo, padroniza e determina a identidade visual.
-* **Webpanel** ponto de entrada de um programa.
-* **Webcomponent** recurso complementar para a execução de certo programa.
+* **Master page** definem o formato e a navegação do sistema como um todo. Este objeto forma um entorno sobre o Webpanel, padronizando e determinando sua identidade visual.
+* **Webpanel** ponto de entrada de um programa, sendo a interface do usuário em si, com o conteúdo referente ao processo que resolve.
+* **Webcomponent** recurso complementar para a execução de certo programa, que inclui funcionalidades a um webpanel.
 
 Utilizaremos a **Master page** para definir a navegação, com o navbar na parte superior, menu e lista de programas na parte esquerda. 
 
@@ -30,6 +30,7 @@ A seguir uma tabela com as Sections e TextBlocks necessários.
 (*) Textblock
 
 No objeto contentplaceholder teremos a apresentação do **Webpanel**.
+
 
 ## masterpage
 A master page deve ser criada com duas linhas (seções), sendo que na primeira deverá ser apresentada a navbar e na segunda uma linha com duas colunas, esquerda para os menus de navegação e direita para conteúdo.
