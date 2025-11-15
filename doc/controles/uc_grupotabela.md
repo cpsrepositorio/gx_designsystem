@@ -48,7 +48,7 @@ Sub 'tabela'
 
   &widths.clear()
   &widths.add("10%")
-  &widths.add("55%") 
+  &widths.add("80%") 
   &widths.add("10%") 
   &grupo.widths  =  &widths.tojson()
 		
@@ -76,10 +76,22 @@ Grupo representa um titulo na parte superior e uma tabela completa. Um conjunto 
 Cada **&grupo** possui três coleções com a finalidade de definir a estrutura e o conteúdo da tabela.
 
 1. **&grupo.titulos**, pode ser criado por meio de uma variável coleção do tipo Varchar(40), por exemplo, e add() para adicionar cada coluna à tabela.
-
-2. **&grupo.widths**, representa o tamanho (width) de cada coluna na tabela, cujo total não pode ser maior que 100%. Por questões de responsividade, é melhor utilizar % ao invés de pixel. Um detalhe importante deve ser levado em conta, porque caso se associe um evento a cada linha de conteúdo, será necessário definir a largura do toolbar, adicionando, neste caso, um item a mais que o titulo.
-
-3. **&grupo.linhas**, compreende o conteúdo a ser inserido em cada linha da tabela em construção.
+```
+  &widths.clear()
+  &widths.add("10%")
+  &widths.add("80%") 
+  &widths.add("10%") 
+  &grupo.widths  =  &widths.tojson()
+```
+2. **&grupo.widths**, representa o tamanho (width) de cada coluna na tabela, cujo total não pode ser maior que 100%. Por questões de responsividade, é melhor utilizar % ao invés de pixel. Um detalhe importante deve ser levado em conta, porque caso se associe um evento a cada linha de conteúdo, será necessário definir a largura do toolbar, adicionando, neste caso, um item a mais que o titulo. Observe no exemplo que existem dois titulos e três larguras definidas. Utilize uma coleção de Varchar(10) para definir as larguras.
+```
+  &widths.clear()
+  &widths.add("10%")
+  &widths.add("80%") 
+  &widths.add("10%") 
+  &grupo.widths  =  &widths.tojson()
+```
+3. **&grupo.linhas**, compreende o conteúdo a ser inserido em cada linha da tabela em construção. 
 
 
 
