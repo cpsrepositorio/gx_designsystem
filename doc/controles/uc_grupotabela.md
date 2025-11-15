@@ -40,7 +40,7 @@ Primeiramente deve-se criar a coleção com os conteúdos de cada célula.
    &linhas.add('10')
    ...
 ```
-Em seguida, opcionalmente, o evento associado a linha. Meio estranho, mas bastante otimizado, pois se define o parâmetro que permite identificar em que linha ocorreu a ação, por meio da **&linha.evento = 'id'+&n.ToString().Trim()**, e em seguida os botões de evento com **&linha.toolbar.open = true**. Os botões do toolbar utilizam os mesmos conceitos definidos no controle **[uc_botaoicone](uc_botaoicone.md)**.
+Em seguida, opcionalmente, o evento associado a linha. Meio estranho, mas bastante otimizado, pois se define o parâmetro que permite identificar em que linha ocorreu a ação, por meio da **&linha.evento = 'id'+&n.ToString().Trim()**, e em seguida os botões de evento com **&linha.toolbar.open = true**. Os botões do toolbar podem ser três, até aqui, OPEN, UPDATE e DELETE, mas poderão ser expandidos conforme necessidade.
 ```
    ...
    &linha.evento = 'id'+&n.ToString().Trim()
