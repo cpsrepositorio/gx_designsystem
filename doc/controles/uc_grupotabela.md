@@ -17,6 +17,7 @@ A primeira cria uma barra e a segunda um botão nesta barra.
 7.	Inclua os arquivos de estilo, com a programação de **form.HeaderRawHTML = UC.uc_cssGET_bot523()**
 8.	Abaixo um exemplo
 
+
 ```
 Event Start
  /* 1 */
@@ -39,44 +40,52 @@ Sub 'tabela'
 	
  for &i = 1 to 2
   &grupo = new()
-  &grupo.titulo  = 'SEMESTRE '+&i.ToString()
+  &grupo.titulo  = 'Item '+&i.ToString()
   &titulos.clear()
-  &titulos.add("SIGLA")
-  &titulos.add("DISCIPLINA")
-  &titulos.add("TIPO")
-  &titulos.add("CH")
-  &titulos.add("EXT")
-  &grupo.titulos = &titulos
+  &titulos.add("id")
+  &titulos.add("titulo")
+  &grupo.titulos = &titulos.tojson()
 
   &widths.clear()
   &widths.add("10%")
   &widths.add("55%") 
-  &widths.add("15%") 
-  &widths.add("5%") 
-  &widths.add("5%") 
   &widths.add("10%") 
-  &grupo.widths  =  &widths
+  &grupo.widths  =  &widths.tojson()
 		
-  for &n = 1 to 2
-   &linha = new()
-   if &n=1
-    &linha.linha = 	\'\["#D'+&n.ToString().Trim()+'","Nome da DI","obrigatoria","10","0"\]\'
-   else
-    &linha.linha = 	\'\["D'+&n.ToString().Trim()+'","Nome da DI","obrigatoria","10","0"\]\'
-   endif
+  for &n = 1 to 10
+   &linhas.clear()
+   &linhas.add('#'+&n.ToString().Trim())
+   &linhas.add('Nome')
+   &linhas.add('10')
 
-   /* toolbar */
    &linha.evento = 'id'+&n.ToString().Trim()
    &linha.toolbar.open 	= true
    &linha.toolbar.update = true
    &linha.toolbar.delete = true
-   &grupo.linhas.Add(&linha)
+   &grupo.linhas = &linhas.tojson()
   endfor
 
   &uc_grupotabelaIN.grupos.Add(&grupo)
  endfor
 EndSub
 ```
+
+## Grupo
+Grupo representa um titulo na parte superior e uma tabela completa. Um conjunto de grupos fornece o aspecto de várias tabelas completas agrupadas, com a separação de um espaço.
+
+Cada **&grupo** possui três coleções com a finalidade de definir a estrutura e o conteúdo da tabela.
+
+1. **&grupo.titulos**, pode ser criado por meio de uma variável coleção do tipo Varchar(40), por exemplo, e add() para adicionar cada coluna à tabela.
+
+2. **&grupo.widths**, representa o tamanho (width) de cada coluna na tabela, cujo total não pode ser maior que 100%. Por questões de responsividade, é melhor utilizar % ao invés de pixel. Um detalhe importante deve ser levado em conta, porque caso se associe um evento a cada linha de conteúdo, será necessário definir a largura do toolbar, adicionando, neste caso, um item a mais que o titulo.
+
+3. **&grupo.linhas**, compreende o conteúdo a ser inserido em cada linha da tabela em construção.
+
+
+
+
+
+
 A variável **&grupo** é do tipo **uc_grupotabelaIN.grupo**, e **&linha** do tipo **uc_grupotabelaIN.grupo.linha**. A primeira representa uma tabela inteira, e a segunda as linhas desta tabela.
 
 **&grupo.titulos** representa um conjunto de TITULO de cabeçalho. Nesse exemplo, **'["SIGLA","DISCIPLINA","TIPO","CH","EXT"]'**, forma uma tabela com 5 colunas.
