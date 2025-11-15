@@ -41,6 +41,7 @@ Sub 'tabela'
  for &i = 1 to 2
   &grupo = new()
   &grupo.titulo  = 'Item '+&i.ToString()
+
   &titulos.clear()
   &titulos.add("id")
   &titulos.add("titulo")
@@ -77,11 +78,10 @@ Cada **&grupo** possui três coleções com a finalidade de definir a estrutura 
 
 1. **&grupo.titulos**, pode ser criado por meio de uma variável coleção do tipo Varchar(40), por exemplo, e add() para adicionar cada coluna à tabela.
 ```
-  &widths.clear()
-  &widths.add("10%")
-  &widths.add("80%") 
-  &widths.add("10%") 
-  &grupo.widths  =  &widths.tojson()
+  &titulos.clear()
+  &titulos.add("id")
+  &titulos.add("titulo")
+  &grupo.titulos = &titulos.tojson()
 ```
 2. **&grupo.widths**, representa o tamanho (width) de cada coluna na tabela, cujo total não pode ser maior que 100%. Por questões de responsividade, é melhor utilizar % ao invés de pixel. Um detalhe importante deve ser levado em conta, porque caso se associe um evento a cada linha de conteúdo, será necessário definir a largura do toolbar, adicionando, neste caso, um item a mais que o titulo. Observe no exemplo que existem dois titulos e três larguras definidas. Utilize uma coleção de Varchar(10) para definir as larguras.
 ```
@@ -91,10 +91,29 @@ Cada **&grupo** possui três coleções com a finalidade de definir a estrutura 
   &widths.add("10%") 
   &grupo.widths  =  &widths.tojson()
 ```
-3. **&grupo.linhas**, compreende o conteúdo a ser inserido em cada linha da tabela em construção. 
+3. **&grupo.linhas**, compreende o conteúdo a ser inserido em cada linha da tabela em construção. Como os conteúdos poderão ser obtidos de tabelas, talvez seja necessário um for each, para percorrer cada linha a ser inserida. Dessa forma esta operação será um pouco mais complexa que as anteriores.
 
+Primeiramente deve-se criar a coleção com os conteúdos de cada célula.
 
+```
+  for &n = 1 to 10
+   &linhas.clear()
+   &linhas.add('#'+&n.ToString().Trim())
+   &linhas.add('Nome')
+   &linhas.add('10')
+   ...
+```
+Em seguida, opcionalmente, o evento associado a linha. Meio estranho, mas bastante otimizado, pois se define o parâmetro que permite identificar em que linha ocorreu a ação, por meio da **&linha.evento = 'id'+&n.ToString().Trim()**, e em seguida os botões de evento com **&linha.toolbar.open = true**. Os botões do toolbar utilizam os mesmos conceitos definidos no controle **[uc_botaoicone](uc_botaoicone.md)**.
+```
+   ...
+   &linha.evento = 'id'+&n.ToString().Trim()
+   &linha.toolbar.open 	 = true
+   &linha.toolbar.update = true
+   &linha.toolbar.delete = true
 
+   &grupo.linhas = &linhas.tojson()
+  endfor
+```
 
 
 
