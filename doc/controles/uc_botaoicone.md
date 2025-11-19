@@ -1,18 +1,22 @@
 # uc_botaoicone
 ![alt text](https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/uc_botaoicone.PNG "Icone")
 
-Barra de botões são elementos importantes para permitir ações por parte dos usuários. Por meio do pacote UC, vários tipos distintos de barras são possíveis e facilmente construídas. Neste caso, temos um controle que constrói uma barra de botões baseadas em icones que representam certas ações para os usuários.
+Barra de botões são elementos que representam ações que podem ser acionadas pelos usuários.
 
-Este controle busca um cenário um pouco mais simples e direto, eliminando o máximo de definições possíveis, buscando um cenário padronizado. Por exemplo, um icone que representa uma lata de lixo, gera um evento APAGAR automaticamente, não sendo necessário ao desenvolvedor incluir detalhes.
+O pacote apresenta vários tipos distintos de barras de botões, sendo simples de serem construídas. 
+
+A barra **uc_botaoicone** objetiva criar uma linha com diversas imagens que representam ações, com características de um botão, sendo um modelo bem mais simples de programação, pois tudo se limita a definir uma palavra que representa o icone e um evento associado.
+
+Por exemplo, um icone que representa uma lata de lixo, gera um evento APAGAR automaticamente, não sendo necessário ao desenvolvedor incluir detalhes.
 
 ### Criando uma barra de botões
-Um botão neste controle é formado por uma **palavra**, seguido de um caracter **:** e o **evento** que deverá ser acionado quando ocorrer o click no botão.
+Um botão neste controle é formado por uma **palavra**, seguido de um caracter **:** e o **evento** que deverá ser acionado quando ocorrer o click no botão. 
 
 A seguir um exemplo.
 
 ```
-	&uc_botaoiconeIN.id 			= 'id'
-	&uc_botaoiconeIN.interface 		= 'interface'	
+	&uc_botaoiconeIN.id 			= 'BOTAO'
+	&uc_botaoiconeIN.interface 		= 'NOME_DA_INTERFACE'	
 	&uc_botaoiconeIN.classebar 		= 'uc_flex-r uc_flex-nowrap uc_mt30'
 	&uc_botaoiconeIN.classebotao  	= 'uc_btspace uc_bt-icon uc_pointer'
 	
@@ -29,13 +33,15 @@ A seguir um exemplo.
 	grid.Caption = UC.uc_botaoicone(&uc_botaoiconeIN.ToJson())
 
 ```
-Para produzir a lista de botões, é definida uma variável simples, **&botoes** que é uma collection de Varchar(40).
+Para produzir a lista de botões, é definida uma variável simples, **&botoes** que é uma collection de Varchar(40), adicionando (add) a lista de botões que se deseja incluir. 
+
+Os numeros que aparecem, por exemplo, PLAY:5, é o ID do registro que será enviado ao controle de eventos para identificar informação adicional para processamento.
 
 Creio que a parte mais importante é a maneira que escrevemos o conteúdo de um botão, pois a palavra APAGAR, do exemplo abaixo, não foi escrita de forma aleatória, pois desejamos de fato que um evento chamado APAGAR seja gerado e uma imagem que represente a ação apagar represente o botão. No exemplo a seguir, um :4 indica que o registro a ser apagado é o de numero quatro (4), o : é apenas o separador.
 
 ```&botoes.add('APAGAR:4')```
 
-##### Eventos padrões
+##### Botões padrões
 Os eventos padrões definidos no controle são apresentados a seguir
 
 ![alt text](https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/uc_botaoicone1.PNG "Icone")
@@ -78,10 +84,14 @@ Os eventos padrões definidos no controle são apresentados a seguir
 |POWER|Ligar|`<i class="fas fa-power-off"></i>`|
 
 
+### Interceptação de eventos
 
+Os eventos gerados pela barra de botão são associados a cada botão individual, sendo formado por uma string separada por dois pontos (:) no seguinte formato:
 
+	&uc_botaoiconeIN.interface : &uc_botaoiconeIN.id : PLAY : 5
+	
+No exemplo apresentado a sequencia de itens nesse evento seria:
 
+	NOME_DA_INTERFACE:BOTAO:PLAY:5
 
-
-
-
+Para maiores informações a respeito desta operação veja [Eventos](/doc/eventos.md)
