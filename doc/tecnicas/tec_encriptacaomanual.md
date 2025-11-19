@@ -1,4 +1,4 @@
-# ENCRIPTAÇÃO MANUAL
+# Encriptação de parametros Manual
 
 A encriptação manual é necessária em algumas circunstâncias e deve ser utilizada quando a encriptação de parametros estiver ligada.
 
