@@ -1,7 +1,6 @@
 # uc_botao
 É um controle que apresenta um formato e comportamento que leva o usuário a interpretar que se trata de uma ação a ser executada pelo sistema.
 
-
 ## Botão simples
 Um botão simples pode ser obtido pela definição das classes Titulo, Icone, Evento. Sem o fornecimento de nenhuma classe ele adotará a classe uc_btn.
 
@@ -116,6 +115,12 @@ O controle permite que links tenham o mesmo formato de um botão tradicional, in
 
 	grid.Caption = UC.uc_botao(&uc_botaoin.ToJson())
 ```
+
+## Eventos
+O controle de eventos é o mesmo que nos demais controles, com a criação da string com Interface:Controle:Acao:Parametro.
+
+Para maiores informações a respeito desta operação veja [Eventos](/eventos.md)
+
 
 ## Classes
 Os botões são definidos nas classes do arquivo **uc_button.css**
