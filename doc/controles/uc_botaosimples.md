@@ -1,12 +1,8 @@
 # uc_botaosimples
 
-Uma variação mais simplificada para criação de uma barra de botões pode ser obtida por meio do controle uc_botaosimples.
+Uma variação mais simplificada para criação de uma barra de botões pode ser obtida por meio do controle **uc_botaosimples**.
 
-Neste ocorre que a informação das propriedades do botao foram simplificadas para apenas uma única propriedade chamada **info**, que representa uma coleção de Varchar(40).
-
-	&botao.info = &info.ToJson()
-
-Esta coleção tem uma sequencia correta para criar a estrutura do botao
+Neste ocorre que a informação das propriedades do botão foram simplificadas para serem armazenadas em uma única propriedade **info**, que representa uma coleção de Varchar(40). Cada propriedade do botão deve ser inserida nessa coleção, na ordem correta.
 
 	&info = new()
 	&info.add('ABRIR:1') 				
@@ -18,6 +14,11 @@ Esta coleção tem uma sequencia correta para criar a estrutura do botao
 * **<i class="fas fa-eye"></i>** Em seguida o icone que será apresentado no botão. Em caso de não necessidade, deve ser inserir um texto vazio ''. Os icones são obtidos do FontAwesome versão 5.34
 * **Abrir** Em seguida o texto que formará o titulo do botão, e caso não seja necessário, informar um texto vazio ''
 * **Abrir o registro** Finalmente o Tooltip para informar ao usuário o que faz o botão.
+
+Em seguida, na propriedade **&botao.info** inclui-se a coleção, em formato JSON.
+
+	&botao.info = &info.ToJson()
+
 
 ## Botões redondos
 Nesse exemplo o controle é utilizado para produzir uma barra com dois botões arredondados. Isso é obtido devido a classe **classeicon   = 'uc_bt-icon'**
