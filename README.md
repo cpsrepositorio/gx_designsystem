@@ -1,4 +1,6 @@
 # gx_designsystem
+O **gx_designsystem** é um recurso para construção de interfaces Web que pode ser utilizado em Kbs Genexus (18). O pacote inclui um Package, Classes CSS, SDTs, documentação técnica e exemplos.
+
 Com um olhar excessivamente simplista, a construção de uma interface em Genexus segue um ritual de inserir controles em um editor estranho, e em seguida configurar suas propriedades. O conteúdo, as ações, formas, são, de certa maneira, limitados pelas caracteristicas do proprio controle.
 
 O editor é meio esquisito porque é conceitual e não reflete exatamente como será a interface final, é usado mais ou menos para definir os controles que precisamos para montar nossa interface e só isso. É chamado de Abstract Editor, portanto, precisamos abstrair bastante para imaginar como será a interface. Alguns controles nesse editor, como Grid, são até mesmo visiveis, mas nem todos tem um comportamento mais visual.
