@@ -1,28 +1,122 @@
 # uc_botao
-Os botões são elementos em HTML criados a partir do controle **uc.uc_botao(&uc_botaoIN.ToJson())**.
-Portanto é necessário ter uma variável **&uc_botaoIN** para carregar.
+É um controle que apresenta um formato e comportamento que leva o usuário a interpretar que se trata de uma ação a ser executada pelo sistema.
 
-A estrutura possui um cabeçalho simples (id e interface) e uma coleção de botões do tipo uc_botaoIN.botao, que formarão a barra de botões do controle.
-É possível criar dois tipos de variáveis a partir deste tipo: uc_botaoIN e uc_botaoIN.botao, e nestas definir o comportamento e o formato dos botões. Vamos testar. A primeira cria uma barra e a segunda um botão nesta barra.
-1.	Criar um webpanel, com o nome de ex_botao
-2.	Criar duas variáveis do tipo uc_botaoIN, uma chamada barra e outra botão, veja os tipos exatos a seguir.
-3.	Adicione na interface um textblock, alterando a propriedade ControlName e Caption para a palavra html e Format para HTML
-4.	Crie um evento Start
-5.	Inclua os arquivos de estilo, com a programação de form.HeaderRawHTML = UC.uc_cssGET_bot523()
-6.	E a definição da barra e do botão, conforme o exemplo abaixo:	
-Event Start
-	/* 1 */
-	form.HeaderRawHTML = UC.uc_cssGET_bot523()
-	/* 2 */
-	&barra.id = 'BAR1'
-	&barra.interface = &Pgmname.Trim()
-	/* 3 */
-	&botao.titulo = 'Teste'
-	&barra.botoes.Add(&botao)
-	/* 4 */
-	html.Caption = uc.uc_botao(&barra.ToJson())
-Endevent
 
-Ao executar o exemplo será possível visualizar o botão criado.
+## Botão simples
+Um botão simples pode ser obtido pela definição das classes Titulo, Icone, Evento. Sem o fornecimento de nenhuma classe ele adotará a classe uc_btn.
 
+```
+	&uc_botaoin.id 		= 'id'
+	&uc_botaoin.interface 	= 'interface'	
+
+	&botao = new()
+	&botao.evento = 'ABRIR:1'
+	&botao.icone = '<i class="fas fa-eye"></i>'
+	&botao.titulo = 'Abrir'
+	&botao.tooltip = 'Abrir o registro'
+	&uc_botaoin.botoes.Add(&botao)
+	
+	grid.Caption = UC.uc_botao(&uc_botaoin.ToJson())
+```
+
+## Botão colorido
+Os botões podem também ser coloridos.
+
+```
+	&uc_botaoin.id 		= 'id'
+	&uc_botaoin.interface 	= 'interface'	
+
+	&botao = new()
+	&botao.evento = 'ABRIR:1'
+	&botao.classe = 'uc_btgreen'
+	&botao.titulo = 'Green'
+	&botao.tooltip = 'Abrir o registro'
+	&uc_botaoin.botoes.Add(&botao)
+	
+	&botao = new()
+	&botao.evento = 'ABRIR:2'
+	&botao.classe = 'uc_btred'
+	&botao.titulo = 'Red'
+	&botao.tooltip = 'Abrir o registro'
+	&uc_botaoin.botoes.Add(&botao)
+	
+	&botao = new()
+	&botao.evento = 'ABRIR:3'
+	&botao.classe = 'uc_btblue'
+	&botao.titulo = 'Blue'
+	&botao.tooltip = 'Abrir o registro'
+	&uc_botaoin.botoes.Add(&botao)
+	
+	&botao = new()
+	&botao.evento = 'ABRIR:4'
+	&botao.classe = 'uc_btorange'
+	&botao.titulo = 'Orange'
+	&botao.tooltip = 'Abrir o registro'
+	&uc_botaoin.botoes.Add(&botao)
+	
+	&botao = new()
+	&botao.evento = 'ABRIR:5'
+	&botao.classe = 'uc_btgray'
+	&botao.titulo = 'Gray'
+	&botao.tooltip = 'Abrir o registro'
+	&uc_botaoin.botoes.Add(&botao)
+	
+	&botao = new()
+	&botao.evento = 'ABRIR:6'
+	&botao.classe = 'uc_btblack'
+	&botao.titulo = 'Black'
+	&botao.tooltip = 'Abrir o registro'
+	&uc_botaoin.botoes.Add(&botao)
+	
+	grid.Caption = UC.uc_botao(&uc_botaoin.ToJson())
+```
+
+## Icones
+O controle permite que se crie botões que sejam simples e apenas representados por um ícone.  
+```
+	&uc_botaoin.id 		= 'id'
+	&uc_botaoin.interface 	= 'interface'	
+
+	&botao = new()
+	&botao.classe = 'uc_bt-icon'
+	&botao.evento = 'ABRIR:7'
+	&botao.icone = '<i class="fas fa-paperclip"></i>'
+	&uc_botaoin.botoes.Add(&botao)
+	
+	&botao = new()
+	&botao.classe = 'uc_bt-icon'
+	&botao.evento = 'EDITAR:1'
+	&botao.icone = '<i class="fas fa-pen"></i>'
+	&uc_botaoin.botoes.Add(&botao)
+	
+	&botao = new()
+	&botao.classe = 'uc_bt-icon'
+	&botao.evento = 'APAGAR:1'
+	&botao.icone = '<i class="fas fa-trash"></i>'
+	&uc_botaoin.botoes.Add(&botao)
+
+	grid.Caption = UC.uc_botao(&uc_botaoin.ToJson())
+```
+Temos uma forma mais simples de fazer isso com o controle [uc_botaoicone](/doc/controles/uc_botaoicone.md)
+
+## Links
+O controle permite que links tenham o mesmo formato de um botão tradicional, inclusive, com o linktarget indicando onde o navegador deverá executar a ação.
+
+```
+	&uc_botaoin.id 		= 'id'
+	&uc_botaoin.interface 	= 'interface'	
+
+	&botao = new()
+	&botao.icone = '<i class="fas fa-eye"></i>'
+ 	&botao.link = 'https://google.com'
+	&botao.linktarget = '_blank'
+	&botao.titulo = 'Google'
+	&botao.tooltip = 'Abrir o registro'
+	&uc_botaoin.botoes.Add(&botao)
+
+	grid.Caption = UC.uc_botao(&uc_botaoin.ToJson())
+```
+
+## Classes
+Os botões são definidos nas classes do arquivo **uc_button.css**
 
