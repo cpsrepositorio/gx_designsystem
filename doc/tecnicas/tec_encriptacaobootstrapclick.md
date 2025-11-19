@@ -1,4 +1,4 @@
-# INTERCEPTAÇÃO DO EVENTO
+# Interceptação de eventos
 
 Não basta ligar o ENCRIPTPARMON no login, é necessário interceptar e tratar todos os parametros enviados ao BootstrapClick.
 
@@ -41,10 +41,4 @@ do case
   do 'ui_grid'
 endcase
 ```
-## Eventos do Navbar
-Para se trocar as páginas a partir de eventos do Navbar, temos o tratamento da &url devolvida pela procedure navDefault_CLICK.
-```
-if not &url.IsEmpty()
- alerta.Caption = '<script>window.location.assign("'+&url.Trim()+'");</script>'
-endif
-```
+
