@@ -7,10 +7,10 @@ Esse procedimento avalia se a variavel de sessão pede encriptação ou não de 
 ### NavEvent(&uc_btclick, &uc_btclickparms, &url, &isok)
 É uma procedure que centraliza a encriptação e trata dos eventos que ocorrem no NAVBAR e SIDEBAR.
 
-**&uc_btclick** string original do evento que pode estar encriptada. Ao término do processamento retorna para o chamador no formato decriptado.
-**&uc_btclickparms** coleção de parametros do evento
-**&url** é a URL do módulo em que ocorreu o evento
-**&isok** informa, se true, que o evento de fato é da NAVBAR ou SIDEBAR.
+* **&uc_btclick** string original do evento que pode estar encriptada. Ao término do processamento retorna para o chamador no formato decriptado.
+* **&uc_btclickparms** coleção de parametros do evento
+* **&url** é a URL do módulo em que ocorreu o evento
+* **&isok** informa, se true, que o evento de fato é da NAVBAR ou SIDEBAR.
 
 ```
 	&encrypt 	= iif(&websession.Get("SECURITYPARMON")="1", true, false)
