@@ -1,5 +1,4 @@
-# ENCRIPTAÇÃO DE PARÂMETROS
-
+# Encriptação de parâmetros
 Na era dos hackers, encriptar coisas é uma forma de 'tentar' diminuir o impacto do roubo de informações ou coisas piores.
 
 Não dá para programar nada sem encriptação nos dias atuais.
