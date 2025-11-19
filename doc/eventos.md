@@ -45,8 +45,8 @@ Essa estrutura é utilizada para tratar todos os eventos que ocorrem nos control
 
 Porém, a operação vai um pouco além desta simples explicação, pois o controle envolve mais recursos relacionados a encriptação dos valores. Consulte os documentos a seguir para maiores informações:
 
-* [interceptação na NavBar](/tecnicas/tec_navevent.md)
-* [encriptação manual de parametros](/tecnicas/tec_encriptacaomanual.md).
-* [encriptação de parametros](/tecnicas/tec_encriptacaoparm.md).
-* [interceptação de eventos](/tecnicas/tec_encriptacaobootstrapclick.md).
+* [interceptação na NavBar](/doc/tecnicas/tec_navevent.md)
+* [encriptação manual de parametros](/doc/tecnicas/tec_encriptacaomanual.md).
+* [encriptação de parametros](/doc/tecnicas/tec_encriptacaoparm.md).
+* [interceptação de eventos](/doc/tecnicas/tec_encriptacaobootstrapclick.md).
 
