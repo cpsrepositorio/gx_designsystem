@@ -1,5 +1,5 @@
 # uc_botaoicone
-![alt text](https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/uc_botaoicone.PNG "Icone")
+![alt text](/doc/imagens/uc_botaoicone.png)
 
 Barra de botões são elementos que representam ações que podem ser acionadas pelos usuários.
 
