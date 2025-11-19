@@ -94,4 +94,4 @@ No exemplo apresentado a sequencia de itens nesse evento seria:
 
 	NOME_DA_INTERFACE:BOTAO:PLAY:5
 
-Para maiores informações a respeito desta operação veja [Eventos](/doc/eventos.md)
+Para maiores informações a respeito desta operação veja [Eventos](/eventos.md)
