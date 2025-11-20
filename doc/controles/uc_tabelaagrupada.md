@@ -1,6 +1,6 @@
 # uc_tabelaagrupada
 
-O controle **uc.uc_tabelaagrupada(&uc_TabelaAgrupadaIN.ToJson())**, possibilita construir um agrupamento de tabelas separadas por um titulo e espaço.
+O controle **uc.uc_tabelaagrupada**, possibilita construir um conjunto de tabelas agrupadas, em sequencia e com um titulo.
 
 É util para apresentação de informações em bloco, como por exemplo:
 
