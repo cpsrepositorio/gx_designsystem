@@ -1,11 +1,14 @@
-# uc_grupotabela (deprecated)
+# uc_tabelaagrupada
 
-O controle **uc.uc_grupotabela(&uc_grupotabelaIN.ToJson())**, possibilita construir um agrupamento de tabelas separadas por um titulo e espaço.
-É util para apresentação de informações me bloco, como por exemplo as disciplinas de um semestre, de todo curso.
+O controle **uc.uc_tabelaagrupada(&uc_TabelaAgrupadaIN.ToJson())**, possibilita construir um agrupamento de tabelas separadas por um titulo e espaço.
 
-![alt text](https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/uc_grupotabela.PNG "Icone")
+É util para apresentação de informações em bloco, como por exemplo:
 
-O controle foi pensado para simplificar ao máximo a construção de multiplas tabelas.
+* disciplinas de um semestre
+* eventos em um dia/mes/ano
+* atividades em uma semana 
+
+O controle foi planejado para simplificar ao máximo a construção de multiplas tabelas, que por si só são controles mais complexos. 
 
 Cada tabela no controle é representada por um **Grupo**.
 
@@ -56,7 +59,7 @@ Em seguida, opcionalmente, o evento associado a linha. Meio estranho, mas bastan
 Uma vez definido o conceito fundamental, a proxima etapa é montar o controle com todos os recursos.
 
 1.	Criar um webpanel
-2.	Criar uma variável do tipo **uc_grupotabelaIN**, e mais duas, **&grupo** (uc_grupotabelaIN.grupo) e **&linha** (uc_grupotabelaIN.grupo.linha)
+2.	Criar uma variável do tipo **uc_tabelaagrupadain**, e mais duas, **&grupo** (uc_tabelaagrupadain.grupo) e **&linha** (uc_tabelaagrupadain.grupo.linha)
 3.	Em seguida uma coleção chamada **&widths**, do tipo Varchar(10), para adicionar as larguras das colunas.
 4.	E outra **&titulos**, também coleção do tipo Varchar(40) para o texto das colunas.
 5.  E mais outra, &linha, também coleção, mas a largura pode ser maior que as anteriores, para conter o conteúdo de cada céluna em cada linha.
@@ -67,16 +70,16 @@ Uma vez definido o conceito fundamental, a proxima etapa é montar o controle co
 Event Start
  form.HeaderRawHTML = UC.uc_cssGET_bot523()
  do 'tabela'
- html.Caption = UC.uc_grupotabela(&uc_grupotabelain.ToJson())
+ html.Caption = UC.uc_tabelaagrupada(&uc_tabelaagrupadain.ToJson())
 Endevent
 
 Sub 'tabela'
- &uc_grupotabelain.interface   = &Pgmname
- &uc_grupotabelain.id    = 'TABELAS'
- &uc_grupotabelain.selected_color 	= '#f7e8e8'
- &uc_grupotabelain.classebotaobar	= 'uc_flex-r uc_flex-wrap'
- &uc_grupotabelain.classebotao		= 'uc_btspace'
- &uc_grupotabelain.classeicone		= 'uc_bticon'
+ &uc_tabelaagrupadain.interface   = &Pgmname
+ &uc_tabelaagrupadain.id    = 'TABELAS'
+ &uc_tabelaagrupadain.selected_color 	= '#f7e8e8'
+ &uc_tabelaagrupadain.classebotaobar	= 'uc_flex-r uc_flex-wrap'
+ &uc_tabelaagrupadain.classebotao		= 'uc_btspace'
+ &uc_tabelaagrupadain.classeicone		= 'uc_bticon'
 	
  for &i = 1 to 2
   &grupo = new()
@@ -106,13 +109,13 @@ Sub 'tabela'
    &grupo.linhas = &linhas.tojson()
   endfor
 
-  &uc_grupotabelain.grupos.Add(&grupo)
+  &uc_tabelaagrupadain.grupos.Add(&grupo)
  endfor
 EndSub
 ```
 
 ## SELECTED
-O controle ainda permite que certa linha, ou linhas, sejam apresentadas de forma destacada, como se estivessem selecionadas a partir da definição de uma cor de fundo **&uc_grupotabelaIN.selected_color = '#f7e8e8'**. 
+O controle ainda permite que certa linha, ou linhas, sejam apresentadas de forma destacada, como se estivessem selecionadas a partir da definição de uma cor de fundo **&uc_tabelaagrupadain.selected_color = '#f7e8e8'**. 
 
 Para 'selecionar' a linha necessário apenas incluir um caracter **#** em qualquer célula na linha. Por exemplo:
 **&linha.linha = '["#D'+&n.ToString().Trim()+'","Nome da DI","obrigatoria","10","0"]'**
