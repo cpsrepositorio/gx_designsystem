@@ -192,18 +192,19 @@ O controle **uc_tabelaagrupada** ainda permite que certa linha, ou linhas, sejam
 Para 'selecionar' a linha necessário apenas incluir um caracter **#** em qualquer célula na linha. Por exemplo:
 **&linha.linha = '["#D'+&n.ToString().Trim()+'","Nome da DI","obrigatoria","10","0"]'**
 
-## Classes
-Quanto ao formato da tabela, tudo é definido n
+## Classes & estilo
+Quanto ao formato da tabela, tudo é definido por meio de classes.
 
 ### Cores 
 
-O titulo das tabelas é definido por duas classes:
+A linha que define o titulo do grupo pode ser definido com duas propriedades de classe:
 * **&grupo.classe** define a classe específica da tabela, permitindo que cada tabela tenha uma cor diferente
 * **&uc_tabelaagrupadain.classegrupo** define uma classe única para todos os grupos
 
-Algumas cores que podem te interessar:
+Algumas classes no sistema podem definir cores que podem te interessar:
+|classe|significado|
 |-------|-------------------|
-| uc_navcolor | mesma cor que o navbar |
+| uc_navregular | mesma cor que o navbar |
 | uc_bs-gray | cinza escuro com letras brancas |
 | uc_bs-white | cinza escuro com letras brancas |
 | uc_bs-black | preto com letras brancas |
@@ -211,5 +212,5 @@ Algumas cores que podem te interessar:
 | uc_bs-red | vermelho com letras brancas |
 | uc_bs-orange | laranja com letras brancas |
 | uc_bs-blue | azul  com letras brancas |
-|-------|-------------------|
+
 
