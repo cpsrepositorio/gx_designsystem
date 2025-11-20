@@ -203,6 +203,13 @@ O titulo das tabelas é definido por duas classes:
 
 Algumas cores que podem te interessar:
 |-------|-------------------|
-| uc_nav-color| mesma cor que o navbar |
+| uc_navcolor | mesma cor que o navbar |
+| uc_bs-gray | cinza escuro com letras brancas |
+| uc_bs-white | cinza escuro com letras brancas |
+| uc_bs-black | preto com letras brancas |
+| uc_bs-green | verde com letras brancas |
+| uc_bs-red | vermelho com letras brancas |
+| uc_bs-orange | laranja com letras brancas |
+| uc_bs-blue | azul  com letras brancas |
 |-------|-------------------|
 
