@@ -13,7 +13,7 @@ O controle foi planejado para simplificar ao máximo a construção de multiplas
 Cada tabela no controle é representada por uma variavel **grupo**, do tipo **uc_tabelaagrupada.grupo**.
 
 ## Grupo
-Grupo representa um titulo na parte superior e uma tabela completa. Um conjunto de grupos fornece o aspecto de várias tabelas completas agrupadas, com a separação de um espaço.
+Grupo representa uma tabela completa que é formada por um titulo na parte superior. É possível incluir vários grupos, ou tabelas, em um controle.
 
 Cada **&grupo** possui três coleções com a finalidade de definir a estrutura e o conteúdo da tabela.
 
@@ -69,8 +69,7 @@ sub 'ex'
 	&uc_tabelaagrupadain.interface   		= &Pgmname
 	&uc_tabelaagrupadain.id    			= 'TABELAS'
 	&uc_tabelaagrupadain.classebotaobar	= 'uc_flex-r uc_flex-wrap'
-	&uc_tabelaagrupadain.classebotao		= 'uc_btspace'
-	&uc_tabelaagrupadain.classeicone		= 'uc_bticon'
+	&uc_tabelaagrupadain.classebotao		= 'uc_bt-icon'
 		
 	for &i = 1 to 2
 		&grupo = new()
@@ -114,9 +113,7 @@ endsub
 ```
 
 ## Mais um exemplo
-Não que seria necessário, mas incluimos aqui mais um exemplo para uma suposta Matriz Curricular.
-
-Segue mais um principio, porém inclui um detalhe a mais **&uc_tabelaagrupadain.selected_color**
+Não que seria necessário, mas incluimos aqui mais um exemplo para uma suposta Matriz Curricular, e nesse exemplo incluimos mais um recurso do controle que estaremos apresentando logo a seguir: **&uc_tabelaagrupadain.selected_color**
 
 ```
 sub 'disc'
@@ -126,8 +123,7 @@ sub 'disc'
 	&uc_tabelaagrupadain.selected_color 	= '#f7e8e8'
 	&uc_tabelaagrupadain.classe			= 'uc_matrizw100'
 	&uc_tabelaagrupadain.classebotaobar	= 'uc_flex-r uc_flex-wrap'
-	&uc_tabelaagrupadain.classebotao		= 'uc_btspace'
-	&uc_tabelaagrupadain.classeicone		= 'uc_bticon'
+	&uc_tabelaagrupadain.classebotao		= 'uc_bt-icon'
 	
 	for &i = 1 to 2
 		&grupo = new()
@@ -188,9 +184,25 @@ sub 'disc'
 	grid.Caption += '<div>'+UC.uc_tabelaagrupada(&uc_tabelaagrupadain.ToJson())+'</div>'
 endsub
 ```
+Se você observar, a primeira linha da tabela aparece com uma cor diferente.
 
-## SELECTED
+## Selected
 O controle **uc_tabelaagrupada** ainda permite que certa linha, ou linhas, sejam apresentadas de forma destacada, como se estivessem selecionadas a partir da definição de uma cor de fundo **&uc_tabelaagrupadain.selected_color = '#f7e8e8'**. 
 
 Para 'selecionar' a linha necessário apenas incluir um caracter **#** em qualquer célula na linha. Por exemplo:
 **&linha.linha = '["#D'+&n.ToString().Trim()+'","Nome da DI","obrigatoria","10","0"]'**
+
+## Classes
+Quanto ao formato da tabela, tudo é definido n
+
+### Cores 
+
+O titulo das tabelas é definido por duas classes:
+* **&grupo.classe** define a classe específica da tabela, permitindo que cada tabela tenha uma cor diferente
+* **&uc_tabelaagrupadain.classegrupo** define uma classe única para todos os grupos
+
+Algumas cores que podem te interessar:
+|-------|-------------------|
+| uc_nav-color| mesma cor que o navbar |
+|-------|-------------------|
+

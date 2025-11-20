@@ -26,43 +26,50 @@ Os botões podem também ser coloridos.
 	&uc_botaoin.interface 	= 'interface'	
 
 	&botao = new()
+	&botao.evento = 'ABRIR:0'
+	&botao.classe = 'uc_white'
+	&botao.titulo = 'White'
+	&botao.tooltip = 'Abrir o registro'
+	&uc_botaoin.botoes.Add(&botao)
+
+	&botao = new()
 	&botao.evento = 'ABRIR:1'
-	&botao.classe = 'uc_btgreen'
+	&botao.classe = 'uc_green'
 	&botao.titulo = 'Green'
 	&botao.tooltip = 'Abrir o registro'
 	&uc_botaoin.botoes.Add(&botao)
 	
 	&botao = new()
 	&botao.evento = 'ABRIR:2'
-	&botao.classe = 'uc_btred'
+	&botao.classe = 'uc_red'
 	&botao.titulo = 'Red'
 	&botao.tooltip = 'Abrir o registro'
 	&uc_botaoin.botoes.Add(&botao)
 	
 	&botao = new()
 	&botao.evento = 'ABRIR:3'
-	&botao.classe = 'uc_btblue'
+	&botao.classe = 'uc_blue'
 	&botao.titulo = 'Blue'
 	&botao.tooltip = 'Abrir o registro'
 	&uc_botaoin.botoes.Add(&botao)
 	
 	&botao = new()
 	&botao.evento = 'ABRIR:4'
-	&botao.classe = 'uc_btorange'
+	&botao.classe = 'uc_orange'
 	&botao.titulo = 'Orange'
 	&botao.tooltip = 'Abrir o registro'
 	&uc_botaoin.botoes.Add(&botao)
 	
 	&botao = new()
 	&botao.evento = 'ABRIR:5'
-	&botao.classe = 'uc_btgray'
+	&botao.classe = 'uc_gray'
 	&botao.titulo = 'Gray'
 	&botao.tooltip = 'Abrir o registro'
 	&uc_botaoin.botoes.Add(&botao)
 	
 	&botao = new()
 	&botao.evento = 'ABRIR:6'
-	&botao.classe = 'uc_btblack'
+	&botao.classe = 'uc_black'
 	&botao.titulo = 'Black'
 	&botao.tooltip = 'Abrir o registro'
 	&uc_botaoin.botoes.Add(&botao)
