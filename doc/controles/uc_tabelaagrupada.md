@@ -41,7 +41,7 @@ for &n = 1 to 10
   &linha = new()
 
   &celulas.clear()
-  &celulas.add('#'+&n.ToString().Trim())
+  &celulas.add(&n.ToString().Trim())
   &celulas.Add("Nome "+&i.ToString().Trim()+'/'+&n.ToString().Trim())
   &linha.linha = &celulas.ToJson()
 
@@ -107,6 +107,7 @@ sub 'ex'
 			
 		&uc_tabelaagrupadain.grupos.Add(&grupo)
 	endfor
+  
 	grid.Caption  = '<h5>Exemplo Simples</h5>'
 	grid.Caption += UC.uc_tabelaagrupada(&uc_tabelaagrupadain.ToJson())
 endsub
