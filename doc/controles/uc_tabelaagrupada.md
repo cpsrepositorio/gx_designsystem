@@ -107,14 +107,90 @@ sub 'ex'
 			
 		&uc_tabelaagrupadain.grupos.Add(&grupo)
 	endfor
-  
+
 	grid.Caption  = '<h5>Exemplo Simples</h5>'
 	grid.Caption += UC.uc_tabelaagrupada(&uc_tabelaagrupadain.ToJson())
 endsub
 ```
 
+## Mais um exemplo
+Não que seria necessário, mas incluimos aqui mais um exemplo para uma suposta Matriz Curricular.
+
+Segue mais um principio, porém inclui um detalhe a mais **&uc_tabelaagrupadain.selected_color**
+
+```
+sub 'disc'
+	&uc_tabelaagrupadain = new()
+	&uc_tabelaagrupadain.interface = &Pgmname
+	&uc_tabelaagrupadain.id = 'TABELAS'
+	&uc_tabelaagrupadain.selected_color 	= '#f7e8e8'
+	&uc_tabelaagrupadain.classe			= 'uc_matrizw100'
+	&uc_tabelaagrupadain.classebotaobar	= 'uc_flex-r uc_flex-wrap'
+	&uc_tabelaagrupadain.classebotao		= 'uc_btspace'
+	&uc_tabelaagrupadain.classeicone		= 'uc_bticon'
+	
+	for &i = 1 to 2
+		&grupo = new()
+		&grupo.titulo  = 'SEMESTRE '+&i.ToString()
+		
+		/* agregar em uma coleção */
+		&titulos = new()
+		&titulos.add("SIGLA")
+		&titulos.add("DISCIPLINA")
+		&titulos.add("TIPO")
+		&titulos.add("CH")
+		&titulos.add("EXT")
+		&grupo.titulos = &titulos.ToJson()
+		
+		/* ou definir diretamente */
+		&widths = new()
+		&widths.Add("15%")
+		&widths.Add("35%")
+		&widths.Add("15%")
+		&widths.Add("5%")
+		&widths.Add("5%")
+		&widths.Add("25%")
+		&grupo.widths = &widths.ToJson()
+	
+		for &n = 1 to 2
+			&linha = new()
+			if &n=1
+				&celulas = new()
+				&celulas.Add("#D"+&n.ToString().Trim())
+				&celulas.Add("Nome")
+				&celulas.Add("ob")
+				&celulas.Add("10")
+				&celulas.Add("0")
+				&linha.linha = &celulas.ToJson()
+			else
+				&celulas = new()
+				&celulas.Add("D"+&n.ToString().Trim())
+				&celulas.Add("Nome")
+				&celulas.Add("ef")
+				&celulas.Add("10")
+				&celulas.Add("0")
+				&linha.linha = &celulas.ToJson()
+			endif
+		
+			/* toolbar */
+			&linha.evento 			= 'id'+&n.ToString().Trim()
+			&linha.toolbar.open 	= true
+			&linha.toolbar.update 	= true
+			&linha.toolbar.delete 	= true
+
+			&grupo.linhas.Add(&linha)
+		endfor
+
+		&uc_tabelaagrupadain.grupos.Add(&grupo)
+	endfor
+	
+	grid.Caption += '<h5 class="uc_mt40">Matriz curricular</h5>'
+	grid.Caption += '<div>'+UC.uc_tabelaagrupada(&uc_tabelaagrupadain.ToJson())+'</div>'
+endsub
+```
+
 ## SELECTED
-O controle ainda permite que certa linha, ou linhas, sejam apresentadas de forma destacada, como se estivessem selecionadas a partir da definição de uma cor de fundo **&uc_tabelaagrupadain.selected_color = '#f7e8e8'**. 
+O controle **uc_tabelaagrupada** ainda permite que certa linha, ou linhas, sejam apresentadas de forma destacada, como se estivessem selecionadas a partir da definição de uma cor de fundo **&uc_tabelaagrupadain.selected_color = '#f7e8e8'**. 
 
 Para 'selecionar' a linha necessário apenas incluir um caracter **#** em qualquer célula na linha. Por exemplo:
 **&linha.linha = '["#D'+&n.ToString().Trim()+'","Nome da DI","obrigatoria","10","0"]'**
