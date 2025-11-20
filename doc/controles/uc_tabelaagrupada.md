@@ -4,13 +4,13 @@ O controle **uc.uc_tabelaagrupada**, possibilita construir um conjunto de tabela
 
 É util para apresentação de informações em bloco, como por exemplo:
 
-* disciplinas de um semestre
+* disciplinas por semestre
 * eventos em um dia/mes/ano
 * atividades em uma semana 
 
-O controle foi planejado para simplificar ao máximo a construção de multiplas tabelas, que por si só são controles mais complexos. 
+O controle foi planejado para simplificar ao máximo a construção de multiplas tabelas.
 
-Cada tabela no controle é representada por um **Grupo**.
+Cada tabela no controle é representada por uma variavel **grupo**, do tipo **uc_tabelaagrupada.grupo**.
 
 ## Grupo
 Grupo representa um titulo na parte superior e uma tabela completa. Um conjunto de grupos fornece o aspecto de várias tabelas completas agrupadas, com a separação de um espaço.
@@ -24,94 +24,92 @@ Cada **&grupo** possui três coleções com a finalidade de definir a estrutura 
   &titulos.add("titulo")
   &grupo.titulos = &titulos.tojson()
 ```
-2. **&grupo.widths**, representa o tamanho (width) de cada coluna na tabela, cujo total não pode ser maior que 100%. Por questões de responsividade, é melhor utilizar % ao invés de pixel. Um detalhe importante deve ser levado em conta, porque caso se associe um evento a cada linha de conteúdo, será necessário definir a largura do toolbar, adicionando, neste caso, um item a mais que o titulo. Observe no exemplo que existem dois titulos e três larguras definidas. Utilize uma coleção de Varchar(10) para definir as larguras.
+2. **&grupo.widths**, representa o tamanho (width) de cada coluna na tabela, cujo total não pode ser maior que 100%. Por questões de responsividade, é melhor utilizar % ao invés de pixel. Caso inclua botões no final, será necessário adicionar um Width a mais na lista, com a largura da barra de botões.  Observe no exemplo que existem dois titulos e três larguras definidas. Utilize uma coleção de Varchar(10) para definir as larguras.
 ```
   &widths.clear()
   &widths.add("10%")
-  &widths.add("80%") 
-  &widths.add("10%") 
+  &widths.add("70%") 
+  &widths.add("30%") // para o toolbar
   &grupo.widths  =  &widths.tojson()
 ```
 3. **&grupo.linhas**, compreende o conteúdo a ser inserido em cada linha da tabela em construção. Como os conteúdos poderão ser obtidos de tabelas, talvez seja necessário um for each, para percorrer cada linha a ser inserida. Dessa forma esta operação será um pouco mais complexa que as anteriores.
-Primeiramente deve-se criar a coleção com os conteúdos de cada célula.
+Primeiramente deve-se criar a coleção com os conteúdos de cada célula da linha. Essa coleção de células deve ser inserida na linha ao final **&linha.linha = &celulas.ToJson()**
 
 ```
-  for &n = 1 to 10
-   &linhas.clear()
-   &linhas.add('#'+&n.ToString().Trim())
-   &linhas.add('Nome')
-   &linhas.add('10')
-   ...
+for &n = 1 to 10
+
+  &linha = new()
+
+  &celulas.clear()
+  &celulas.add('#'+&n.ToString().Trim())
+  &celulas.Add("Nome "+&i.ToString().Trim()+'/'+&n.ToString().Trim())
+  &linha.linha = &celulas.ToJson()
+
 ```
-Em seguida, opcionalmente, o evento associado a linha. Meio estranho, mas bastante otimizado, pois se define o parâmetro que permite identificar em que linha ocorreu a ação, por meio da **&linha.evento = 'id'+&n.ToString().Trim()**, e em seguida os botões de evento com **&linha.toolbar.open = true**. Os botões do toolbar podem ser três, até aqui, OPEN, UPDATE e DELETE, mas poderão ser expandidos conforme necessidade.
+Em seguida associamos um evento linha, definindo o valor da Ação e em seguida chave do evento que será retornada. Os botões são ligados por meio de true em (Open, Update, Delete). 
 ```
    ...
-   &linha.evento = 'id'+&n.ToString().Trim()
+   &linha.evento = 'ID:'+&n.ToString().Trim()
    &linha.toolbar.open 	 = true
    &linha.toolbar.update = true
    &linha.toolbar.delete = true
-
-   &grupo.linhas = &linhas.tojson()
+  ...
+```
+E finalmente se insere a linha construída pela coleção de células e o evento no grupo: **&grupo.linhas.Add(&linha)**
+```
+   &grupo.linhas.Add(&linha)
   endfor
 ```
 
-## Exemplo completo
-Uma vez definido o conceito fundamental, a proxima etapa é montar o controle com todos os recursos.
-
-1.	Criar um webpanel
-2.	Criar uma variável do tipo **uc_tabelaagrupadain**, e mais duas, **&grupo** (uc_tabelaagrupadain.grupo) e **&linha** (uc_tabelaagrupadain.grupo.linha)
-3.	Em seguida uma coleção chamada **&widths**, do tipo Varchar(10), para adicionar as larguras das colunas.
-4.	E outra **&titulos**, também coleção do tipo Varchar(40) para o texto das colunas.
-5.  E mais outra, &linha, também coleção, mas a largura pode ser maior que as anteriores, para conter o conteúdo de cada céluna em cada linha.
-6.	Adicione na interface um **textblock**, alterando a propriedade ControlName e Caption para a palavra **html** e Format para **HTML**
-6.	Crie um evento Start, faça a carga do CSS e monte a tabela, veja o exemplo abaixo.
+## Exemplo simples
+A seguir o código completo do exemplo, caso queira copiar de uma única vez. Neste é possível observar como um novo **&grupo** é criado no **for &i = 1 to 2**.
 
 ```
-Event Start
- form.HeaderRawHTML = UC.uc_cssGET_bot523()
- do 'tabela'
- html.Caption = UC.uc_tabelaagrupada(&uc_tabelaagrupadain.ToJson())
-Endevent
-
-Sub 'tabela'
- &uc_tabelaagrupadain.interface   = &Pgmname
- &uc_tabelaagrupadain.id    = 'TABELAS'
- &uc_tabelaagrupadain.selected_color 	= '#f7e8e8'
- &uc_tabelaagrupadain.classebotaobar	= 'uc_flex-r uc_flex-wrap'
- &uc_tabelaagrupadain.classebotao		= 'uc_btspace'
- &uc_tabelaagrupadain.classeicone		= 'uc_bticon'
-	
- for &i = 1 to 2
-  &grupo = new()
-  &grupo.titulo  = 'GRUPO '+&i.ToString()
-
-  &titulos.clear()
-  &titulos.add("id")
-  &titulos.add("titulo")
-  &grupo.titulos = &titulos.tojson()
-
-  &widths.clear()
-  &widths.add("10%")
-  &widths.add("80%") 
-  &widths.add("10%") 
-  &grupo.widths  =  &widths.tojson()
+sub 'ex'
+	&uc_tabelaagrupadain.interface   		= &Pgmname
+	&uc_tabelaagrupadain.id    			= 'TABELAS'
+	&uc_tabelaagrupadain.classebotaobar	= 'uc_flex-r uc_flex-wrap'
+	&uc_tabelaagrupadain.classebotao		= 'uc_btspace'
+	&uc_tabelaagrupadain.classeicone		= 'uc_bticon'
 		
-  for &n = 1 to 10
-   &linhas.clear()
-   &linhas.add('#'+&n.ToString().Trim())
-   &linhas.add('Nome')
-   &linhas.add('10')
+	for &i = 1 to 2
+		&grupo = new()
+		&grupo.titulo  = 'GRUPO '+&i.ToString()
+			
+		&titulos.clear()
+		&titulos.add("id")
+		&titulos.add("titulo")
+		&grupo.titulos = &titulos.tojson()
+			
+		&widths.clear()
+		&widths.add("10%")
+		&widths.add("70%") 
+		&widths.add("30%") 
+		&grupo.widths  =  &widths.tojson()
+			
+		for &n = 1 to 4
+			&linha = new()
+			
+			&celulas.Clear()
+			&celulas = new()
+			&celulas.Add(&n.ToString().Trim())
+			&celulas.Add("Nome "+&i.ToString().Trim()+'/'+&n.ToString().Trim())
+			&linha.linha = &celulas.ToJson()
+		
+			/* toolbar */
+			&linha.evento 			= 'id'+&n.ToString().Trim()
+			&linha.toolbar.open 	= true
+			&linha.toolbar.update 	= true
+			&linha.toolbar.delete 	= true
 
-   &linha.evento = 'id'+&n.ToString().Trim()
-   &linha.toolbar.open 	= true
-   &linha.toolbar.update = true
-   &linha.toolbar.delete = true
-   &grupo.linhas = &linhas.tojson()
-  endfor
-
-  &uc_tabelaagrupadain.grupos.Add(&grupo)
- endfor
-EndSub
+			&grupo.linhas.Add(&linha)
+		endfor
+			
+		&uc_tabelaagrupadain.grupos.Add(&grupo)
+	endfor
+	grid.Caption  = '<h5>Exemplo Simples</h5>'
+	grid.Caption += UC.uc_tabelaagrupada(&uc_tabelaagrupadain.ToJson())
+endsub
 ```
 
 ## SELECTED
