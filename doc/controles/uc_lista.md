@@ -131,3 +131,22 @@ sub 'listabotoes'
 	html.Caption += UC.uc_lista(&uc_listin.ToJson())
 endsub
 ```
+
+A barra de botões de EDITAR e APAGAR nas linhas pode ser substituida por algo mais simples, como 
+```
+		&uc_botaoiconein.id 			= 'LISTA'
+		&uc_botaoiconein.interface 		= &Pgmname	
+		&uc_botaoiconein.classebar 		= 'uc_flex-r uc_flex-nowrap uc_mt30'
+		&uc_botaoiconein.classebotao  	= 'uc_btspace uc_bt-icon uc_pointer'
+		&uc_botaoiconein.classeicon   	= ''
+		&botoes.add('EDITAR:'+&i.ToString().Trim())
+		&botoes.add('APAGAR:'+&i.ToString().Trim())
+		&uc_botaoiconein.botoes = &botoes.ToJson()
+
+		&item = new()
+		&item.titulo 	= 'Titulo '+&i.ToString().Trim()
+		&item.tooltip	= 'Tooltip do registro '+&i.ToString().Trim()
+		&item.icone	= '<i class="fas fa-user-graduate"></i>'
+		&item.toolbox 	= UC.uc_botaoicone(&uc_botaoiconein.ToJson())
+		&uc_listin.itens.Add(&item)
+```
