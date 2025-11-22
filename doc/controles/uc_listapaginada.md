@@ -3,6 +3,13 @@ A lista paginada é um controle tipo lista que apresenta páginas de registros a
 
 O controle é bastante simples, porém necessita de recursos adicionais para a carga dos registros.
 
+No evento **Start** se deve definir a página inicial e o tamanho da página e a rotina de 'load' deve ser acionada.
+```
+	&pg 						= 1		
+	&pgsize 					= 10	
+	do 'load'	
+``` 
+
 ## Data provider
 O controle precisa de um **DataProvider** que faça a carga dos registros de forma paginada, de forma que ocor
 Para simplificar, utilize um SDT que possa ser carregado por etapas.

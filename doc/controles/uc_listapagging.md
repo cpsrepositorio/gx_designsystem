@@ -1,152 +1,160 @@
-# uc_listapagging
+# uc_listapagging (deprecated)
 
-O controle **uc.uc_lista** permite criar uma lista de itens em linhas, e na formatação do pacote, é semelhante a uma tabela com uma única coluna.
+Utilize o controle [uc_listapaginada](/doc/controles/uc_listapaginada.md) ao invés deste controle de paginação.
 
-É util para apresentação de conjuntos de informações, como por exemplo:
-
-* apresentar uma lista de registros
-* substituir tabelas mais simples que tenham um texto e botões
+Este controle realiza a paginação dos registros em uma lista, porém, apresenta uma maior complexidade na navegação das paginas.
 
 ## Lista simples
 
-Numa lista simples, o que se precisa definir basicamente as propriedades na variável **&uc_listin**, incluindo o id, interface, classes. E em seguida um laço (for) para definir os registros a serem apresentados
+A seguir o exemplo completo.
 
 ```
-	&uc_listin.interface      = &Pgmname
-	&uc_listin.id			 = 'LISTA'
-	&uc_listin.classe 		 = 'uc_lista'
-	&uc_listin.classeitem 	 = 'uc_listaitem'
+Event Start
+	form.HeaderRawHTML = uc_carga()
+	html.Caption	= ''	
+	alerta.Caption	= ''
+
+	&pg			= 1	
+	&pgsize		= 14	
 	
-	for &i = 1 to 3
-		&item = new()
-		&item.titulo 	= 'Titulo '+&i.ToString().Trim()
-		&item.tooltip	= 'Tooltip do registro '+&i.ToString().Trim()
-		&item.icone		= '<i class="fas fa-user-graduate"></i>'
-		&uc_listin.itens.Add(&item)
-	endfor
+	do 'load'
+Endevent
 
-	html.Caption = UC.uc_lista(&uc_listin.ToJson())
-```
-
-## Lista com toolbar
-Outra possibilidade é incluir na parte superior, em uma área chamada toolbar uma barra de botões, titulos, ou outras coisas de seu interesse.
-
-No exemplo abaixo inserimos em um **&uc_botaoin** um botão para significar a opção do usuário inserir um NOVO registro e o colocamos na propriedade **&uc_listin.toolbox**.
-
-```
-sub 'listatoolbar'
-	do 'toolbar'
-	&uc_listin = new()
-	&uc_listin.interface      = &Pgmname
-	&uc_listin.id			 = 'LISTA'
-	&uc_listin.classe 		 = 'uc_lista'
-	&uc_listin.classeitem 	 = 'uc_listaitem'
-	&uc_listin.toolbox 		 = UC.uc_botao(&uc_botaoin.ToJson())
-	&uc_listin.classetoolbox = 'uc_flex-r uc_flex-jce uc_mb10'
-	
-	for &i = 1 to 3
-		&item = new()
-		&item.titulo 	= 'Titulo '+&i.ToString().Trim()
-		&item.evento 	= 'SELECIONAR:'+&i.ToString().Trim()
-		&item.tooltip	= 'Tooltip do registro '+&i.ToString().Trim()
-		&item.icone		= '<i class="fas fa-user-graduate"></i>'
-		&uc_listin.itens.Add(&item)
-	endfor
-	
-	html.Caption += '<h5 class="uc_mt40">Toolbar</h5>'
-	html.Caption += UC.uc_lista(&uc_listin.ToJson())
+sub 'load'
+	&registros.Clear()
+ 	&registros = LIXO_TesteDP(&pgsize, &pg)
+	do 'grid'
 endsub
 
-sub 'toolbar'
-	&uc_botaoin.interface	= &Pgmname
-	&uc_botaoin.id			= 'TOOLBAR'	
-	&botao = new()
-	&botao.titulo 		= 'novo'
-	&botao.evento 		= "NOVO:param0"
-	&botao.icone 		= '<i class="fas fa-plus"></i>'
-	&botao.tooltip  	= 'Criar novo item na lista'
-	&uc_botaoin.botoes.Add(&botao)
-endsub	
-```
-Observe que é possível posicionar o conteúdo desta linha com a propriedade **&uc_listin.classetoolbox**, que nesse exemplo, utilizamos o flex-layout para posicionar o botão à direita **uc_flex-r uc_flex-jce uc_mb10**.
+Event &search.IsValid
+	&registros.Clear()
+ 	&registros = LIXO_TesteDPSearch(&search)
+	do 'grid'
+EndEvent
 
-Inicialmente os registros na lista não são 'clicáveis', mas ao se adicionar uma propriedade evento, como por exemplo, **&item.evento = 'SELECIONAR:'+&i.ToString().Trim()**, a linha passa a responder a cliques, assim o exemplo ficou um pouco mais completo, incluindo a operação NOVO e SELECIONAR.
-
-## Lista com botões
-Um terceiro uso deste controle é a inclusão de um toolbox diretamente na linha do registro. Nesse caso uma propriedade **&item.toolbox = UC.uc_botao(&uc_botaoin.ToJson())** deverá receber a barra de botões.
-
-Não se esqueça de desligar a propriedade **&item.evento = ''** senão vai sobrepor os eventos dos botões.
-
-```
-sub 'listabotoes'
-	&uc_listin = new()
+sub 'grid'
+	do 'last'
 	
-	&uc_botaoin 			= new()
-	&uc_botaoin.interface	= &Pgmname
-	&uc_botaoin.id			= 'TOOLBAR'
-	&botao = new()
-	&botao.classe			='uc_bt-icon'
-	&botao.evento 		= "NOVO:param0"
-	&botao.icone 		= '<i class="fas fa-plus"></i>'
-	&botao.tooltip  	= 'Criar novo item na lista'
-	&uc_botaoin.botoes.Add(&botao)
+	&uc_listIN.id = 'LISTA'
+	&uc_listIN.interface = &Pgmname
+	&uc_listIN.pagging = true
+	&uc_listIN.paggingcolor = 'uc_btblueoutlineclear'
+	&uc_listIN.paggingposition = uc_position.bottom
+	&uc_listIN.pagginglabel = 'pg: '+&pg.ToString().Trim()+' de: '+&last.ToString()
+	&uc_listIN.itens.Clear()
 	
-	&uc_listin.interface      = &Pgmname
-	&uc_listin.id			 = 'LISTA'
-	&uc_listin.classe 		 = 'uc_lista'
-	&uc_listin.classeitem 	 = 'uc_listaitem'
-	&uc_listin.toolbox 		 = UC.uc_botao(&uc_botaoin.ToJson())
-	&uc_listin.classetoolbox = 'uc_flex-r uc_flex-jce uc_mb10'
-	
-	for &i = 1 to 3
+	for &reg in &registros
 
-    	/* botoes nos registros */
-		&uc_botaoin = new()
-		&uc_botaoin.interface	= &Pgmname
-		&uc_botaoin.id			= 'TOOLBAR'
+		&uc_botoesIN.id = 'LISTA'
+		&uc_botoesIN.interface = &Pgmname.Trim()
+		&uc_botoesIN.botoes.Clear()
 		
-		&botao = new()
-		&botao.classe			='uc_bt-icon'
-		&botao.evento 			= "EDITAR:"+&i.ToString().Trim()
-		&botao.icone 			= '<i class="fas fa-pen"></i>'
-		&botao.tooltip  		= 'Criar novo item na lista'
-		&uc_botaoin.botoes.Add(&botao)
+		&uc_botaoIN = new()
+		&uc_botaoIN.cor 		= uc_bt.outblue
+		&uc_botaoIN.icone		= '<i class="far fa-edit"></i>'
+		&uc_botaoIN.evento 		= "EDIT:bt1"
+		&uc_botaoIN.tooltip  	= 'tooltip do componente'
+		&uc_botaoIN.classe      = 'uc_btspace'
+		&uc_botoesIN.botoes.Add(&uc_botaoIN)
 		
-		&botao = new()
-		&botao.classe			='uc_bt-icon'
-		&botao.evento 			= "APAGAR:"+&i.ToString().Trim()
-		&botao.icone 			= '<i class="fas fa-trash"></i>'
-		&botao.tooltip  		= 'Criar novo item na lista'
-		&uc_botaoin.botoes.Add(&botao)
+		&uc_botaoIN = new()
+		&uc_botaoIN.cor 		=  uc_bt.outblue
+		&uc_botaoIN.icone		= '<i class="fas fa-trash-alt"></i>'
+		&uc_botaoIN.evento 		= "DELETE:bt2"
+		&uc_botaoIN.tooltip  	= 'tooltip do componente'
+		&uc_botaoIN.outline   	= true
+		&uc_botaoIN.classe      = 'uc_btspace'
+		&uc_botoesIN.botoes.Add(&uc_botaoIN)
 		
-		/* registro */
+		
 		&item = new()
-		&item.titulo 	= 'Titulo '+&i.ToString().Trim()
-		&item.tooltip	= 'Tooltip do registro '+&i.ToString().Trim()
-		&item.icone	= '<i class="fas fa-user-graduate"></i>'
-		&item.toolbox 	= UC.uc_botao(&uc_botaoin.ToJson())
-		&uc_listin.itens.Add(&item)
+		&item.titulo 			= &reg.LIXO_TesteNome.ToUpper().Trim()
+		&item.tooltip			= &reg.LIXO_TesteNome.ToUpper().Trim()
+		&item.evento			= 'ABRIR:'+&reg.LIXO_TesteId.ToString().Trim()
+		&item.imagem.classe 	= 'uc_imagemredonda15px'
+		&item.imagem.image		= &reg.LIXO_TesteFoto.Trim()
+		&item.imagem.tooltip 	= &reg.LIXO_TesteNome.ToUpper().Trim()
+		&item.toolbox =  UC.uc_botao(&uc_botoesIN.ToJson())
+
+		&uc_listIN.itens.Add(&item)
 	endfor
-	
-	html.Caption += UC.uc_lista(&uc_listin.ToJson())
+	html.Caption = UC.uc_listapagging(&uc_listIN.ToJson())
 endsub
-```
 
-A barra de botões de EDITAR e APAGAR nas linhas pode ser substituida por algo mais simples, como 
-```
-		&uc_botaoiconein.id 			= 'LISTA'
-		&uc_botaoiconein.interface 		= &Pgmname	
-		&uc_botaoiconein.classebar 		= 'uc_flex-r uc_flex-nowrap uc_mt30'
-		&uc_botaoiconein.classebotao  	= 'uc_btspace uc_bt-icon uc_pointer'
-		&uc_botaoiconein.classeicon   	= ''
-		&botoes.add('EDITAR:'+&i.ToString().Trim())
-		&botoes.add('APAGAR:'+&i.ToString().Trim())
-		&uc_botaoiconein.botoes = &botoes.ToJson()
+// ---------- PAGGING ---------------------------------------------------------- //
+sub 'PAGGING'
+	&search = ''
+	do case
+		case &uc_btclickparms.Item(uc_btitem.acao) = 'FIRST'
+			do '<<'
+		case &uc_btclickparms.Item(uc_btitem.acao) = 'BEFORE'
+			do '<'
+		case &uc_btclickparms.Item(uc_btitem.acao) = 'NEXT'
+			do '>'
+		case &uc_btclickparms.Item(uc_btitem.acao) = 'LAST'
+			do '>>'
+	endcase
+	do 'load'
+endsub
 
-		&item = new()
-		&item.titulo 	= 'Titulo '+&i.ToString().Trim()
-		&item.tooltip	= 'Tooltip do registro '+&i.ToString().Trim()
-		&item.icone	= '<i class="fas fa-user-graduate"></i>'
-		&item.toolbox 	= UC.uc_botaoicone(&uc_botaoiconein.ToJson())
-		&uc_listin.itens.Add(&item)
+sub '<<'
+	&pg=1
+endsub
+
+sub '<'
+	&pg-=1
+	if &pg<=0
+		&pg=1
+	endif
+endsub
+
+sub '>'
+	&pg+=1
+	do 'last'
+	if &pg > &last
+		&pg = &last
+	endif
+	&uc_mensagem = 'proximo '+&pg.ToString()
+endsub
+
+sub '>>'
+	do 'last'
+	&pg = &last
+endsub
+
+sub 'last'
+	if &pgsize>0
+		&total = count(LIXO_TesteId)
+		&rs = &total/&pgsize	
+		if &rs.Integer()<&rs
+			&last = &total/&pgsize + 1
+		else
+			&last = &total/&pgsize
+		endif
+	else
+		&last=0
+	endif
+endsub
+
+// ------ CONTROLE DE EVENTOS ---------------------------------------------------- //
+Event Bootstrapclick1.Click
+	&uc_btclick = Bootstrapclick1.ButtonId
+	navEvent2(&uc_btclick, &uc_btclickparms, &url, &isok)
+	if &isok
+		GlobalEvents.MPHOME(&uc_btclickparms)
+	endif
+	
+	msg(
+		' interface:'	+ &uc_btclickparms.Item(uc_btitem.interface)
+		+' controle:'	+ &uc_btclickparms.Item(uc_btitem.controle)
+		+' acao:'		+ &uc_btclickparms.Item(uc_btitem.acao)
+		+' parametro:'	+ &uc_btclickparms.Item(uc_btitem.parm1)
+	)
+
+	do case 
+		case  &uc_btclickparms.Item(uc_btitem.controle) = 'PAGGING'
+			do 'PAGGING'
+	endcase
+EndEvent
+
 ```
