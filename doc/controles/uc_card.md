@@ -8,6 +8,7 @@ No exemplo abaixo temos um titulo, texto e imagem, com a classe **uc_card** que 
 	&uc_cardin.classesize = 'uc_card300'
 	
 	&card = new()
+	&card = new()
 	&card.titulo 	= 'Titulo'
 	&card.texto 	= 'Mussum Ipsum, cacilds vidis litro abertis. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Detraxit consequat et quo num tendi nada. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.'
 	&card.image 	= 'https://www.w3schools.com/howto/img_avatar.png'
