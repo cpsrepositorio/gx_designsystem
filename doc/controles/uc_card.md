@@ -3,7 +3,6 @@ Cards são elementos que incluem imagens, titulos e textos em um cartão.
 
 ## Simples
 No exemplo abaixo temos um titulo, texto e imagem, com a classe **uc_card** que inclui uma borda.
-
 ```
 	&uc_cardin.classe	  = 'uc_card'
 	&uc_cardin.classesize = 'uc_card300'
@@ -22,7 +21,6 @@ No exemplo abaixo temos um titulo, texto e imagem, com a classe **uc_card** que 
 
 ## Cinza
 Um pequeno ajuste da classe, desta vez para **uc_card_gray**.
-
 ```
 &uc_cardin = new()
 	&uc_cardin.classe	  = 'uc_card_gray'
@@ -42,7 +40,6 @@ Um pequeno ajuste da classe, desta vez para **uc_card_gray**.
 
 ## Clear
 Um outro conjunto de classes apresenta o cartão sem as bordas num padrão mais claro,  **uc_card_clear**.
-
 ```
 	&uc_cardin = new()
 	&uc_cardin.classe	  = 'uc_card_clear'
@@ -58,7 +55,6 @@ Um outro conjunto de classes apresenta o cartão sem as bordas num padrão mais 
 	
 	html.Caption += '<h5 class="uc_mt30">uc_card_clear</h5>'
 	html.Caption += UC.uc_card(&uc_cardin.ToJson())
-
 ```
 
 ## Botões
@@ -66,7 +62,6 @@ Um toolbox também pode ser inserido, incluindo botões.
 
 * **&card.toolboxclasse = 'uc_flex-r uc_flex-jcc uc_pt10 uc_pb10'** Define a classe da linha onde se inclui o toolbox, com a centralização e espaçamentos.
 * **&card.toolbox  = UC.uc_botao(&uc_botaoin.ToJson())** Inclui a barra de botões.
-
 ```
 	&uc_cardin = new()
 	&uc_cardin.classe			= 'uc_card_clear'
@@ -99,7 +94,6 @@ Um toolbox também pode ser inserido, incluindo botões.
 
 ## Footer
 O controle também permite incluir um rodapé, que pode ser utilizado para incluir o toolbox, por exemplo.
-
 ```
 	&uc_cardin = new()
 	&uc_cardin.classe			= 'uc_card_clear '
@@ -128,6 +122,5 @@ O controle também permite incluir um rodapé, que pode ser utilizado para inclu
 	
 	html.Caption += '<h5 class="uc_mt30">Footer</h5>'
 	html.Caption += UC.uc_card(&uc_cardin.ToJson())
-
 ```
 
