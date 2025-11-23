@@ -1,4 +1,4 @@
-# uc_listapagging (deprecated)
+# uc_listapagging (obsoleto)
 
 Utilize o controle [uc_listapaginada](/doc/controles/uc_listapaginada.md) ao invés deste controle de paginação.
 
@@ -15,7 +15,7 @@ Event Start
 	alerta.Caption	= ''
 
 	&pg			= 1	
-	&pgsize		= 14	
+	&pgsize		= 6	
 	
 	do 'load'
 Endevent

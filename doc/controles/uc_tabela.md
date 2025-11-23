@@ -123,6 +123,7 @@ O controle **uc_tabela** também inclui uma barra de botões na parte superior.
 | **&uc_tabelaIN.toolbar.___title** | titulos nos botões, por exemplo: **&uc_tabelaIN.toolbar.newtitle** |
 | **&uc_tabelaIN.toolbar.notitle** 	| não inclui titulos nos botões |
 
+
 ```
 	...
 
