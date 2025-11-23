@@ -32,7 +32,7 @@ As linhas normalmente são extraidas de uma tabela, portanto, um **for each** ou
 ## Lines
 ```
 &uc_tabelaIN.lines.Clear()
-for &i = 1 to 10
+for &i = 1 to 5
 	
 	&tablin = new()
 	
@@ -67,56 +67,70 @@ O codigo inclui uma barra de botões em cada registro.
 A cor da tabela é definida na classe **&uc_tabelain.class = 'minimalistBlack'**, sendo que temos duas cores minimalistBlack e minimalistGray.
 
 ```
-sub 'matriz'
 	&uc_tabelain.id 		= 'TABELA'
 	&uc_tabelain.interface 	= &Pgmname.ToUpper()
-	&uc_tabelain.class = 'minimalistBlack'
+	&uc_tabelain.class 		= 'minimalistBlack'
 	
-	&uc_tabelain.header.Clear()
-	&uc_tabelain.lines.Clear()
-	&uc_tabelain.footer.Clear()
-			
-	&tabhead = new()
-	&tabhead.text  = 'Matriz'
-	&tabhead.width = '80%'
-	&uc_tabelain.header.Add(&tabhead)
+	...
+```
 
-	&tabhead = new()
-	&tabhead.text  = 'Status'
-	&tabhead.width = '10%'
-	&uc_tabelain.header.Add(&tabhead)
+## Card
+O controle **uc_tabela** possui um ajuste que permite mostrar os registros como cards. Algumas propriedades permitem definir o modo de apresentação em formato Card.
 
-	&tabhead = new()
-	&tabhead.text  = ''
-	&tabhead.width = '10%'
-	&uc_tabelain.header.Add(&tabhead)
-	
-	for each
+| classe							| funcionamento						|
+|-----------------------------------|-----------------------------------|
+| **&uc_tabelaIN.card** 			| true. modo card                 	|
+| **&uc_tabelaIN.cardcontainer** 	| define a disposição dos cartões 	|
+| **&uc_tabelaIN.cardclass**     	| define o formato do cartão      	| 
 
-		&tablin = new()
+Eventualmente, será necessário reposicionar a barra de botões **&tabcel.classe = 'uc_flex-r uc_flex-jce'** utilizando as classes uc_flex para colocar os botões no centro **uc_flex-jcc**, na esquerda **uc_flex-jcs** ou direita **uc_flex-jce**.
+
+```
+sub 'card'
+	...
+
+	&uc_tabelain.card 				= true
+	&uc_tabelaIN.cardcontainer 		= 'uc_flex-r uc_flex-w uc_flex-jcc'
+	&uc_tabelaIN.cardclass 			= 'uc_card uc_card300'
+
+	...
+
+	&uc_tabelaIN.lines.Clear()
+	for &i = 1 to 4
 		
-		&tabcel = new()
-		&tabcel.text = 'titulo'
-		&tablin.cells.Add(&tabcel)
-		
-		&uc_botaoiconein.id 			= 'id'
-		&uc_botaoiconein.interface 		= 'interface'	
-		&uc_botaoiconein.classebar 		= 'uc_flex-r uc_flex-nowrap'
-		&uc_botaoiconein.classebotao  	= 'uc_btspace uc_bt-icon uc_pointer'
-		&uc_botaoiconein.classeicon   	= ''
-        &botoes.Clear()
-		&botoes.add('ABRIR:'+id)
-		&uc_botaoiconein.botoes = &botoes.ToJson()
+		...
 		
 		&tabcel = new()
 		&tabcel.text = UC.uc_botaoicone(&uc_botaoiconein.ToJson())
+		&tabcel.classe = 'uc_flex-r uc_flex-jce'
 		&tablin.cells.Add(&tabcel)
 		
 		&uc_tabelain.lines.Add(&tablin)
-
+		
 	endfor
-	matriz.Caption = uc.uc_tabela(&uc_tabelain.ToJson())
+
+	grid.Caption += '<h5 class="uc_mt30">Card</h5>'
+	grid.Caption += UC.uc_tabela(&uc_tabelain.ToJson())
 endsub
+```
+
+## Botões
+O controle **uc_tabela** também inclui uma barra de botões na parte superior.
+
+| classe							| opção						|
+|-----------------------------------|-----------------------------------|
+| **&uc_tabelaIN.toolbar.__** 	| new,close, refresh, export, filter, config, filteredit, save, view, por exemplo: **&uc_tabelaIN.toolbar.new**  | 
+| **&uc_tabelaIN.toolbar.___title** | titulos nos botões, por exemplo: **&uc_tabelaIN.toolbar.newtitle** |
+| **&uc_tabelaIN.toolbar.notitle** 	| não inclui titulos nos botões |
+
+```
+	...
+
+	&uc_tabelain.toolbar.notitle	= true
+	&uc_tabelain.toolbar.new 	= true
+	&uc_tabelain.toolbar.export 	= true
+
+	...
 ```
 
 ## DivTable

@@ -6,3 +6,8 @@
 4) Ajustar as classes css, padronizar tamanhos de fontes, espaçamentos
 5) Controlar redimensionamento da tela @mediaquerie
 6) Controlar 125% de tamanho do Windows 11
+
+mapa de calor
+https://divtable.com/table-styler/ TopazCell
+https://www.expensive.toys/blog/pure-CSS-heatmap
+https://www.cssscript.com/tag/heat-map/
