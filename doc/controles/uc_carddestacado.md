@@ -3,9 +3,9 @@ Cards destacados são controles que destacam apenas um único valor, levando em 
 
 Até esse momento, temos tres tipos de cards destacados disponíveis:
 
-* **&card.classe = 'uc_card-destacado-<cor>'** que coloca a cor no fundo do card.
-* **&card.classe = 'uc_card-lborder-<cor>'** que coloca a cor na lateral esquerda do card
-* **&card.classe = 'uc_card-rborder-<cor>'** que coloca a cor na lateral direita do card
+* **&card.classe = 'uc_card-destacado-...cor'** coloca a cor no fundo do card.
+* **&card.classe = 'uc_card-lborder-...cor'**  coloca a cor na lateral esquerda do card
+* **&card.classe = 'uc_card-rborder-...cor'**  coloca a cor na lateral direita do card
 
 As cores possíveis são:
 
