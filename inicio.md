@@ -25,6 +25,7 @@ Depois de feitas as devidas apresentações, vamos evoluir para um nivel superio
 *  [Estratégias de carga de registros](/doc/tecnicas/tec_estrategiascarga.md)
 *  [Estratégias de interface](/doc/tecnicas/tec_estrategiasinterface.md)
 *  [Estratégias de controle de eventos](/doc/tecnicas/tec_estrategiaseventos.md) |
+|---|---|
 
 
 
