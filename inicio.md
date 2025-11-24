@@ -1,5 +1,7 @@
 # gx_designsystem
 
+| | opcoes |
+|---|---|
 | O **gx_designsystem** é um recurso para construção de interfaces Web que pode ser utilizado em Kbs Genexus (18). O pacote inclui um Package, Classes CSS, SDTs, documentação técnica e exemplos.
 
 Com um olhar excessivamente simplista, a construção de uma interface em Genexus segue um ritual de inserir controles em um editor estranho, e em seguida configurar suas propriedades. O conteúdo, as ações, formas, são, de certa maneira, limitados pelas caracteristicas do proprio controle.
@@ -18,15 +20,13 @@ Para quem nunca trabalhou com Genexus este modelo será mais simples, mas será 
 * Infelizmente tem coisas esquisitas para aprender como [eventos](/doc/eventos.md), por exemplo.
 * Depois vamos ao checklist para os herois que desejam contribuir com seu benvindo esforço: [o que falta fazer](/doc/oquefalta.md)
 
-## agora vamos ao nivel master
+
 Depois de feitas as devidas apresentações, vamos evoluir para um nivel superior, tratando carga de registros, estratégias de interface, estratégias de encriptação.
 
 *  [Estratégias](/doc/tecnicas/tec_estrategias.md)
 *  [Estratégias de carga de registros](/doc/tecnicas/tec_estrategiascarga.md)
 *  [Estratégias de interface](/doc/tecnicas/tec_estrategiasinterface.md)
 *  [Estratégias de controle de eventos](/doc/tecnicas/tec_estrategiaseventos.md) |
-|---|---|
-|z |z |
 
 
 
