@@ -1,12 +1,7 @@
 # uc_menu
 Um menu consiste em uma barra com opções posicionadas na horizontal, normalmente contendo uma imagem e um texto que representam uma certa ação de interesse do usuário. Pressupõe-se que ao clicar sobre a imagem ou texto, o menu causará o efeito de abrir alguma coisa.
 
-No pacote temos um objeto uc_menu que permite construir menus na horizontal ou vertical.
-
-| horizontal     | vertical |
-|----------------|----------|
-|![menu horizontal](https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/uc_menu.png)|![menu vertical](https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/uc_menuv.png)|
-
+O **uc_menu** permite construir menus na horizontal ou vertical.
 
 ## uc_menuin
 Um objeto **uc_menuin** deve ser utilizado para adicionar itens ao menu. Caso necessite de mais de um menu ao mesmo tempo na mesma interface, utilize um segundo **uc_menuin**.

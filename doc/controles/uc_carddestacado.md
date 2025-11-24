@@ -9,17 +9,17 @@ Até esse momento, temos tres tipos de cards destacados disponíveis:
 
 As cores possíveis são:
 
-* **primary** azul
-* **danger** vermelho
-* **warning** amarelo
-* **success** verde
-* **light** cinza
+* **blue** azul
+* **red** vermelho
+* **orange** amarelo
+* **green** verde
+* **gray** cinza
 * **clear** branco
 
 ## Tipo destacado
 Neste exemplo os cards são mais fortes porque a cor fica no fundo do mesmo. Um icone (opcional) é possível para destacar ainda mais o assunto do cartão.
 
-A classe ainda informa um valor adicional &card.classe = 'uc_card-destacado-primary **uc_card160**' que indica a largura do cartão em 160px.
+A classe ainda informa um valor adicional &card.classe = 'uc_card-destacado-blue **uc_card160**' que indica a largura do cartão em 160px.
 
 ```
 	&uc_carddestacadoin = new()
@@ -30,7 +30,7 @@ A classe ainda informa um valor adicional &card.classe = 'uc_card-destacado-prim
 	
 	&card = new()
 	&card.icone  		= '<i class="fas fa-home"></i>'
- 	&card.classe 		= 'uc_card-destacado-primary uc_card160'
+ 	&card.classe 		= 'uc_card-destacado-blue uc_card160'
 	&card.titulo 		= 'PROFESSORES'
 	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
 	&card.valor  		= '31123'
@@ -40,7 +40,7 @@ A classe ainda informa um valor adicional &card.classe = 'uc_card-destacado-prim
 	
 	&card = new()
 	&card.icone  	= '<i class="fas fa-user-alt"></i>'
- 	&card.classe 	= 'uc_card-destacado-danger uc_card160'
+ 	&card.classe 	= 'uc_card-destacado-red uc_card160'
 	&card.titulo 	= 'PROFESSORES'
 	&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
 	&card.valor  	= '31123'
@@ -50,7 +50,7 @@ A classe ainda informa um valor adicional &card.classe = 'uc_card-destacado-prim
 	
 	&card = new()
 	&card.icone  	= '<i class="fas fa-power-off"></i>'
- 	&card.classe 	= 'uc_card-destacado-warning uc_card160'
+ 	&card.classe 	= 'uc_card-destacado-orange uc_card160'
 	&card.titulo 	= 'PROFESSORES'
 	&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
 	&card.valor  	= '31123'
@@ -60,7 +60,7 @@ A classe ainda informa um valor adicional &card.classe = 'uc_card-destacado-prim
 	
 	&card = new()
 	&card.icone  	= '<i class="fas fa-recycle"></i>'
- 	&card.classe 	= 'uc_card-destacado-success uc_card160'
+ 	&card.classe 	= 'uc_card-destacado-green uc_card160'
 	&card.titulo 	= 'PROFESSORES'
 	&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
 	&card.valor  	= '31123'
@@ -70,19 +70,19 @@ A classe ainda informa um valor adicional &card.classe = 'uc_card-destacado-prim
 	
 	&card = new()
 	&card.icone  	= '<i class="fas fa-trash-alt"></i>'
- 	&card.classe 	= 'uc_card-destacado-light uc_card160'
+ 	&card.classe 	= 'uc_card-destacado-gray uc_card160'
 	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
+	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
 	&card.valor  	= '31123'
-	&card.unidade = 'un'
-	&card.evento  = 'ABRIR:5'
+	&card.unidade 	= 'un'
+	&card.evento  	= 'ABRIR:5'
 	&uc_carddestacadoin.cards.add(&card)
 	
 	html.Caption  =  '<h5>uc_card-destacado</h5>'
 	html.Caption +=  UC.uc_carddestaque(&uc_carddestacadoin.ToJson())
 ```
 ## Borda a esquerda ou direita
-Trocando para o conjunto de classes lborder na definição da classe, **&card.classe = 'uc_card-lborder-danger'**, temos a borda na cor desejada e o fundo do cartão em branco.
+Trocando para o conjunto de classes lborder na definição da classe, **&card.classe = 'uc_card-lborder-red'**, temos a borda na cor desejada e o fundo do cartão em branco.
 
 ```
 	&uc_carddestacadoin = new()
@@ -92,60 +92,60 @@ Trocando para o conjunto de classes lborder na definição da classe, **&card.cl
 	&uc_carddestacadoin.classe = 'uc_card-destacado'
 	
 	&card = new()
-	&card.icone  		= '<i class="fas fa-home"></i>'
- 	&card.classe 		= 'uc_card-lborder-primary uc_card160'
-	&card.titulo 		= 'PROFESSORES'
+	&card.icone  	= '<i class="fas fa-home"></i>'
+ 	&card.classe 	= 'uc_card-lborder-blue uc_card160'
+	&card.titulo 	= 'PROFESSORES'
 	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
-	&card.valor  		= '31123'
+	&card.valor  	= '31123'
 	&card.unidade 	= 'un'
 	&card.evento  	= 'ABRIR:1'
 	&uc_carddestacadoin.cards.add(&card)
 	
 	&card = new()
 	&card.icone  	= '<i class="fas fa-user-alt"></i>'
- 	&card.classe 	= 'uc_card-lborder-danger uc_card160'
+ 	&card.classe 	= 'uc_card-lborder-red uc_card160'
 	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
+	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
 	&card.valor  	= '31123'
-	&card.unidade = 'un'
-	&card.evento  = 'ABRIR:2'
+	&card.unidade 	= 'un'
+	&card.evento  	= 'ABRIR:2'
 	&uc_carddestacadoin.cards.add(&card)
 	
 	&card = new()
 	&card.icone  	= '<i class="fas fa-power-off"></i>'
- 	&card.classe 	= 'uc_card-lborder-warning uc_card160'
+ 	&card.classe 	= 'uc_card-lborder-orange uc_card160'
 	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
+	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
 	&card.valor  	= '31123'
-	&card.unidade = 'un'
-	&card.evento  = 'ABRIR:3'
+	&card.unidade 	= 'un'
+	&card.evento  	= 'ABRIR:3'
 	&uc_carddestacadoin.cards.add(&card)
 	
 	&card = new()
 	&card.icone  	= '<i class="fas fa-recycle"></i>'
- 	&card.classe 	= 'uc_card-lborder-success uc_card160'
+ 	&card.classe 	= 'uc_card-lborder-green uc_card160'
 	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
+	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
 	&card.valor  	= '31123'
-	&card.unidade = 'un'
-	&card.evento  = 'ABRIR:4'
+	&card.unidade 	= 'un'
+	&card.evento  	= 'ABRIR:4'
 	&uc_carddestacadoin.cards.add(&card)
 	
 	&card = new()
 	&card.icone  	= '<i class="fas fa-trash-alt"></i>'
- 	&card.classe 	= 'uc_card-lborder-light uc_card160'
+ 	&card.classe 	= 'uc_card-lborder-gray uc_card160'
 	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
+	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
 	&card.valor  	= '31123'
-	&card.unidade = 'un'
-	&card.evento  = 'ABRIR:5'
+	&card.unidade 	= 'un'
+	&card.evento  	= 'ABRIR:5'
 	&uc_carddestacadoin.cards.add(&card)
 	
 	html.Caption +=  '<h5 class="uc_mt30">uc_card-lborder</h5>'
 	html.Caption +=  UC.uc_carddestaque(&uc_carddestacadoin.ToJson())
 ```
 
-O mesmo pode ser realizado com a borda à direita, com as classes **&card.classe = 'uc_card-rborder-danger'**.
+O mesmo pode ser realizado com a borda à direita, com as classes **&card.classe = 'uc_card-rborder-red'**.
 
 ```
 	&uc_carddestacadoin = new()
@@ -155,53 +155,53 @@ O mesmo pode ser realizado com a borda à direita, com as classes **&card.classe
 	&uc_carddestacadoin.classe = 'uc_card-destacado'
 	
 	&card = new()
-	&card.icone  		= '<i class="fas fa-home"></i>'
- 	&card.classe 		= 'uc_card-rborder-primary uc_card160'
-	&card.titulo 		= 'PROFESSORES'
+	&card.icone  	= '<i class="fas fa-home"></i>'
+ 	&card.classe 	= 'uc_card-rborder-blue uc_card160'
+	&card.titulo 	= 'PROFESSORES'
 	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
-	&card.valor  		= '31123'
+	&card.valor  	= '31123'
 	&card.unidade 	= 'un'
 	&card.evento  	= 'ABRIR:1'
 	&uc_carddestacadoin.cards.add(&card)
 	
 	&card = new()
 	&card.icone  	= '<i class="fas fa-user-alt"></i>'
- 	&card.classe 	= 'uc_card-rborder-danger uc_card160'
+ 	&card.classe 	= 'uc_card-rborder-red uc_card160'
 	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
+	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
 	&card.valor  	= '31123'
-	&card.unidade = 'un'
-	&card.evento  = 'ABRIR:2'
+	&card.unidade 	= 'un'
+	&card.evento  	= 'ABRIR:2'
 	&uc_carddestacadoin.cards.add(&card)
 	
 	&card = new()
 	&card.icone  	= '<i class="fas fa-power-off"></i>'
- 	&card.classe 	= 'uc_card-rborder-warning uc_card160'
+ 	&card.classe 	= 'uc_card-rborder-orange uc_card160'
 	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
+	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
 	&card.valor  	= '31123'
-	&card.unidade = 'un'
-	&card.evento  = 'ABRIR:3'
+	&card.unidade 	= 'un'
+	&card.evento  	= 'ABRIR:3'
 	&uc_carddestacadoin.cards.add(&card)
 	
 	&card = new()
 	&card.icone  	= '<i class="fas fa-recycle"></i>'
- 	&card.classe 	= 'uc_card-rborder-success uc_card160'
+ 	&card.classe 	= 'uc_card-rborder-green uc_card160'
 	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
+	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
 	&card.valor  	= '31123'
-	&card.unidade = 'un'
-	&card.evento  = 'ABRIR:4'
+	&card.unidade 	= 'un'
+	&card.evento  	= 'ABRIR:4'
 	&uc_carddestacadoin.cards.add(&card)
 	
 	&card = new()
 	&card.icone  	= '<i class="fas fa-trash-alt"></i>'
- 	&card.classe 	= 'uc_card-rborder-light uc_card160'
+ 	&card.classe 	= 'uc_card-rborder-gray uc_card160'
 	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
+	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
 	&card.valor  	= '31123'
-	&card.unidade = 'un'
-	&card.evento  = 'ABRIR:5'
+	&card.unidade 	= 'un'
+	&card.evento  	= 'ABRIR:5'
 	&uc_carddestacadoin.cards.add(&card)
 	
 	html.Caption +=  '<h5 class="uc_mt30">uc_card-rborder</h5>'
@@ -241,8 +241,7 @@ As dimensões definidas nas classes para os cards destacados são:
 | .uc_cardw50	  | {width:49%;}  |
 | .uc_cardw30	  | {width:32%;}  |
  	
- 	
-	
+As classes estão definidas em **uc_card.css**.
 	
 	
 	

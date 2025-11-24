@@ -1,7 +1,5 @@
 # uc_menuapp | uc_appmenu
-Um controle do tipo **uc_menuapp** ou **uc_appmenu**, é um modelo de menu baseado em cards com certas caracteristicas como uma imagem ou icone à esquerda, titulo, subtitulo e uma toolbox com botões, para abrir o registro, por exemplo.
-
-Pode ser apresentado 
+Um controle do tipo **uc_menuapp** ou **uc_appmenu**, apresenta um menu em estilo cards, com um titulo, subtitulo e toolbox com botões.
 
 ## uc_menuin
 Um controle **uc_menuapp** utiliza o mesmo SDT **uc_menuin** para adicionar itens ao menu.
@@ -12,67 +10,44 @@ Para incluir uma lista de itens no menu, uma segunda variável será necessária
 A seguir um exemplo de um menu horizontal.
 
 ```
-sub 'menu'
+	&uc_menuIN.id = 'MENU'
+	&uc_menuIN.interface = &Pgmname.Trim()
+	&uc_menuIN.classe = 'uc_mt30'
+	&uc_menuIN.itens.Clear()
+	&uc_menuIN.toolbarclass = 'uc_flex-c'
 	
-	&uc_menuin.classe = 'uc_menu-h uc_menu-hc'
-	&uc_menuin.itens.Clear()
+	&uc_botaoiconeIN.id 			= 'id'
+	&uc_botaoiconeIN.interface 		= 'interface'	
+	&uc_botaoiconeIN.classebar 		= 'uc_flex-r uc_flex-nowrap'
+	&uc_botaoiconeIN.classebotao  	= 'uc_btspace uc_appmenu-toolbar-icon'
+	&uc_botaoiconeIN.classeicon   	= 'uc_bticon'
+	&botoes.add('PLAY:1')
+	&botoes.add('INFO:1')
+	&uc_botaoiconeIN.botoes = &botoes.ToJson()
+	
+	&item = new()
+	&item.evento = ''//ABRIR:1'
+	&item.icone = '<i class="fas fa-user-cog"></i>'
+	&item.titulo = 'Configuração'
+	&item.subtitulo = 'infraestrutura'
+	&item.toolbar = UC.uc_botaoicone(&uc_botaoiconeIN.ToJson())
+	&uc_menuIN.itens.Add(&item)
+	
+	&item = new()
+	&item.evento = 'ABRIR:1'
+	&item.icone = '<i class="fas fa-copy"></i>'
+	&item.titulo = 'Projeto Um'
+	&item.subtitulo = 'academico'
+	&uc_menuIN.itens.Add(&item)
+		
+	&item = new()
+	&item.evento = 'ABRIR:1'
+	&item.icone = '<i class="fas fa-eye"></i>'
+	&item.titulo = 'Projeto Principal'
+	&item.subtitulo = 'academico'
+	&uc_menuIN.itens.Add(&item)
 
-	&menuitem = new()
-	&menuitem.evento = &Pgmname.Trim()+':MENU:HOME:1'
-	&menuitem.icone  = '<i class="fas fa-house-damage uc_pointer"></i>'
-	&menuitem.titulo = 'relatorio'
-	&uc_menuin.itens.Add(&menuitem)
-
-	&menuitem = new()
-	&menuitem.evento = &Pgmname.Trim()+':MENU:FOLLOW:1'
-	&menuitem.icone  = '<i class="fas fa-running uc_pointer"></i>'
-	&menuitem.titulo = 'follow-up'
-	&uc_menuin.itens.Add(&menuitem)
-
-	&menuitem = new()
-	&menuitem.evento = &Pgmname.Trim()+':MENU:PRODUTO:1'
-	&menuitem.icone  = '<i class="fab fa-windows uc_pointer"></i>'
-	&menuitem.titulo = 'produto'
-	&uc_menuin.itens.Add(&menuitem)
-
-	&menuitem = new()
-	&menuitem.evento = &Pgmname.Trim()+':MENU:CVE:1'
-	&menuitem.icone  = '<i class="fas fa-shield-alt uc_pointer"></i>'
-	&menuitem.titulo = 'cve'
-	&uc_menuin.itens.Add(&menuitem)
-
-	&menuitem = new()
-	&menuitem.evento = &Pgmname.Trim()+':MENU:UNIDADE:1'
-	&menuitem.icone  = '<i class="fas fa-school uc_pointer"></i>'
-	&menuitem.titulo = 'unidade'
-	&uc_menuin.itens.Add(&menuitem)
-
-	&menuitem = new()
-	&menuitem.evento = &Pgmname.Trim()+':MENU:IP:1'
-	&menuitem.icone  = '<i class="fas fa-network-wired uc_pointer"></i>'
-	&menuitem.titulo = 'ip'
-	&uc_menuin.itens.Add(&menuitem)
-
-	html.Caption  = UC.uc_menu(&uc_menuIN.ToJson())
-endsub
+	grid.Caption  = '<div>'+UC.uc_appmenu(&uc_menuIN.ToJson()) + '</div>'
 ```
-
-A linha **html.Caption  = UC.uc_menu(&uc_menuIN.ToJson())**, inclui o menu num textblock na interface.
-
-
-### Estilo
-O estilo do menu é definido no arquivo **uc_menu.css**, que contém uma série de classes que permitem configurar o objeto.
-
-A seguir apresentamos uma pequena explicação dessas classes:
-
-| classe   | significado        |
-|----------|--------------------|
-|uc_menu-h | menu horizontal    |
-|uc_menu-hl| alinhado a esquerda|
-|uc_menu-hc| alinhado ao centro |
-|uc_menu-hr| alinhado a direita |
-|uc_menu-v | menu vertical      |
-|uc_menu-vl| alinhado a esquerda|
-|uc_menu-vc| alinhado ao centro |
-|uc_menu-vr| alinhado a direita |
+Observe que quando **&item.evento** é definido passa a gerar o evento de todo card, independente se houver algum botão na toolbox.
 
