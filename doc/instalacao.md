@@ -1,4 +1,4 @@
-# PROCEDIMENTO DE INSTALAÇÃO (SETUP)
+# Setup
 
 Para utilizar os componentes será necessário instalar o pacote UC em sua última versão disponível. 
 
@@ -17,22 +17,22 @@ Para utilizar será necessário instalar no Genexus, através do procedimento a 
 Para utilizar o pacote você pode optar por criar um projeto do zero (criando uma kb), e em seguida o configurando para receber o pacote de componentes.
 
 1) Ligue o Genexus
-2) Crie uma Kb, File – New knowledge base, dando o nome de GrupoEstudosGx18, selecionando em Prototyping: .Net Framework e Sql Server
+2) Crie uma Kb selecionando em Prototyping: .Net Framework e Sql Server
+3) Crie os Webpanels para testar os componentes
 
 ## Instalação do pacote UC
 Obtenha a última versão do pacote de modulos e o instale a partir dos seguintes procedimentos.
 
 1) Abra no Gx o Knowledge Manager->Manage Module References.
 2) Selecione do lado esquerdo a opção LOCAL, e com o botão direito do mouse, selecione UPLOAD FROM FILE
-3) Aponte para o arquivo OPC do pacote de controles. O arquivo possui um nome similar a UC_nn.nnn.nn onde os valores de n refletem a versão do componente, como por exemplo: UC_18.1.9.20.opc. Neste documento você encontrará a última versão do pacote: [uc distribuição](/recursos/uc.md)
+3) Aponte para o arquivo OPC do pacote de controles. O arquivo possui um nome similar a UC_nn.nnn.nn onde os valores de n refletem a versão do componente, como por exemplo: UC_18.1.9.20.opc. Neste documento você encontrará a última versão do pacote [uc](/recursos/distrib.md)
 4) Uma vez selecionado pressione INSTALL
 5) Aguardar o término da instalação.
 6) Uma pasta aparecerá no KB EXPLORER - REFERENCES - UC, que conterá os elementos (readonly) importados do arquivo OPC.
 
-
 ## Executar a KB
 
-1) Para completar a operação execute a KB para criar a pasta WEB
+1) Para completar a operação execute a KB para criar a pasta WEB, será necessário 
 2) No menu, selecione Tools -> Explore Target Environment Directory para abrir a pasta WEB. 
 3) Copiar a pasta STYLE nessa pasta, descompactando o arquivo UC_nn.nn.nn.zip. Nos arquivos descompactados localiza uma pasta chamada STYLE.
 4) O projeto, neste ponto está configurado para iniciar os trabalhos.

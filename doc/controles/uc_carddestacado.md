@@ -7,19 +7,29 @@ Até esse momento, temos tres tipos de cards destacados disponíveis:
 * **&card.classe = 'uc_card-lborder-...cor'**  coloca a cor na lateral esquerda do card
 * **&card.classe = 'uc_card-rborder-...cor'**  coloca a cor na lateral direita do card
 
-As cores possíveis são:
+As cores possíveis são apresentadas a seguir, sendo duas variações, uma mais forte e outra, com um prefixo **p-**, mais clara.
 
-* **blue** azul
-* **red** vermelho
-* **orange** amarelo
-* **green** verde
-* **gray** cinza
-* **clear** branco
+| Classe  		| Cor      			|    html    |
+|---------------|-------------------|------------|
+| **clear**		| Branco			| #ffffff	|
+| **blue**		| Azul 				| #0c85ff 	|
+| **red**		| Vermelho 			| #ff3838	|
+| **orange**	| Laranja 			| #ff9a0c	|
+| **green**		| Verde 			| #32ff58 	|
+| **yellow**	| Amarelo 			| #f7ff0c	|
+| **gray**		| Cinza 			| #5e5e5e 	|
+| **p-blue**	| Azul 				| #a4d1ff 	|
+| **p-red**		| Vermelho claro 	| #ffa4a4	|
+| **p-orange**	| Laranja claro 	| #fff1a4	|	
+| **p-green**	| Verde claro 		| #a4ffa7 	|
+| **p-yellow**	| Amarelo claro 	| #f9ffa4	|
+| **p-gray**	| Cinza claro		| #a7a7	|
 
 ## Tipo destacado
 Neste exemplo os cards são mais fortes porque a cor fica no fundo do mesmo. Um icone (opcional) é possível para destacar ainda mais o assunto do cartão.
 
 A classe ainda informa um valor adicional &card.classe = 'uc_card-destacado-blue **uc_card160**' que indica a largura do cartão em 160px.
+
 
 ```
 	&uc_carddestacadoin = new()
@@ -46,6 +56,16 @@ A classe ainda informa um valor adicional &card.classe = 'uc_card-destacado-blue
 	&card.valor  	= '31123'
 	&card.unidade = 'un'
 	&card.evento  = 'ABRIR:2'
+	&uc_carddestacadoin.cards.add(&card)
+	
+	&card = new()
+	&card.icone  	= '<i class="fas fa-power-off"></i>'
+ 	&card.classe 	= 'uc_card-destacado-yellow uc_card160'
+	&card.titulo 	= 'PROFESSORES'
+	&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
+	&card.valor  	= '31123'
+	&card.unidade = 'un'
+	&card.evento  = 'ABRIR:3'
 	&uc_carddestacadoin.cards.add(&card)
 	
 	&card = new()
@@ -113,6 +133,16 @@ Trocando para o conjunto de classes lborder na definição da classe, **&card.cl
 	
 	&card = new()
 	&card.icone  	= '<i class="fas fa-power-off"></i>'
+ 	&card.classe 	= 'uc_card-lborder-yellow uc_card160'
+	&card.titulo 	= 'PROFESSORES'
+	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
+	&card.valor  	= '31123'
+	&card.unidade 	= 'un'
+	&card.evento  	= 'ABRIR:3'
+	&uc_carddestacadoin.cards.add(&card)
+	
+	&card = new()
+	&card.icone  	= '<i class="fas fa-power-off"></i>'
  	&card.classe 	= 'uc_card-lborder-orange uc_card160'
 	&card.titulo 	= 'PROFESSORES'
 	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
@@ -172,6 +202,16 @@ O mesmo pode ser realizado com a borda à direita, com as classes **&card.classe
 	&card.valor  	= '31123'
 	&card.unidade 	= 'un'
 	&card.evento  	= 'ABRIR:2'
+	&uc_carddestacadoin.cards.add(&card)
+	
+	&card = new()
+	&card.icone  	= '<i class="fas fa-power-off"></i>'
+ 	&card.classe 	= 'uc_card-rborder-yellow uc_card160'
+	&card.titulo 	= 'PROFESSORES'
+	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
+	&card.valor  	= '31123'
+	&card.unidade 	= 'un'
+	&card.evento  	= 'ABRIR:3'
 	&uc_carddestacadoin.cards.add(&card)
 	
 	&card = new()

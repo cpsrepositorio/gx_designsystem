@@ -1,5 +1,5 @@
-# O QUE É UM COMPONENTE
-Um componente no pacote UC é uma procedure que produz elementos HTML + CSS e em alguns casos JS que definem a forma do controle na interface. Um conjunto de componentes que produzem conteúdos 'padronizados' são empacotados em uma DLL externa criada por um recurso chamado Package em Genexus. O resultado do empacotamento é um objeto com extensão OPC que poderá ser inserido em qualquer KB.
+# O que é o DesignSystem
+O **Designsystem** é um conjunto de componentes, formado por procedures que produzem elementos HTML + CSS e em alguns casos JS que definem a forma do controle na interface. Um conjunto de componentes que produzem conteúdos 'padronizados' são empacotados em uma DLL externa criada por um recurso chamado Package em Genexus. O resultado do empacotamento é um objeto com extensão OPC que poderá ser inserido em qualquer KB.
 
 ## Objetivos estratégicos
 Desenvolver interfaces em Genexus é pouco produtivo se você não estiver utilizando os Patterns, pois cada interface deve ser definida em termos de controles padrões, em seguida configurações, e depois carga de dados. 
@@ -16,11 +16,10 @@ O agrupamento dos componentes em um Package (OPC) também permite que as mesmas 
 
 O desafio maior é construir controles que sejam uteis e de uso frequente pelos desenvolvedores, alcançar as caracteristicas desejadas, incrementem a usabilidade, a assessibilidade de pessoas PCD e um recurso que automatize a construção do SDT nos controles.
 
-
-## configuração do controle
+## Configuração do controle
 Associado ao controle teremos sempre um SDT com os parametros necessários para a sua construção.
 O nome deste objeto é o mesmo que o do controle seguido de um IN no final (para determinar INPUT)
 Exemplo, para o controle **uc_tabela** temos um SDT **uc_tabelaIN** que permitirá a configuração das propriedades que criam a tabela.
 
-## contribuições
+## Contribuições
 Para contribuir, baixe a kb CEETEPS_DESIGNSYSTEM18 e programe os controles na pasta UC.

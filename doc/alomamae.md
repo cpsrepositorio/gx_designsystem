@@ -18,7 +18,9 @@ Endevent
 6) Dentro deste evento programe:
 ```
 Event Start
- textblock1.caption = '<div style="border:1px solid red;">teste</div>'
+   form.HeaderRawHTML = uc_cssLOAD()
+	form.Meta.AddItem("mobile-web-app-capable",'content="yes"')
+   textblock1.caption = '<div style="border:1px solid red;">teste</div>'
 Endevent
 ```
 7) Salve o objeto
@@ -28,5 +30,4 @@ Voce deve ter observado que é possivel a partir de um Textblock simples apresen
 
 Parece ser um modelo tão elementar, mas na prática, todo conteúdo baseado na internet parte da estrutura HTML incluido informações texto. O pacote UC utiliza desta capacidade para inserir na interface padrão Genexus as tags HTML que apresentarão recursos complexos.
 
-
-
+Não se esqueça de ver a explicação sobre o procedimento [uc_cssLOAD()](/docs/classes.md).
