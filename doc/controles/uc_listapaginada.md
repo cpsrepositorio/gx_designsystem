@@ -5,8 +5,8 @@ O controle é bastante simples, porém necessita de recursos adicionais para a c
 
 No evento **Start** se deve definir a página inicial e o tamanho da página e a rotina de 'load' deve ser acionada.
 ```
-	&pg 						= 1		
-	&pgsize 					= 10	
+	&pg = 1		
+	&pgsize = 10	
 	do 'load'	
 ``` 
 
@@ -54,46 +54,46 @@ O **for &reg in &registros** percorre a lista de registros retornado pelo DataPr
 ```
 sub 'grid'
 	/* botão INS */
-	&uc_botaoiconein.id			= 'LISTA'
-	&uc_botaoiconein.interface	= &Pgmname.ToUpper()
+	&uc_botaoiconein.id = 'LISTA'
+	&uc_botaoiconein.interface = &Pgmname.ToUpper()
 	&botoes.Clear()
 	&botoes.Add("NOVO:")
 	&uc_botaoiconein.botoes = &botoes.ToJson()
 
 	/* lista de registros */
-	&uc_listin.id 						= 'LISTA'
-	&uc_listin.interface 				= &Pgmname.ToUpper()
-	&uc_listin.pagging 					= true
-	&uc_listin.paggingposition 			= uc_position.bottom
-	&uc_listIN.paggingpgsize			= &pgsize
-	&uc_listIN.paggingpg				= &pg
-	&uc_listIN.paggingtrec				= count(nome)
-	&uc_listin.toolbox 		 			= UC.uc_botaoicone(&uc_botaoiconein.ToJson())
-	&uc_listin.classetoolbox 			= 'uc_flex-r uc_flex-jce uc_mb10'
+	&uc_listin.id = 'LISTA'
+	&uc_listin.interface = &Pgmname.ToUpper()
+	&uc_listin.pagging = true
+	&uc_listin.paggingposition = uc_position.bottom
+	&uc_listIN.paggingpgsize = &pgsize
+	&uc_listIN.paggingpg = &pg
+	&uc_listIN.paggingtrec = count(nome)
+	&uc_listin.toolbox  = UC.uc_botaoicone(&uc_botaoiconein.ToJson())
+	&uc_listin.classetoolbox = 'uc_flex-r uc_flex-jce uc_mb10'
 
 	/* carga dos registros da lista */
 	&uc_listin.itens.Clear()
 	for &reg in &registros
 
-		&uc_botaoiconein 				= new()
-		&uc_botaoiconein.id				= 'LISTA'
-		&uc_botaoiconein.interface		= &Pgmname.ToUpper()
-		&uc_botaoiconein.classebar 		= 'uc_flex-r uc_flex-nowrap'
-		&uc_botaoiconein.classebotao  	= 'uc_btspace uc_bt-icon uc_pointer'
-		&uc_botaoiconein.classeicon   	= ''
+		&uc_botaoiconein = new()
+		&uc_botaoiconein.id = 'LISTA'
+		&uc_botaoiconein.interface = &Pgmname.ToUpper()
+		&uc_botaoiconein.classebar = 'uc_flex-r uc_flex-nowrap'
+		&uc_botaoiconein.classebotao = 'uc_btspace uc_bt-icon uc_pointer'
+		&uc_botaoiconein.classeicon = ''
 		&botoes.Clear()
 		&botoes.Add("EDITAR:")
 		&botoes.Add("APAGAR:")
 		&uc_botaoiconein.botoes = &botoes.ToJson()
 		
 		&item = new()
-		&item.titulo 					= &reg.Nome.ToUpper().Trim()
-		&item.tooltip					= &reg.Nome.ToUpper().Trim()
-		&item.evento					= 'ABRIR:'+&reg.Id.ToString().Trim()
-		&item.imagem.classe 			= 'uc_imagemredonda15px'
-		&item.imagem.image				= &reg.Foto.Trim()
-		&item.imagem.tooltip 			= &reg.Nome.ToUpper().Trim()
-		&item.toolbox 					= UC.uc_botaoicone(&uc_botaoiconein.ToJson())
+		&item.titulo = &reg.Nome.ToUpper().Trim()
+		&item.tooltip = &reg.Nome.ToUpper().Trim()
+		&item.evento = 'ABRIR:'+&reg.Id.ToString().Trim()
+		&item.imagem.classe  = 'uc_imagemredonda15px'
+		&item.imagem.image = &reg.Foto.Trim()
+		&item.imagem.tooltip = &reg.Nome.ToUpper().Trim()
+		&item.toolbox = UC.uc_botaoicone(&uc_botaoiconein.ToJson())
 		&uc_listin.itens.Add(&item)
 
 	endfor
