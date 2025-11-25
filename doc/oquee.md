@@ -16,5 +16,23 @@ Uma outra vantagem desse modelo é que todos os projetos que utilizam o package 
 
 ## Configuração do controle
 Associado ao controle teremos sempre um tipo SDT que oferece os parametros necessários para a sua construção do controle.
-Para facilitar um pouco, o nome da procedure é semelhante ao nome do SDT. Por exemplo, para o controle **uc_tabela** temos um SDT **uc_tabelaIN** que oferece as propriedades para se criar uma tabela.
+Para facilitar um pouco, o nome da procedure é semelhante ao nome do SDT. Por exemplo, para o controle **uc_botao** temos um SDT **uc_botaoIN** que oferece as propriedades para se criar um botão.
+
+Veja um exemplo que cria um Botão.
+```
+&botao = new()
+&botao.evento = 'ABRIR:1'
+&botao.icone = '<i class="fas fa-eye"></i>'
+&botao.titulo = 'Abrir'
+&botao.tooltip = 'Abrir o registro'
+
+&uc_botaoin.id = 'id'
+&uc_botaoin.interface = 'interface'	
+&uc_botaoin.botoes.Add(&botao)
+	
+textblock1.Caption = UC.uc_botao(&uc_botaoin.ToJson())
+```
+Os detalhes das propriedades que precisam ser informadas são apresentados nos exemplos disponíveis nessa documentação.
+
+
 
