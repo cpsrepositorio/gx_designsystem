@@ -1,5 +1,5 @@
-# O que é o DesignSystem
-O **Designsystem** é um conjunto de componentes, formado por procedures que produzem elementos HTML + CSS e em alguns casos JS que definem a forma do controle na interface. Um conjunto de componentes que produzem conteúdos 'padronizados' são empacotados em uma DLL externa criada por um recurso chamado Package em Genexus. O resultado do empacotamento é um objeto com extensão OPC que poderá ser inserido em qualquer KB.
+# O que é
+O **Designsystem** é um conjunto de controles HTML + CSS, e em alguns casos JS, criados pela chamada de procedures padrões. Cada procedure cria um certo componente de interface que pode ser utilizado nos sistemas Genexus. Este conjunto de procedures é empacotado em um Package, e as versões são distribuídas para os desenvolvedores.
 
 ## Objetivos estratégicos
 Desenvolver interfaces em Genexus é pouco produtivo se você não estiver utilizando os Patterns, pois cada interface deve ser definida em termos de controles padrões, em seguida configurações, e depois carga de dados. 
