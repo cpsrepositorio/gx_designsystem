@@ -13,6 +13,9 @@ O [Abstract Editor](https://docs.genexus.com/en/wiki?25250,How+to+use+the+Abstra
 
 Utilizamos com maior frequencia o **flex layout** em nossos sistemas.
 
+## Stencil
+Um recurso útil são os Stencils que geram 'modelos' de interfaces.
+
 ## Section
 Outro objeto importante para adicionar em nosso projeto de interface são os controles **Section** do Genexus, que produzem **<div>...</div>** na interface.
 São úteis para organizar agrupamentos de controles na interface.
