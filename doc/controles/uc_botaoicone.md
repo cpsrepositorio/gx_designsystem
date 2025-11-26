@@ -11,12 +11,11 @@ Por exemplo, um icone que representa uma lata de lixo, gera um evento APAGAR aut
 Um botão neste controle é formado por uma **palavra**, seguido de um caracter **:** e o **evento** que deverá ser acionado quando ocorrer o click no botão. 
 
 A seguir um exemplo.
-
 ```
-	&uc_botaoiconeIN.id 			= 'BOTAO'
-	&uc_botaoiconeIN.interface 		= 'NOME_DA_INTERFACE'	
-	&uc_botaoiconeIN.classebar 		= 'uc_flex-r uc_flex-nowrap uc_mt30'
-	&uc_botaoiconeIN.classebotao  	= 'uc_btspace uc_bt-icon uc_pointer'
+	&uc_botaoiconeIN.id = 'BOTAO'
+	&uc_botaoiconeIN.interface = 'NOME_DA_INTERFACE'	
+	&uc_botaoiconeIN.classebar = 'uc_flex-r uc_flex-nowrap uc_mt30'
+	&uc_botaoiconeIN.classebotao = 'uc_btspace uc_bt-icon uc_pointer'
 	
 	&botoes.add('PLAY:5')
 	&botoes.add('INFO:5')
@@ -29,7 +28,6 @@ A seguir um exemplo.
 	&uc_botaoiconeIN.botoes = &botoes.ToJson()
 	
 	grid.Caption = UC.uc_botaoicone(&uc_botaoiconeIN.ToJson())
-
 ```
 Para produzir a lista de botões, é definida uma variável simples, **&botoes** que é uma collection de Varchar(40), adicionando (add) a lista de botões que se deseja incluir. 
 
