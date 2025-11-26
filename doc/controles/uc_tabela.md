@@ -13,17 +13,17 @@ O cabeçalho é inserido em uma coleção, do tipo **uc_tabelain.cell**, no exem
 &uc_tabelain.header.Clear()
 		
 &tabhead = new()
-&tabhead.text  = 'Titulo'
+&tabhead.text = 'Titulo'
 &tabhead.width = '50%'
 &uc_tabelain.header.Add(&tabhead)
 	
 &tabhead = new()
-&tabhead.text  = 'Conteudo'
+&tabhead.text = 'Conteudo'
 &tabhead.width = '40%'
 &uc_tabelain.header.Add(&tabhead)
 
 &tabhead = new()
-&tabhead.text  = ''
+&tabhead.text = ''
 &tabhead.width = '10%'
 &uc_tabelain.header.Add(&tabhead)
 ```
@@ -44,11 +44,11 @@ for &i = 1 to 5
 	&tabcel.text = 'Conteudo'+&i.ToString()
 	&tablin.cells.Add(&tabcel)
 	
-	&uc_botaoiconein.id 			= 'id'
-	&uc_botaoiconein.interface 		= 'interface'	
-	&uc_botaoiconein.classebar 		= 'uc_flex-r uc_flex-nowrap'
-	&uc_botaoiconein.classebotao  	= 'uc_btspace uc_bt-icon uc_pointer'
-	&uc_botaoiconein.classeicon   	= ''
+	&uc_botaoiconein.id = 'id'
+	&uc_botaoiconein.interface = 'interface'	
+	&uc_botaoiconein.classebar = 'uc_flex-r uc_flex-nowrap'
+	&uc_botaoiconein.classebotao = 'uc_btspace uc_bt-icon uc_pointer'
+	&uc_botaoiconein.classeicon = ''
    	&botoes.Clear()
 	&botoes.add('ABRIR:'+&i.ToString())
 	&uc_botaoiconein.botoes = &botoes.ToJson()
@@ -57,8 +57,7 @@ for &i = 1 to 5
 	&tabcel.text = UC.uc_botaoicone(&uc_botaoiconein.ToJson())
 	&tablin.cells.Add(&tabcel)
 	
-	&uc_tabelain.lines.Add(&tablin)
-	
+	&uc_tabelain.lines.Add(&tablin)	
 endfor
 ```
 O codigo inclui uma barra de botões em cada registro.
@@ -67,9 +66,9 @@ O codigo inclui uma barra de botões em cada registro.
 A cor da tabela é definida na classe **&uc_tabelain.class = 'minimalistBlack'**, sendo que temos duas cores minimalistBlack e minimalistGray.
 
 ```
-	&uc_tabelain.id 		= 'TABELA'
-	&uc_tabelain.interface 	= &Pgmname.ToUpper()
-	&uc_tabelain.class 		= 'minimalistBlack'
+	&uc_tabelain.id = 'TABELA'
+	&uc_tabelain.interface = &Pgmname.ToUpper()
+	&uc_tabelain.class = 'minimalistBlack'
 	
 	...
 ```
@@ -89,31 +88,23 @@ Eventualmente, será necessário reposicionar a barra de botões **&tabcel.class
 sub 'card'
 	...
 
-	&uc_tabelain.card 				= true
-	&uc_tabelaIN.cardcontainer 		= 'uc_flex-r uc_flex-w uc_flex-jcc'
-	&uc_tabelaIN.cardclass 			= 'uc_card uc_card300'
-
+	&uc_tabelain.card = true
+	&uc_tabelaIN.cardcontainer = 'uc_flex-r uc_flex-w uc_flex-jcc'
+	&uc_tabelaIN.cardclass = 'uc_card uc_card300'
 	...
-
 	&uc_tabelaIN.lines.Clear()
-	for &i = 1 to 4
-		
-		...
-		
+	for &i = 1 to 4		
+		...		
 		&tabcel = new()
 		&tabcel.text = UC.uc_botaoicone(&uc_botaoiconein.ToJson())
 		&tabcel.classe = 'uc_flex-r uc_flex-jce'
-		&tablin.cells.Add(&tabcel)
-		
-		&uc_tabelain.lines.Add(&tablin)
-		
+		&tablin.cells.Add(&tabcel)		
+		&uc_tabelain.lines.Add(&tablin)	
 	endfor
-
 	grid.Caption += '<h5 class="uc_mt30">Card</h5>'
 	grid.Caption += UC.uc_tabela(&uc_tabelain.ToJson())
 endsub
 ```
-
 ## Botões
 O controle **uc_tabela** também inclui uma barra de botões na parte superior.
 
@@ -123,16 +114,12 @@ O controle **uc_tabela** também inclui uma barra de botões na parte superior.
 | **&uc_tabelaIN.toolbar.___title** | titulos nos botões, por exemplo: **&uc_tabelaIN.toolbar.newtitle** |
 | **&uc_tabelaIN.toolbar.notitle** 	| não inclui titulos nos botões |
 
-
 ```
 	...
-
-	&uc_tabelain.toolbar.notitle	= true
-	&uc_tabelain.toolbar.new 	= true
-	&uc_tabelain.toolbar.export 	= true
-
+	&uc_tabelain.toolbar.notitle = true
+	&uc_tabelain.toolbar.new = true
+	&uc_tabelain.toolbar.export = true
 	...
 ```
-
 ## DivTable
 Este controle foi construído tendo como base o site [divtable.com](https://divtable.com/table-styler/), que possui um editor de estilo interessante, caso se deseje configurar tabelas com cores diferentes.
