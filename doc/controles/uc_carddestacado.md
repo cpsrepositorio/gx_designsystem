@@ -32,237 +32,230 @@ A classe ainda informa um valor adicional &card.classe = 'uc_card-destacado-blue
 
 
 ```
-	&uc_carddestacadoin = new()
-	&uc_carddestacadoin.id = 'CARDS'
-	&uc_carddestacadoin.interface = &Pgmname
-	&uc_carddestacadoin.classecontainer = 'uc_cardcontainer'
-	&uc_carddestacadoin.classe = 'uc_card-destacado'
+&uc_carddestacadoin = new()
+&uc_carddestacadoin.id = 'CARDS'
+&uc_carddestacadoin.interface = &Pgmname
+&uc_carddestacadoin.classecontainer = 'uc_cardcontainer'
+&uc_carddestacadoin.classe = 'uc_card-destacado'
 	
-	&card = new()
-	&card.icone  		= '<i class="fas fa-home"></i>'
- 	&card.classe 		= 'uc_card-destacado-blue uc_card160'
-	&card.titulo 		= 'PROFESSORES'
-	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
-	&card.valor  		= '31123'
-	&card.unidade 	= 'un'
-	&card.evento  	= 'ABRIR:1'
-	&uc_carddestacadoin.cards.add(&card)
+&card = new()
+&card.icone  		= '<i class="fas fa-home"></i>'
+&card.classe 		= 'uc_card-destacado-blue uc_card160'
+&card.titulo 		= 'PROFESSORES'
+&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
+&card.valor  		= '31123'
+&card.unidade 	= 'un'
+&card.evento  	= 'ABRIR:1'
+&uc_carddestacadoin.cards.add(&card)
 	
-	&card = new()
-	&card.icone  	= '<i class="fas fa-user-alt"></i>'
- 	&card.classe 	= 'uc_card-destacado-red uc_card160'
-	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
-	&card.valor  	= '31123'
-	&card.unidade = 'un'
-	&card.evento  = 'ABRIR:2'
-	&uc_carddestacadoin.cards.add(&card)
+&card = new()
+&card.icone  	= '<i class="fas fa-user-alt"></i>'
+&card.classe 	= 'uc_card-destacado-red uc_card160'
+&card.titulo 	= 'PROFESSORES'
+&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
+&card.valor  	= '31123'
+&card.unidade = 'un'
+&card.evento  = 'ABRIR:2'
+&uc_carddestacadoin.cards.add(&card)
 	
-	&card = new()
-	&card.icone  	= '<i class="fas fa-power-off"></i>'
- 	&card.classe 	= 'uc_card-destacado-yellow uc_card160'
-	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
-	&card.valor  	= '31123'
-	&card.unidade = 'un'
-	&card.evento  = 'ABRIR:3'
-	&uc_carddestacadoin.cards.add(&card)
+&card = new()
+&card.icone  	= '<i class="fas fa-power-off"></i>'
+&card.classe 	= 'uc_card-destacado-yellow uc_card160'
+&card.titulo 	= 'PROFESSORES'
+&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
+&card.valor  	= '31123'
+&card.unidade = 'un'
+&card.evento  = 'ABRIR:3'
+&uc_carddestacadoin.cards.add(&card)
 	
-	&card = new()
-	&card.icone  	= '<i class="fas fa-power-off"></i>'
- 	&card.classe 	= 'uc_card-destacado-orange uc_card160'
-	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
-	&card.valor  	= '31123'
-	&card.unidade = 'un'
-	&card.evento  = 'ABRIR:3'
-	&uc_carddestacadoin.cards.add(&card)
+&card = new()
+&card.icone  	= '<i class="fas fa-power-off"></i>'
+&card.classe 	= 'uc_card-destacado-orange uc_card160'
+&card.titulo 	= 'PROFESSORES'
+&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
+&card.valor  	= '31123'
+&card.unidade = 'un'
+&card.evento  = 'ABRIR:3'
+&uc_carddestacadoin.cards.add(&card)
 	
-	&card = new()
-	&card.icone  	= '<i class="fas fa-recycle"></i>'
- 	&card.classe 	= 'uc_card-destacado-green uc_card160'
-	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
-	&card.valor  	= '31123'
-	&card.unidade = 'un'
-	&card.evento  = 'ABRIR:4'
-	&uc_carddestacadoin.cards.add(&card)
+&card = new()
+&card.icone  	= '<i class="fas fa-recycle"></i>'
+&card.classe 	= 'uc_card-destacado-green uc_card160'
+&card.titulo 	= 'PROFESSORES'
+&card.tooltip = 'TOTAL DE ATRIBUICOES DE AULAS'
+&card.valor  	= '31123'
+&card.unidade = 'un'
+&card.evento  = 'ABRIR:4'
+&uc_carddestacadoin.cards.add(&card)
 	
-	&card = new()
-	&card.icone  	= '<i class="fas fa-trash-alt"></i>'
- 	&card.classe 	= 'uc_card-destacado-gray uc_card160'
-	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
-	&card.valor  	= '31123'
-	&card.unidade 	= 'un'
-	&card.evento  	= 'ABRIR:5'
-	&uc_carddestacadoin.cards.add(&card)
-	
-	html.Caption  =  '<h5>uc_card-destacado</h5>'
-	html.Caption +=  UC.uc_carddestaque(&uc_carddestacadoin.ToJson())
+&card = new()
+&card.icone  	= '<i class="fas fa-trash-alt"></i>'
+&card.classe 	= 'uc_card-destacado-gray uc_card160'
+&card.titulo 	= 'PROFESSORES'
+&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
+&card.valor  	= '31123'
+&card.unidade 	= 'un'
+&card.evento  	= 'ABRIR:5'
+&uc_carddestacadoin.cards.add(&card)
+
+html.Caption  =  '<h5>uc_card-destacado</h5>'
+html.Caption +=  UC.uc_carddestaque(&uc_carddestacadoin.ToJson())
 ```
 ## Borda a esquerda ou direita
 Trocando para o conjunto de classes lborder na definição da classe, **&card.classe = 'uc_card-lborder-red'**, temos a borda na cor desejada e o fundo do cartão em branco.
-
 ```
-	&uc_carddestacadoin = new()
-	&uc_carddestacadoin.id = 'CARDS'
-	&uc_carddestacadoin.interface = &Pgmname
-	&uc_carddestacadoin.classecontainer = 'uc_cardcontainer'
-	&uc_carddestacadoin.classe = 'uc_card-destacado'
+&uc_carddestacadoin = new()
+&uc_carddestacadoin.id = 'CARDS'
+&uc_carddestacadoin.interface = &Pgmname
+&uc_carddestacadoin.classecontainer = 'uc_cardcontainer'
+&uc_carddestacadoin.classe = 'uc_card-destacado'
 	
-	&card = new()
-	&card.icone  	= '<i class="fas fa-home"></i>'
- 	&card.classe 	= 'uc_card-lborder-blue uc_card160'
-	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
-	&card.valor  	= '31123'
-	&card.unidade 	= 'un'
-	&card.evento  	= 'ABRIR:1'
-	&uc_carddestacadoin.cards.add(&card)
+&card = new()
+&card.icone  	= '<i class="fas fa-home"></i>'
+&card.classe 	= 'uc_card-lborder-blue uc_card160'
+&card.titulo 	= 'PROFESSORES'
+&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
+&card.valor  	= '31123'
+&card.unidade 	= 'un'
+&card.evento  	= 'ABRIR:1'
+&uc_carddestacadoin.cards.add(&card)
 	
-	&card = new()
-	&card.icone  	= '<i class="fas fa-user-alt"></i>'
- 	&card.classe 	= 'uc_card-lborder-red uc_card160'
-	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
-	&card.valor  	= '31123'
-	&card.unidade 	= 'un'
-	&card.evento  	= 'ABRIR:2'
-	&uc_carddestacadoin.cards.add(&card)
-	
-	&card = new()
-	&card.icone  	= '<i class="fas fa-power-off"></i>'
- 	&card.classe 	= 'uc_card-lborder-yellow uc_card160'
-	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
-	&card.valor  	= '31123'
-	&card.unidade 	= 'un'
-	&card.evento  	= 'ABRIR:3'
-	&uc_carddestacadoin.cards.add(&card)
-	
-	&card = new()
-	&card.icone  	= '<i class="fas fa-power-off"></i>'
- 	&card.classe 	= 'uc_card-lborder-orange uc_card160'
-	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
-	&card.valor  	= '31123'
-	&card.unidade 	= 'un'
-	&card.evento  	= 'ABRIR:3'
-	&uc_carddestacadoin.cards.add(&card)
-	
-	&card = new()
-	&card.icone  	= '<i class="fas fa-recycle"></i>'
- 	&card.classe 	= 'uc_card-lborder-green uc_card160'
-	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
-	&card.valor  	= '31123'
-	&card.unidade 	= 'un'
-	&card.evento  	= 'ABRIR:4'
-	&uc_carddestacadoin.cards.add(&card)
-	
-	&card = new()
-	&card.icone  	= '<i class="fas fa-trash-alt"></i>'
- 	&card.classe 	= 'uc_card-lborder-gray uc_card160'
-	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
-	&card.valor  	= '31123'
-	&card.unidade 	= 'un'
-	&card.evento  	= 'ABRIR:5'
-	&uc_carddestacadoin.cards.add(&card)
-	
-	html.Caption +=  '<h5 class="uc_mt30">uc_card-lborder</h5>'
-	html.Caption +=  UC.uc_carddestaque(&uc_carddestacadoin.ToJson())
-```
+&card = new()
+&card.icone  	= '<i class="fas fa-user-alt"></i>'
+&card.classe 	= 'uc_card-lborder-red uc_card160'
+&card.titulo 	= 'PROFESSORES'
+&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
+&card.valor  	= '31123'
+&card.unidade 	= 'un'
+&card.evento  	= 'ABRIR:2'
+&uc_carddestacadoin.cards.add(&card)
 
+&card = new()
+&card.icone  	= '<i class="fas fa-power-off"></i>'
+&card.classe 	= 'uc_card-lborder-yellow uc_card160'
+&card.titulo 	= 'PROFESSORES'
+&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
+&card.valor  	= '31123'
+&card.unidade 	= 'un'
+&card.evento  	= 'ABRIR:3'
+&uc_carddestacadoin.cards.add(&card)
+	
+&card = new()
+&card.icone  	= '<i class="fas fa-power-off"></i>'
+&card.classe 	= 'uc_card-lborder-orange uc_card160'
+&card.titulo 	= 'PROFESSORES'
+&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
+&card.valor  	= '31123'
+&card.unidade 	= 'un'
+&card.evento  	= 'ABRIR:3'
+&uc_carddestacadoin.cards.add(&card)
+
+&card = new()
+&card.icone  	= '<i class="fas fa-recycle"></i>'
+&card.classe 	= 'uc_card-lborder-green uc_card160'
+&card.titulo 	= 'PROFESSORES'
+&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
+&card.valor  	= '31123'
+&card.unidade 	= 'un'
+&card.evento  	= 'ABRIR:4'
+&uc_carddestacadoin.cards.add(&card)
+
+&card = new()
+&card.icone  	= '<i class="fas fa-trash-alt"></i>'
+&card.classe 	= 'uc_card-lborder-gray uc_card160'
+&card.titulo 	= 'PROFESSORES'
+&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
+&card.valor  	= '31123'
+&card.unidade 	= 'un'
+&card.evento  	= 'ABRIR:5'
+&uc_carddestacadoin.cards.add(&card)
+	
+html.Caption +=  '<h5 class="uc_mt30">uc_card-lborder</h5>'
+html.Caption +=  UC.uc_carddestaque(&uc_carddestacadoin.ToJson())
+```
 O mesmo pode ser realizado com a borda à direita, com as classes **&card.classe = 'uc_card-rborder-red'**.
-
 ```
-	&uc_carddestacadoin = new()
-	&uc_carddestacadoin.id = 'CARDS'
-	&uc_carddestacadoin.interface = &Pgmname
-	&uc_carddestacadoin.classecontainer = 'uc_cardcontainer'
-	&uc_carddestacadoin.classe = 'uc_card-destacado'
-	
-	&card = new()
-	&card.icone  	= '<i class="fas fa-home"></i>'
- 	&card.classe 	= 'uc_card-rborder-blue uc_card160'
-	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
-	&card.valor  	= '31123'
-	&card.unidade 	= 'un'
-	&card.evento  	= 'ABRIR:1'
-	&uc_carddestacadoin.cards.add(&card)
-	
-	&card = new()
-	&card.icone  	= '<i class="fas fa-user-alt"></i>'
- 	&card.classe 	= 'uc_card-rborder-red uc_card160'
-	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
-	&card.valor  	= '31123'
-	&card.unidade 	= 'un'
-	&card.evento  	= 'ABRIR:2'
-	&uc_carddestacadoin.cards.add(&card)
-	
-	&card = new()
-	&card.icone  	= '<i class="fas fa-power-off"></i>'
- 	&card.classe 	= 'uc_card-rborder-yellow uc_card160'
-	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
-	&card.valor  	= '31123'
-	&card.unidade 	= 'un'
-	&card.evento  	= 'ABRIR:3'
-	&uc_carddestacadoin.cards.add(&card)
-	
-	&card = new()
-	&card.icone  	= '<i class="fas fa-power-off"></i>'
- 	&card.classe 	= 'uc_card-rborder-orange uc_card160'
-	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
-	&card.valor  	= '31123'
-	&card.unidade 	= 'un'
-	&card.evento  	= 'ABRIR:3'
-	&uc_carddestacadoin.cards.add(&card)
-	
-	&card = new()
-	&card.icone  	= '<i class="fas fa-recycle"></i>'
- 	&card.classe 	= 'uc_card-rborder-green uc_card160'
-	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
-	&card.valor  	= '31123'
-	&card.unidade 	= 'un'
-	&card.evento  	= 'ABRIR:4'
-	&uc_carddestacadoin.cards.add(&card)
-	
-	&card = new()
-	&card.icone  	= '<i class="fas fa-trash-alt"></i>'
- 	&card.classe 	= 'uc_card-rborder-gray uc_card160'
-	&card.titulo 	= 'PROFESSORES'
-	&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
-	&card.valor  	= '31123'
-	&card.unidade 	= 'un'
-	&card.evento  	= 'ABRIR:5'
-	&uc_carddestacadoin.cards.add(&card)
-	
-	html.Caption +=  '<h5 class="uc_mt30">uc_card-rborder</h5>'
-	html.Caption +=  UC.uc_carddestaque(&uc_carddestacadoin.ToJson())
-```
+&uc_carddestacadoin = new()
+&uc_carddestacadoin.id = 'CARDS'
+&uc_carddestacadoin.interface = &Pgmname
+&uc_carddestacadoin.classecontainer = 'uc_cardcontainer'
+&uc_carddestacadoin.classe = 'uc_card-destacado'
 
+&card = new()
+&card.icone  	= '<i class="fas fa-home"></i>'
+&card.classe 	= 'uc_card-rborder-blue uc_card160'
+&card.titulo 	= 'PROFESSORES'
+&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
+&card.valor  	= '31123'
+&card.unidade 	= 'un'
+&card.evento  	= 'ABRIR:1'
+&uc_carddestacadoin.cards.add(&card)
+	
+&card = new()
+&card.icone  	= '<i class="fas fa-user-alt"></i>'
+&card.classe 	= 'uc_card-rborder-red uc_card160'
+&card.titulo 	= 'PROFESSORES'
+&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
+&card.valor  	= '31123'
+&card.unidade 	= 'un'
+&card.evento  	= 'ABRIR:2'
+&uc_carddestacadoin.cards.add(&card)
+	
+&card = new()
+&card.icone  	= '<i class="fas fa-power-off"></i>'
+&card.classe 	= 'uc_card-rborder-yellow uc_card160'
+&card.titulo 	= 'PROFESSORES'
+&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
+&card.valor  	= '31123'
+&card.unidade 	= 'un'
+&card.evento  	= 'ABRIR:3'
+&uc_carddestacadoin.cards.add(&card)
+	
+&card = new()
+&card.icone  	= '<i class="fas fa-power-off"></i>'
+&card.classe 	= 'uc_card-rborder-orange uc_card160'
+&card.titulo 	= 'PROFESSORES'
+&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
+&card.valor  	= '31123'
+&card.unidade 	= 'un'
+&card.evento  	= 'ABRIR:3'
+&uc_carddestacadoin.cards.add(&card)
+	
+&card = new()
+&card.icone  	= '<i class="fas fa-recycle"></i>'
+&card.classe 	= 'uc_card-rborder-green uc_card160'
+&card.titulo 	= 'PROFESSORES'
+&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
+&card.valor  	= '31123'
+&card.unidade 	= 'un'
+&card.evento  	= 'ABRIR:4'
+&uc_carddestacadoin.cards.add(&card)
+	
+&card = new()
+&card.icone  	= '<i class="fas fa-trash-alt"></i>'
+&card.classe 	= 'uc_card-rborder-gray uc_card160'
+&card.titulo 	= 'PROFESSORES'
+&card.tooltip 	= 'TOTAL DE ATRIBUICOES DE AULAS'
+&card.valor  	= '31123'
+&card.unidade 	= 'un'
+&card.evento  	= 'ABRIR:5'
+&uc_carddestacadoin.cards.add(&card)
+
+html.Caption +=  '<h5 class="uc_mt30">uc_card-rborder</h5>'
+html.Caption +=  UC.uc_carddestaque(&uc_carddestacadoin.ToJson())
+```
 ## Sem ícone
 Quando não se informa o valor de icone no cartão, o texto de titulo se posiciona à esquerda, produzindo um modelo mais simples ainda.
 ```
-	...
-
-	&card = new()
-	&card.titulo 	= 'Titulo'
-	// &card.icone  	= '<i class="fas fa-trash-alt"></i>'
-	&card.texto 	= 'Mussum Ipsum, cacilds vidis litro abertis. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Detraxit consequat et quo num tendi nada. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.'
-	&card.image 	= 'https://www.w3schools.com/howto/img_avatar.png'
-	&card.imageclasse = 'uc_card300img'
-	
+...
+&card = new()
+&card.titulo 	= 'Titulo'
+// &card.icone  	= '<i class="fas fa-trash-alt"></i>'
+&card.texto 	= 'Mussum Ipsum, cacilds vidis litro abertis. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Detraxit consequat et quo num tendi nada. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.'
+&card.image 	= 'https://www.w3schools.com/howto/img_avatar.png'
+&card.imageclasse = 'uc_card300img'
 	...
 ```
-
 ## Dimensões
 As dimensões definidas nas classes para os cards destacados são:
 
@@ -282,12 +275,3 @@ As dimensões definidas nas classes para os cards destacados são:
 | .uc_cardw30	  | {width:32%;}  |
  	
 As classes estão definidas em **uc_card.css**.
-	
-	
-	
-	
-	
-	
-	
-	
-	
