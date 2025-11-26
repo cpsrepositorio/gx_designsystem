@@ -37,14 +37,12 @@ Primeiramente deve-se criar a coleção com os conteúdos de cada célula da lin
 
 ```
 for &n = 1 to 10
-
   &linha = new()
-
   &celulas.clear()
   &celulas.add(&n.ToString().Trim())
   &celulas.Add("Nome "+&i.ToString().Trim()+'/'+&n.ToString().Trim())
   &linha.linha = &celulas.ToJson()
-
+  ...
 ```
 Em seguida associamos um evento linha, definindo o valor da Ação e em seguida chave do evento que será retornada. Os botões são ligados por meio de true em (Open, Update, Delete). 
 ```
@@ -66,10 +64,10 @@ A seguir o código completo do exemplo, caso queira copiar de uma única vez. Ne
 
 ```
 sub 'ex'
-	&uc_tabelaagrupadain.interface   		= &Pgmname
-	&uc_tabelaagrupadain.id    			= 'TABELAS'
+	&uc_tabelaagrupadain.interface = &Pgmname
+	&uc_tabelaagrupadain.id = 'TABELAS'
 	&uc_tabelaagrupadain.classebotaobar	= 'uc_flex-r uc_flex-wrap'
-	&uc_tabelaagrupadain.classebotao		= 'uc_bt-icon'
+	&uc_tabelaagrupadain.classebotao = 'uc_bt-icon'
 		
 	for &i = 1 to 2
 		&grupo = new()
@@ -96,18 +94,17 @@ sub 'ex'
 			&linha.linha = &celulas.ToJson()
 		
 			/* toolbar */
-			&linha.evento 			= 'id'+&n.ToString().Trim()
-			&linha.toolbar.open 	= true
-			&linha.toolbar.update 	= true
-			&linha.toolbar.delete 	= true
+			&linha.evento = 'id'+&n.ToString().Trim()
+			&linha.toolbar.open = true
+			&linha.toolbar.update = true
+			&linha.toolbar.delete = true
 
 			&grupo.linhas.Add(&linha)
-		endfor
-			
+		endfor			
 		&uc_tabelaagrupadain.grupos.Add(&grupo)
 	endfor
 
-	grid.Caption  = '<h5>Exemplo Simples</h5>'
+	grid.Caption = '<h5>Exemplo Simples</h5>'
 	grid.Caption += UC.uc_tabelaagrupada(&uc_tabelaagrupadain.ToJson())
 endsub
 ```
@@ -120,14 +117,14 @@ sub 'disc'
 	&uc_tabelaagrupadain = new()
 	&uc_tabelaagrupadain.interface = &Pgmname
 	&uc_tabelaagrupadain.id = 'TABELAS'
-	&uc_tabelaagrupadain.selected_color 	= '#f7e8e8'
-	&uc_tabelaagrupadain.classe			= 'uc_matrizw100'
+	&uc_tabelaagrupadain.selected_color = '#f7e8e8'
+	&uc_tabelaagrupadain.classe = 'uc_matrizw100'
 	&uc_tabelaagrupadain.classebotaobar	= 'uc_flex-r uc_flex-wrap'
-	&uc_tabelaagrupadain.classebotao		= 'uc_bt-icon'
+	&uc_tabelaagrupadain.classebotao = 'uc_bt-icon'
 	
 	for &i = 1 to 2
 		&grupo = new()
-		&grupo.titulo  = 'SEMESTRE '+&i.ToString()
+		&grupo.titulo = 'SEMESTRE '+&i.ToString()
 		
 		/* agregar em uma coleção */
 		&titulos = new()
@@ -169,10 +166,10 @@ sub 'disc'
 			endif
 		
 			/* toolbar */
-			&linha.evento 			= 'id'+&n.ToString().Trim()
-			&linha.toolbar.open 	= true
-			&linha.toolbar.update 	= true
-			&linha.toolbar.delete 	= true
+			&linha.evento = 'id'+&n.ToString().Trim()
+			&linha.toolbar.open = true
+			&linha.toolbar.update = true
+			&linha.toolbar.delete = true
 
 			&grupo.linhas.Add(&linha)
 		endfor
