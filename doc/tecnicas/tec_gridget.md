@@ -46,9 +46,9 @@ sub 'grid'
 	
  /* apresenta */
  if &GridViewSDT.pagging
- 	grid.Caption  = '<div class="uc_ml30 uc_mr30">'+UC.uc_listapaginada(&grid.ToJson())+'</div>'
+ 	grid.Caption  = UC.uc_listapaginada(&grid.ToJson())
  else
-	grid.Caption  = '<div class="uc_ml30 uc_mr30">'+UC.uc_lista(&grid.ToJson())+'</div>'
+	grid.Caption  = UC.uc_lista(&grid.ToJson())
  endif
 endsub
 ```
