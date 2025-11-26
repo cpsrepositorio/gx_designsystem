@@ -3,10 +3,9 @@
 
 ## Botão simples
 Um botão simples pode ser obtido pela definição das classes Titulo, Icone, Evento. Sem o fornecimento de nenhuma classe ele adotará a classe uc_btn.
-
 ```
-	&uc_botaoin.id 		= 'id'
-	&uc_botaoin.interface 	= 'interface'	
+	&uc_botaoin.id = 'id'
+	&uc_botaoin.interface = 'interface'	
 
 	&botao = new()
 	&botao.evento = 'ABRIR:1'
@@ -20,10 +19,9 @@ Um botão simples pode ser obtido pela definição das classes Titulo, Icone, Ev
 
 ## Botão colorido
 Os botões podem também ser coloridos.
-
 ```
-	&uc_botaoin.id 		= 'id'
-	&uc_botaoin.interface 	= 'interface'	
+	&uc_botaoin.id = 'id'
+	&uc_botaoin.interface = 'interface'	
 
 	&botao = new()
 	&botao.evento = 'ABRIR:0'
@@ -80,8 +78,8 @@ Os botões podem também ser coloridos.
 ## Icones
 O controle permite que se crie botões que sejam simples e apenas representados por um ícone.  
 ```
-	&uc_botaoin.id 		= 'id'
-	&uc_botaoin.interface 	= 'interface'	
+	&uc_botaoin.id = 'id'
+	&uc_botaoin.interface = 'interface'	
 
 	&botao = new()
 	&botao.classe = 'uc_bt-icon'
@@ -107,10 +105,9 @@ Temos uma forma mais simples de fazer isso com o controle [uc_botaoicone](/doc/c
 
 ## Links
 O controle permite que links tenham o mesmo formato de um botão tradicional, inclusive, com o linktarget indicando onde o navegador deverá executar a ação.
-
 ```
-	&uc_botaoin.id 		= 'id'
-	&uc_botaoin.interface 	= 'interface'	
+	&uc_botaoin.id = 'id'
+	&uc_botaoin.interface = 'interface'	
 
 	&botao = new()
 	&botao.icone = '<i class="fas fa-eye"></i>'
@@ -122,12 +119,10 @@ O controle permite que links tenham o mesmo formato de um botão tradicional, in
 
 	grid.Caption = UC.uc_botao(&uc_botaoin.ToJson())
 ```
-
 ## Eventos
 O controle de eventos é o mesmo que nos demais controles, com a criação da string com Interface:Controle:Acao:Parametro.
 
 Para maiores informações a respeito desta operação veja [Eventos](/eventos.md)
-
 
 ## Classes
 Os botões são definidos nas classes do arquivo **uc_button.css**
