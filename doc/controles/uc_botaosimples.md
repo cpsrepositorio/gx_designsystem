@@ -4,11 +4,11 @@ Uma variação mais simplificada para criação de uma barra de botões pode ser
 
 Neste ocorre que a informação das propriedades do botão foram simplificadas para serem armazenadas em uma única propriedade **info**, que representa uma coleção de Varchar(40). Cada propriedade do botão deve ser inserida nessa coleção, na ordem correta.
 ```
-	&info = new()
-	&info.add('ABRIR:1') 				
-	&info.add('<i class="fas fa-eye"></i>') 
-	&info.add('Abrir') 					
-	&info.add('Abrir o registro') 
+&info = new()
+&info.add('ABRIR:1') 				
+&info.add('<i class="fas fa-eye"></i>') 
+&info.add('Abrir') 					
+&info.add('Abrir o registro') 
 ```
 * **ABRIR:1** o primeiro parametro representa o evento, que além de uma palavra deve incluir, caso necessário, o codigo do registro após um caracter dois pontos (:)
 * **<i class="fas fa-eye"></i>** Em seguida o icone que será apresentado no botão. Em caso de não necessidade, deve ser inserir um texto vazio ''. Os icones são obtidos do FontAwesome versão 5.34
@@ -17,7 +17,7 @@ Neste ocorre que a informação das propriedades do botão foram simplificadas p
 
 Em seguida, na propriedade **&botao.info** inclui-se a coleção, em formato JSON.
 
-	&botao.info = &info.ToJson()
+&botao.info = &info.ToJson()
 
 ## Botões redondos
 Nesse exemplo o controle é utilizado para produzir uma barra com dois botões arredondados. Isso é obtido devido a classe **classeicon   = 'uc_bt-icon'**
