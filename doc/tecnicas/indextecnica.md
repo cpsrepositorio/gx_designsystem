@@ -17,3 +17,10 @@ Não basta ligar o ENCRIPTPARMON no login, é necessário interceptar e tratar t
 ### Ordenação de colunas
 Aprenda como fazer ordenção de colunas em tabelas. [Ordenação de colunas](tecnicas/tec_uc_tabelaordenacao.md)
 
+## ESTRATÉGIAS DE LISTA
+
+### Row
+Aprenda como criar um SDT padrão para todos os Dataproviders do sistema. [Row](tecnicas/tec_row.md)
+
+### GridGET
+Aprenda como criar uma procedure que monta um controle Lista somente com parâmetros, de forma muito mais simples que a programação em cada WebPanel. [GridGET](tecnicas/tec_gridget.md)
