@@ -20,7 +20,7 @@ Aprenda como fazer ordenção de colunas em tabelas. [Ordenação de colunas](te
 ## ESTRATÉGIAS DE LISTA
 
 ### Row
-Aprenda como criar um SDT padrão para todos os Dataproviders do sistema. [Row](tecnicas/tec_row.md)
+Aprenda como criar um SDT padrão para todos os Dataproviders do sistema. [Row](tec_row.md)
 
 ### GridGET
-Aprenda como criar uma procedure que monta um controle Lista somente com parâmetros, de forma muito mais simples que a programação em cada WebPanel. [GridGET](tecnicas/tec_gridget.md)
+Aprenda como criar uma procedure que monta um controle Lista somente com parâmetros, de forma muito mais simples que a programação em cada WebPanel. [GridGET](tec_gridget.md)
