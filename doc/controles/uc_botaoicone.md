@@ -1,6 +1,4 @@
 # uc_botaoicone
-![alt text](/doc/imagens/uc_botaoicone.png)
-
 Barra de botões são elementos que representam ações que podem ser acionadas pelos usuários.
 
 O pacote apresenta vários tipos distintos de barras de botões, sendo simples de serem construídas. 
@@ -43,8 +41,6 @@ Creio que a parte mais importante é a maneira que escrevemos o conteúdo de um 
 
 ##### Botões padrões
 Os eventos padrões definidos no controle são apresentados a seguir
-
-![alt text](https://github.com/cpsrepositorio/gx_designsystem/blob/main/doc/imagens/uc_botaoicone1.PNG "Icone")
 
 | Evento        | Tooltip           | icone  |
 |------------- |:-------------:| -----:|

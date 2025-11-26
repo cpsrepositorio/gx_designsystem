@@ -7,11 +7,12 @@ Será necessário uma variável **&pie** do tipo **
 
 ```
 sub 'pie'
-	&pie.id 		= 'pizza1'
+ 	&pie.id 		= 'pizza1'
 	&pie.tipo 		= uc_charttipo.pie
-	&pie.titulo  	= 'PIZZA CALABRESA'
-	&pie.legenda 	= '' // top, center, bottom, left, chartArea
-	
+	&pie.titulo  	= 'Grafico Pizza'
+	&pie.width		= '300px;'
+	&pie.height		= '300px;'
+ 
 	&pie.rotulos.Add("vermeio")
 	&pie.rotulos.Add("azur")
 	&pie.rotulos.Add("marelo")
@@ -34,6 +35,8 @@ sub 'pie'
 	&pie.datasetbgcolor.Add('#33F6FF')
 	&pie.datasetbgcolor.Add('#3374FF')
 	&pie.datasetbgcolor.Add('#4a83bc')
+	html.Caption += UC.uc_chart(&pie.ToJson())
+
 endsub
 ```
 
