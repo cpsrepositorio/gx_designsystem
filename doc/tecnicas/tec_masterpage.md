@@ -19,47 +19,45 @@ Queremos produzir algo semelhante a imagem a seguir.
 Onde teremos um menu na lateral com os Modulos, em caso de seleção de algum modulo (click) o sidebar deve apresentar os programas associados a este modulo, e uma área central com o conteúdo selecionado no sidebar.
 
 ## codigo da masterpage
-
 ```
 Event Start
-	form.HeaderRawHTML = uc_carga()
-	
-	do 'ui_menu'
-	do 'ui_navbar'
-	do 'ui_sidebar'
+ form.HeaderRawHTML = uc_carga()	
+ do 'ui_menu'
+ do 'ui_navbar'
+ do 'ui_sidebar'
 Endevent
 
 // 1
 sub 'ui_menu'
-	&uc_menuin 	    = menuGET(&Pgmname.ToUpper().Trim())
-	menu.Caption  	= UC.uc_menu(&uc_menuIN.ToJson())	
+ &uc_menuin 	    = menuGET(&Pgmname.ToUpper().Trim())
+ menu.Caption  	= UC.uc_menu(&uc_menuIN.ToJson())	
 endsub
 
 // 2
 sub 'ui_navbar'
-	&uc_navbarin    = navGET(&Pgmname.ToUpper().Trim())
-	navbar.Caption  = UC.uc_navbar(&uc_navbarin.ToJson())
+ &uc_navbarin    = navGET(&Pgmname.ToUpper().Trim())
+ navbar.Caption  = UC.uc_navbar(&uc_navbarin.ToJson())
 endsub
 
 // 3
 sub 'ui_sidebar'
-	sidebar.Caption = ''
-	&modulo = &websession.get('MODULO')
-	if not &modulo.IsEmpty()
-		&uc_sidebarIN = sidebarGET(&Pgmname.ToUpper())
-		if &uc_sidebarIN.itens.Count>0
-			sidebar.Caption = uc.uc_sidebar(&uc_sidebarIN.ToJson())
-		endif
-	endif
+ sidebar.Caption = ''
+ &modulo = &websession.get('MODULO')
+ if not &modulo.IsEmpty()
+  &uc_sidebarIN = sidebarGET(&Pgmname.ToUpper())
+  if &uc_sidebarIN.itens.Count>0  
+    sidebar.Caption = uc.uc_sidebar(&uc_sidebarIN.ToJson())
+  endif
+ endif
 endsub
 
 // 4
 Event GlobalEvents.MPHOME(&uc_btclickparms)
-	do 'ui_navbar'
-	do 'ui_sidebar'
-	if &uc_btclickparms.Item(2)='NAV'
-		home()
-	endif
+do 'ui_navbar'
+do 'ui_sidebar'
+if &uc_btclickparms.Item(2)='NAV'
+ home()
+endif
 EndEvent
 ```
 1. Temos a chamada a um procedimento que cria o menu lateral **navMenuGET**
@@ -71,17 +69,17 @@ EndEvent
 A programação dos controles são simples, e no caso do **menuGET** associado ao conteúdo da tabela ADM_MODULO. 
 
 ```
-&uc_menuin.interface	= &programa.trim()
-&uc_menuin.id			= 'NAV'
-&uc_menuin.classe 		= 'uc_menu-v uc_menu-vl uc_menu-v-mp uc_pt30'
+&uc_menuin.interface = &programa.trim()
+&uc_menuin.id = 'NAV'
+&uc_menuin.classe = 'uc_menu-v uc_menu-vl uc_menu-v-mp uc_pt30'
 &uc_menuin.itens.Clear()
 
 for each ADM_MODULO
 order ModuloSeq
 	&menuitem = new()
-	&menuitem.evento 	= ModuloNome.ToUpper().Trim()
-	&menuitem.icone  	= ModuloIcone.Trim()
-	&menuitem.titulo 	= ModuloNome.Trim()
+	&menuitem.evento = ModuloNome.ToUpper().Trim()
+	&menuitem.icone = ModuloIcone.Trim()
+	&menuitem.titulo = ModuloNome.Trim()
 	&uc_menuin.itens.Add(&menuitem)
 endfor
 ```
@@ -95,19 +93,19 @@ Este programa devolve um objeto &uc_menuin que é apresentado na masterpage.
 O **sidebarGET** também não tem muitos segredos, apenas filtra os programas associados ao modulo que estão na tabela ADM_HELP.
 
 ```
-&uc_sidebarin.id 		= 'SIDEBAR'
+&uc_sidebarin.id = 'SIDEBAR'
 &uc_sidebarin.programa 	= &programa.ToUpper()
-&uc_sidebarIN.classe 	= 'uc_sidebar uc_sidebarwhite uc_pt30'
+&uc_sidebarIN.classe = 'uc_sidebar uc_sidebarwhite uc_pt30'
 
 for each ADM_HELP
 order HelpModule, HelpPosicao
 where HelpModule = &websession.get('MODULO')
 where HelpActive
-	&sidebaritem 			= new()
-	&sidebaritem.titulo		= HelpTitle.Trim()
-	&sidebaritem.link     	= HelpProgram.Trim()
-	&sidebaritem.icone 		= HelpIcone.Trim()
-	&sidebaritem.tooltip  	= HelpTooltip.Trim()
+	&sidebaritem = new()
+	&sidebaritem.titulo = HelpTitle.Trim()
+	&sidebaritem.link = HelpProgram.Trim()
+	&sidebaritem.icone = HelpIcone.Trim()
+	&sidebaritem.tooltip = HelpTooltip.Trim()
 	&uc_sidebarin.itens.Add(&sidebaritem)			
 endfor
 ```
