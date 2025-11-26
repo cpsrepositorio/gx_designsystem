@@ -28,6 +28,8 @@ where Id =&id when &id<>0
 
 ```
 O **count=&pgsize** determina o total de registros a ser retornado, e **skip=(&pg-1)*&pgsize** calcula o primeiro registro da lista em função da pagina a ser carrega.
+Na chamada ao DataProvider se deve passar o **&pgsize** que é fixado no Start, e o **&pg** que altera conforme a navegação do usuário. 
+O DP inclui um filtro para o caso do usuário queira filtrar um registro.
 
 ```
 sub 'load'
@@ -36,7 +38,7 @@ sub 'load'
 	do 'grid'
 endsub
 ```
-A chamada ao **cargaDP** retorna os registros da página carregada.
+A chamada ao **cargaDP** retorna os registros da página carregada, e aqui podemos acionar um truquezinho, e utilizar um SDT padrão para não ter que criar, para cada tabela uma estrutura específica. Lembre-se que o controle é uma lista que apresenta um titulo apenas, portanto, não precisariamos de um tipo específico. Ver [row](/doc/tecnicas/row.md) para maiores detalhes
 
 ## Montagem da lista
 A lista de registros é carregada para o controle **uc_listapaginada**, que inclui algumas propriedades adicionais.
