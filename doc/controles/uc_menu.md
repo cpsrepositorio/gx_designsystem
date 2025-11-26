@@ -11,57 +11,53 @@ Para incluir uma lista de itens no menu, uma segunda variável será necessária
 
 ### Exemplo:
 A seguir um exemplo de um menu horizontal.
-
 ```
 sub 'menu'
-	
-	&uc_menuin.id 			= 'MENU'
-	&uc_menuin.interface 	= 'interface'
-    &uc_menuin.classe       = 'uc_menu-h uc_menu-hc'
-	&uc_menuin.itens.Clear()
+ &uc_menuin.id 			= 'MENU'
+ &uc_menuin.interface 	= 'interface'
+ &uc_menuin.classe       = 'uc_menu-h uc_menu-hc'
+ &uc_menuin.itens.Clear()
 
-	&menuitem = new()
-	&menuitem.evento = &Pgmname.Trim()+':MENU:HOME:1'
-	&menuitem.icone  = '<i class="fas fa-house-damage uc_pointer"></i>'
-	&menuitem.titulo = 'relatorio'
-	&uc_menuin.itens.Add(&menuitem)
+ &menuitem = new()
+ &menuitem.evento = &Pgmname.Trim()+':MENU:HOME:1'
+ &menuitem.icone  = '<i class="fas fa-house-damage uc_pointer"></i>'
+ &menuitem.titulo = 'relatorio'
+ &uc_menuin.itens.Add(&menuitem)
 
-	&menuitem = new()
-	&menuitem.evento = &Pgmname.Trim()+':MENU:FOLLOW:1'
-	&menuitem.icone  = '<i class="fas fa-running uc_pointer"></i>'
-	&menuitem.titulo = 'follow-up'
-	&uc_menuin.itens.Add(&menuitem)
+ &menuitem = new()
+ &menuitem.evento = &Pgmname.Trim()+':MENU:FOLLOW:1'
+ &menuitem.icone  = '<i class="fas fa-running uc_pointer"></i>'
+ &menuitem.titulo = 'follow-up'
+ &uc_menuin.itens.Add(&menuitem)
 
-	&menuitem = new()
-	&menuitem.evento = &Pgmname.Trim()+':MENU:PRODUTO:1'
-	&menuitem.icone  = '<i class="fab fa-windows uc_pointer"></i>'
-	&menuitem.titulo = 'produto'
-	&uc_menuin.itens.Add(&menuitem)
+ &menuitem = new()
+ &menuitem.evento = &Pgmname.Trim()+':MENU:PRODUTO:1'
+ &menuitem.icone  = '<i class="fab fa-windows uc_pointer"></i>'
+ &menuitem.titulo = 'produto'
+ &uc_menuin.itens.Add(&menuitem)
 
-	&menuitem = new()
-	&menuitem.evento = &Pgmname.Trim()+':MENU:CVE:1'
-	&menuitem.icone  = '<i class="fas fa-shield-alt uc_pointer"></i>'
-	&menuitem.titulo = 'cve'
-	&uc_menuin.itens.Add(&menuitem)
+ &menuitem = new()
+ &menuitem.evento = &Pgmname.Trim()+':MENU:CVE:1'
+ &menuitem.icone  = '<i class="fas fa-shield-alt uc_pointer"></i>'
+ &menuitem.titulo = 'cve'
+ &uc_menuin.itens.Add(&menuitem)
 
-	&menuitem = new()
-	&menuitem.evento = &Pgmname.Trim()+':MENU:UNIDADE:1'
-	&menuitem.icone  = '<i class="fas fa-school uc_pointer"></i>'
-	&menuitem.titulo = 'unidade'
-	&uc_menuin.itens.Add(&menuitem)
+ &menuitem = new()
+ &menuitem.evento = &Pgmname.Trim()+':MENU:UNIDADE:1'
+ &menuitem.icone  = '<i class="fas fa-school uc_pointer"></i>'
+ &menuitem.titulo = 'unidade'
+ &uc_menuin.itens.Add(&menuitem)
 
-	&menuitem = new()
-	&menuitem.evento = &Pgmname.Trim()+':MENU:IP:1'
-	&menuitem.icone  = '<i class="fas fa-network-wired uc_pointer"></i>'
-	&menuitem.titulo = 'ip'
-	&uc_menuin.itens.Add(&menuitem)
+ &menuitem = new()
+ &menuitem.evento = &Pgmname.Trim()+':MENU:IP:1'
+ &menuitem.icone  = '<i class="fas fa-network-wired uc_pointer"></i>'
+ &menuitem.titulo = 'ip'
+ &uc_menuin.itens.Add(&menuitem)
 
-	html.Caption  = UC.uc_menu(&uc_menuIN.ToJson())
+ html.Caption  = UC.uc_menu(&uc_menuIN.ToJson())
 endsub
 ```
-
 A linha **html.Caption  = UC.uc_menu(&uc_menuIN.ToJson())**, inclui o menu num textblock na interface.
-
 
 ### Estilo
 O estilo do menu é definido no arquivo **uc_menu.css**, que contém uma série de classes que permitem configurar o objeto.
