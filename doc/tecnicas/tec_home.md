@@ -7,7 +7,7 @@ No TEXTBLOCK (grid) apresentamos informações a respeito do módulo que está s
 
 ```
 event Start
-	form.HeaderRawHTML = uc_carga()
+	form.HeaderRawHTML = uc_cssLoad()
 	form.Meta.AddItem("viewport", "width=device-width,initial-scale=1")
 	do 'ui_grid'
 endevent
@@ -20,14 +20,14 @@ endsub
 sub 'modulo'
 	for each
 	where ModuloNome = &modulo.ToLower()
-		&uc_cardin.classe			= 'uc_card_clear '
-		&uc_cardin.classesize		= 'uc_card300'
+		&uc_cardin.classe = 'uc_card_clear '
+		&uc_cardin.classesize = 'uc_card300'
 		&uc_cardin.classecontainer 	= 'uc_cardcontainer_clear'
 		&carditem = new()
-		&carditem.titulo 			= ModuloNome.Trim()
-		&carditem.texto 			= ModuloDescricao.Trim()
-		&carditem.image 			= ModuloImagem.Trim()
-		&carditem.imageclasse 		= 'uc_card300img'
+		&carditem.titulo = ModuloNome.Trim()
+		&carditem.texto = ModuloDescricao.Trim()
+		&carditem.image = ModuloImagem.Trim()
+		&carditem.imageclasse = 'uc_card300img'
 		&uc_cardin.cards.add(&carditem)
 		grid.Caption = UC.uc_card(&uc_cardin.ToJson())
 		
