@@ -25,7 +25,7 @@ Voce deve ter observado que é possivel a partir de um Textblock simples apresen
 
 Parece ser um modelo tão elementar, mas na prática, todo conteúdo baseado na internet parte da estrutura HTML incluido informações texto. O pacote UC utiliza desta capacidade para inserir na interface padrão Genexus as tags HTML que apresentarão recursos complexos.
 
-Não se esqueça de ver a explicação sobre o procedimento [uc_cssLOAD()](/docs/classes.md).
+Não se esqueça de ver a explicação sobre o procedimento [uc_cssLOAD()](/docs/classes.md), que é uma procedure que precisa ser criada no projeto.
 
 ## Inserindo um botão
 Após a execução do exemplo, podemos então utilizar esse painel para criar um Botão AloMamãe!!
