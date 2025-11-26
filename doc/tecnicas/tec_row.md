@@ -55,10 +55,7 @@ Para montar a lista, basta percorrer a coleção de registros obtida do DP, adic
    uc_listin.itens.add(&item)
  endfor
 ```
+### Informações adicionais
+Temos mais uma otimização à sua disposição, veja a procedure [GridGET](/doc/tecnicas/tec_gridget.md)
 
 
-
-
-
-
-```
