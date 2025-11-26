@@ -5,9 +5,9 @@ O controle é bastante simples, porém necessita de recursos adicionais para a c
 
 No evento **Start** se deve definir a página inicial e o tamanho da página e a rotina de 'load' deve ser acionada.
 ```
-	&pg = 1		
-	&pgsize = 10	
-	do 'load'	
+&pg = 1		
+&pgsize = 10	
+do 'load'	
 ``` 
 
 ## Data provider
@@ -19,11 +19,11 @@ cargaSDT [count=&pgsize][skip=(&pg-1)*&pgsize]
 order Id
 where Id =&id when &id<>0
 {
-	Id			
-	Nome		
-	Foto		
-	Endereco	
-	Cidade
+ Id			
+ Nome		
+ Foto		
+ Endereco	
+ Cidade
 }
 
 ```
@@ -33,9 +33,9 @@ O DP inclui um filtro para o caso do usuário queira filtrar um registro.
 
 ```
 sub 'load'
-	&registros.Clear()
- 	&registros = cargaDP(&id, &pgsize, &pg)
-	do 'grid'
+ &registros.Clear()
+ &registros = cargaDP(&id, &pgsize, &pg)
+ do 'grid'
 endsub
 ```
 A chamada ao **cargaDP** retorna os registros da página carregada, e aqui podemos acionar um truquezinho, e utilizar um SDT padrão para não ter que criar, para cada tabela uma estrutura específica. Lembre-se que o controle é uma lista que apresenta um titulo apenas, portanto, não precisariamos de um tipo específico. Ver [row](/doc/tecnicas/row.md) para maiores detalhes
@@ -55,54 +55,52 @@ O **for &reg in &registros** percorre a lista de registros retornado pelo DataPr
 
 ```
 sub 'grid'
-	/* botão INS */
-	&uc_botaoiconein.id = 'LISTA'
-	&uc_botaoiconein.interface = &Pgmname.ToUpper()
-	&botoes.Clear()
-	&botoes.Add("NOVO:")
-	&uc_botaoiconein.botoes = &botoes.ToJson()
+ /* botão INS */
+ &uc_botaoiconein.id = 'LISTA'
+ &uc_botaoiconein.interface = &Pgmname.ToUpper()
+ &botoes.Clear()
+ &botoes.Add("NOVO:")
+ &uc_botaoiconein.botoes = &botoes.ToJson()
 
-	/* lista de registros */
-	&uc_listin.id = 'LISTA'
-	&uc_listin.interface = &Pgmname.ToUpper()
-	&uc_listin.pagging = true
-	&uc_listin.paggingposition = uc_position.bottom
-	&uc_listIN.paggingpgsize = &pgsize
-	&uc_listIN.paggingpg = &pg
-	&uc_listIN.paggingtrec = count(nome)
-	&uc_listin.toolbox  = UC.uc_botaoicone(&uc_botaoiconein.ToJson())
-	&uc_listin.classetoolbox = 'uc_flex-r uc_flex-jce uc_mb10'
+ /* lista de registros */
+ &uc_listin.id = 'LISTA'
+ &uc_listin.interface = &Pgmname.ToUpper()
+ &uc_listin.pagging = true
+ &uc_listin.paggingposition = uc_position.bottom
+ &uc_listIN.paggingpgsize = &pgsize
+ &uc_listIN.paggingpg = &pg
+ &uc_listIN.paggingtrec = count(nome)
+ &uc_listin.toolbox  = UC.uc_botaoicone(&uc_botaoiconein.ToJson())
+ &uc_listin.classetoolbox = 'uc_flex-r uc_flex-jce uc_mb10' 
 
-	/* carga dos registros da lista */
-	&uc_listin.itens.Clear()
-	for &reg in &registros
-
-		&uc_botaoiconein = new()
-		&uc_botaoiconein.id = 'LISTA'
-		&uc_botaoiconein.interface = &Pgmname.ToUpper()
-		&uc_botaoiconein.classebar = 'uc_flex-r uc_flex-nowrap'
-		&uc_botaoiconein.classebotao = 'uc_btspace uc_bt-icon uc_pointer'
-		&uc_botaoiconein.classeicon = ''
-		&botoes.Clear()
-		&botoes.Add("EDITAR:")
-		&botoes.Add("APAGAR:")
-		&uc_botaoiconein.botoes = &botoes.ToJson()
+ /* carga dos registros da lista */
+ &uc_listin.itens.Clear()
+ for &reg in &registros
+  &uc_botaoiconein = new()
+  &uc_botaoiconein.id = 'LISTA'
+  &uc_botaoiconein.interface = &Pgmname.ToUpper()
+  &uc_botaoiconein.classebar = 'uc_flex-r uc_flex-nowrap'
+  &uc_botaoiconein.classebotao = 'uc_btspace uc_bt-icon uc_pointer'
+  &uc_botaoiconein.classeicon = ''
+  &botoes.Clear()
+  &botoes.Add("EDITAR:")
+  &botoes.Add("APAGAR:")
+  &uc_botaoiconein.botoes = &botoes.ToJson()
 		
-		&item = new()
-		&item.titulo = &reg.Nome.ToUpper().Trim()
-		&item.tooltip = &reg.Nome.ToUpper().Trim()
-		&item.evento = 'ABRIR:'+&reg.Id.ToString().Trim()
-		&item.imagem.classe  = 'uc_imagemredonda15px'
-		&item.imagem.image = &reg.Foto.Trim()
-		&item.imagem.tooltip = &reg.Nome.ToUpper().Trim()
-		&item.toolbox = UC.uc_botaoicone(&uc_botaoiconein.ToJson())
-		&uc_listin.itens.Add(&item)
+  &item = new()
+  &item.titulo = &reg.Nome.ToUpper().Trim()
+  &item.tooltip = &reg.Nome.ToUpper().Trim()
+  &item.evento = 'ABRIR:'+&reg.Id.ToString().Trim()
+  &item.imagem.classe  = 'uc_imagemredonda15px'
+  &item.imagem.image = &reg.Foto.Trim()
+  &item.imagem.tooltip = &reg.Nome.ToUpper().Trim()
+  &item.toolbox = UC.uc_botaoicone(&uc_botaoiconein.ToJson())
+  &uc_listin.itens.Add(&item)
 
-	endfor
-	html.Caption = UC.uc_listapaginada(&uc_listin.ToJson())
+ endfor
+ html.Caption = UC.uc_listapaginada(&uc_listin.ToJson())
 endsub
 ```
-
 ## Evento de paginação
 A paginação no controle exige mais um pequeno detalhe, na interceptação do Bootstrapclick.
 
@@ -110,27 +108,26 @@ Observe se o controle que causou o evento é chamado de 'PAGGING', e em caso pos
 
 ```
 case  &uc_btclickparms.Item(uc_btitem.controle) = 'PAGGING'
-	&pg = &uc_btclickparms.Item(uc_btitem.parm1).ToNumeric()
-	do 'load'
+ &pg = &uc_btclickparms.Item(uc_btitem.parm1).ToNumeric()
+ do 'load'
 ```
 O controle de qual página o controle vai acionar é definido pelo **uc_listapaginada**, que já calcula e determina no próprio botão.
-
 ```
 Event Bootstrapclick1.Click
-	&uc_btclick = Bootstrapclick1.ButtonId
-	navEvent2(&uc_btclick, &uc_btclickparms, &url, &isok)
+ &uc_btclick = Bootstrapclick1.ButtonId
+ navEvent2(&uc_btclick, &uc_btclickparms, &url, &isok)
 	
-	do case 
-		case  &uc_btclickparms.Item(uc_btitem.controle) = 'PAGGING'
-			&pg = &uc_btclickparms.Item(uc_btitem.parm1).ToNumeric()
-			do 'load'
-	endcase
+ do case 
+  case  &uc_btclickparms.Item(uc_btitem.controle) = 'PAGGING'
+   &pg = &uc_btclickparms.Item(uc_btitem.parm1).ToNumeric()
+   do 'load'
+  endcase
 
-	msg(
-		 ' interface:'	+ &uc_btclickparms.Item(uc_btitem.interface)
-		+' controle:'	+ &uc_btclickparms.Item(uc_btitem.controle)
-		+' acao:'		+ &uc_btclickparms.Item(uc_btitem.acao)
-		+' parametro:'	+ &uc_btclickparms.Item(uc_btitem.parm1)
-	)
+  msg(
+   ' interface:'	+ &uc_btclickparms.Item(uc_btitem.interface)
+  +' controle:'	+ &uc_btclickparms.Item(uc_btitem.controle)
+  +' acao:'		+ &uc_btclickparms.Item(uc_btitem.acao)
+  +' parametro:'	+ &uc_btclickparms.Item(uc_btitem.parm1)
+  )
 EndEvent
 ```
