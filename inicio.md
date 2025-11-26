@@ -12,13 +12,15 @@ O ponto favorável é que Genexus busca o nivel hard de automatização para o d
 
 Para quem nunca trabalhou com Genexus este modelo será mais simples, mas será necessário entender um pouco do contexto, principalmente porque estamos descolando um pouco do cenário tradicional, buscando criar [interfaces diferentes](/doc/interfacesdiferentes.md), deixando um pouco de lado o caminho da produção 'automatica' das coisas pelo Genexus, mas buscando criar um modelo de interface mais dinâmica, ágil, leve e padronizada. 
 
- ## como começar?
-
-* Começe entendendo [o que é](/doc/oquee.md) o designsystem
-* Instale o pacote na sua kb Genexus [instalacao](/doc/instalacao.md)
-* Vamos para o [alomamae](/doc/alomamae.md)
-* Infelizmente tem coisas esquisitas para aprender como [eventos](/doc/eventos.md), por exemplo.
-* Depois vamos ao checklist para os herois que desejam contribuir com seu benvindo esforço: [o que falta fazer](/doc/oquefalta.md)
+ ## começando...
+ A seguir apresentamos uma trilha básica para iniciar:
+* Começe entendendo [o que é](/doc/oquee.md) o gxdesignsystem
+* Instale os recursos necessários na sua kb Genexus [instalacao](/doc/instalacao.md)
+* Vamos para o importante [alomamae](/doc/alomamae.md) para ver como tudo funciona
+* Planeje e construa sua interface [WebPanel](/doc/tecnicas/tec_webpanel.md)
+* Estude e utilize os controles, aqui tem uma lista: [indice de controles](/doc/indexcontrole.md)
+* Infelizmente tem coisas esquisitas para aprender, [eventos](/doc/eventos.md), por exemplo.
+* Depois que ficar craque no assunto vamos ao checklist para os herois que desejam contribuir no projeto [o que falta fazer](/doc/oquefalta.md)
 
 Depois das devidas apresentações, vamos evoluir para um nivel superior, tratando carga de registros, estratégias de interface, estratégias de encriptação.
 
