@@ -165,3 +165,7 @@ Event Enter
 Endevent
 
 ```
+
+## Master page
+Para aumentar a capacidade da interface, continue a programação incluindo uma [master page](doc/tecnicas/tec_masterpage.md)
+
