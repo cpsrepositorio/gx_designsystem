@@ -5,13 +5,13 @@ O **gx_designsystem** é um recurso para construção de interfaces Web que pode
  ## começando...
  A seguir apresentamos uma trilha básica para iniciar:
  
-* Começe entendendo [o que é](/doc/oquee.md) o gxdesignsystem
-* Instale os recursos necessários na sua kb Genexus [instalacao](/doc/instalacao.md)
-* Vamos para o importante [alomamae](/doc/alomamae.md) para ver como tudo funciona
-* Planeje e construa sua interface [WebPanel](/doc/tecnicas/tec_webpanel.md)
-* Estude e utilize os controles, aqui tem uma lista: [indice de controles](/doc/indexcontrole.md)
-* Infelizmente tem coisas esquisitas para aprender, [eventos](/doc/eventos.md), por exemplo.
-* Depois que ficar craque no assunto vamos ao checklist para os herois que desejam contribuir no projeto [o que falta fazer](/doc/oquefalta.md)
+1. Começe entendendo [o que é](/doc/oquee.md) o gxdesignsystem
+2. Instale os recursos necessários na sua kb Genexus [instalacao](/doc/instalacao.md)
+3. Vamos para o importante [alomamae](/doc/alomamae.md) para ver como tudo funciona
+4. Planeje e construa sua interface [webpanel](/doc/tecnicas/tec_webpanel.md)
+5. Estude e utilize os controles, aqui tem uma lista: [indice de controles](/doc/indexcontrole.md)
+6. Infelizmente tem coisas esquisitas para aprender, [eventos](/doc/eventos.md), por exemplo.
+7. Depois que ficar craque no assunto vamos ao checklist para os herois que desejam contribuir no projeto [o que falta fazer](/doc/oquefalta.md)
 
 Depois das devidas apresentações, vamos evoluir para um nivel superior, tratando carga de registros, estratégias de interface, estratégias de encriptação.
 
