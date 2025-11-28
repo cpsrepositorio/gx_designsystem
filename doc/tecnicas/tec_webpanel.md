@@ -31,6 +31,12 @@ E dentro das sections, os **textblocks**:
 
 A interface opera para carregar os textblocks com conteúdos.
 
+O programa é constituido por três áreas:
+
+* **ESTRUTURA DA INTERFACE**, define as maneiras que a interface se comporta conforme a operação que será realizada pelo usuário.
+* **CARGA DE DADOS**, define a carga dos registros nas tabelas e em seguida a montagem do **grid**
+* **CONTROLE DE EVENTOS**, define as ações dos usuários.
+
 ```
 Event Start
  form.HeaderRawHTML = uc_carga()
@@ -133,14 +139,20 @@ Event Bootstrapclick1.Click
  do case
   case &uc_btclickparms.Item(uc_btitem.interface)=&Pgmname.toupper()
    do case
+
+    /* botão INSERIR */
     case &uc_btclickparms.Item(uc_btitem.acao)='INSERIR'
      do 'ui_modo_detail'
      &id = 0
      component1.Object = LIXO_Teste.Create(trnmode.Insert, &id)
+
+    /* botão EDITAR */
     case &uc_btclickparms.Item(uc_btitem.acao)='EDITAR'
      do 'ui_modo_detail'
      &id = &uc_btclickparms.Item(uc_btitem.parm1).ToNumeric()
      component1.Object = LIXO_Teste.Create(trnmode.Update, &id)
+
+    /* botão APAGAR */
     case &uc_btclickparms.Item(uc_btitem.acao)='APAGAR'
      &id = &uc_btclickparms.Item(uc_btitem.parm1).ToNumeric()
      &LIXO_Teste.Load(&id)
@@ -151,12 +163,14 @@ Event Bootstrapclick1.Click
      else
       msg('Erro '+&LIXO_Teste.GetMessages().Item(1).Description)
      endif
+
+    /* botão PAGGING */
     case &uc_btclickparms.Item(uc_btitem.controle)='PAGGING'
      &pg = &uc_btclickparms.Item(uc_btitem.parm1).ToNumeric()
      do 'ui_modo_default'
      do 'load'
-    endcase
-  otherwise
+
+   endcase
  endcase
 EndEvent
 
