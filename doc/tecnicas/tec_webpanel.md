@@ -71,26 +71,26 @@ sub 'ui_modo_default'
  &search.Visible = 1
  tb_detail.Visible = 0
 	
- &ButtonBarSDT.programa  	= &Pgmname
- &ButtonBarSDT.inserir	= true
- &ButtonBarSDT.fechar	= false
- &ButtonBarSDT.detalhe	= false
- &ButtonBarSDT.doc      	= false
+ &ButtonBarSDT.programa = &Pgmname
+ &ButtonBarSDT.inserir = true
+ &ButtonBarSDT.fechar = false
+ &ButtonBarSDT.detalhe = false
+ &ButtonBarSDT.doc = false
  do 'ui_buttonbar'
 endsub
 
 sub 'ui_modo_detail'
  alerta.Caption = ''
  grid.Caption = ''
- icone.Caption 	= ''
- &search.Visible	= 0
- tb_detail.Visible 	= 1
+ icone.Caption = ''
+ &search.Visible = 0
+ tb_detail.Visible = 1
 	
- &ButtonBarSDT.programa  	= &Pgmname
- &ButtonBarSDT.inserir	= false
- &ButtonBarSDT.fechar	= true
- &ButtonBarSDT.detalhe	= false
- &ButtonBarSDT.doc      	= false
+ &ButtonBarSDT.programa = &Pgmname
+ &ButtonBarSDT.inserir = false
+ &ButtonBarSDT.fechar = true
+ &ButtonBarSDT.detalhe = false
+ &ButtonBarSDT.doc = false
  do 'ui_buttonbar'
 endsub
 
@@ -142,33 +142,33 @@ Event Bootstrapclick1.Click
 
     /* botão INSERIR */
     case &uc_btclickparms.Item(uc_btitem.acao)='INSERIR'
-     do 'ui_modo_detail'
-     &id = 0
-     component1.Object = LIXO_Teste.Create(trnmode.Insert, &id)
+      do 'ui_modo_detail'
+      &id = 0
+      component1.Object = LIXO_Teste.Create(trnmode.Insert, &id)
 
     /* botão EDITAR */
     case &uc_btclickparms.Item(uc_btitem.acao)='EDITAR'
-     do 'ui_modo_detail'
-     &id = &uc_btclickparms.Item(uc_btitem.parm1).ToNumeric()
-     component1.Object = LIXO_Teste.Create(trnmode.Update, &id)
+      do 'ui_modo_detail'
+      &id = &uc_btclickparms.Item(uc_btitem.parm1).ToNumeric()
+      component1.Object = LIXO_Teste.Create(trnmode.Update, &id)
 
     /* botão APAGAR */
     case &uc_btclickparms.Item(uc_btitem.acao)='APAGAR'
-     &id = &uc_btclickparms.Item(uc_btitem.parm1).ToNumeric()
-     &LIXO_Teste.Load(&id)
-     &LIXO_Teste.Delete()
-     if &LIXO_Teste.Success()
-      commit
-      do 'load'
-     else
-      msg('Erro '+&LIXO_Teste.GetMessages().Item(1).Description)
-     endif
+      &id = &uc_btclickparms.Item(uc_btitem.parm1).ToNumeric()
+      &LIXO_Teste.Load(&id)
+      &LIXO_Teste.Delete()
+      if &LIXO_Teste.Success()
+        commit
+        do 'load'
+      else
+        msg('Erro '+&LIXO_Teste.GetMessages().Item(1).Description)
+      endif
 
     /* botão PAGGING */
     case &uc_btclickparms.Item(uc_btitem.controle)='PAGGING'
-     &pg = &uc_btclickparms.Item(uc_btitem.parm1).ToNumeric()
-     do 'ui_modo_default'
-     do 'load'
+      &pg = &uc_btclickparms.Item(uc_btitem.parm1).ToNumeric()
+      do 'ui_modo_default'
+      do 'load'
 
    endcase
  endcase
