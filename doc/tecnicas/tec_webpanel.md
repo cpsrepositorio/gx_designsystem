@@ -26,7 +26,7 @@ São úteis para organizar agrupamentos de controles na interface.
 ## Exemplo completo
 Nesse exemplo, que temos como padrão para interfaces com o controle de lista temos
 
-
+[padrao](https://raw.githubusercontent.com/cpsrepositorio/gx_designsystem/refs/heads/main/doc/imagens/uc_padrao.png)
 
 ```
 Event Start
