@@ -3,18 +3,13 @@ Tudo começa com uma interface Web, que em Genexus é definida a partir de um ob
 
 Primeiramente, é necessário compreender que o Genexus é um gerador de código e ele sempre vai querer incluir um monte de coisas a mais, que consideramos desnecessárias e o pior, que atrapalham no design da tela.
 
+Para reduzir o trabalho de configuração, utilizamos com maior frequencia o **flex layout** em nossos sistemas (mais informações [aqui](/doc/layout.md).
 
-Utilizamos com maior frequencia o **flex layout** em nossos sistemas.
-
-## Stencil
-Não utilize stencil nas interfaces com o gxdesignsystem, simplesmente não funcionam.
-
-## Section
+## Section, Textblocks e BootstrapClick
 Outro objeto importante para adicionar em nosso projeto de interface são os controles **Section** do Genexus, que produzem **<div>...</div>** na interface.
-São úteis para organizar agrupamentos de controles na interface.
-
-## Textblock
-É o controle principal que utilizaremos para apresentar nossos controles.
+Utilizaremos as sections para organizar agrupamentos de controles na interface.
+Os **textblocks** são os controles que utilizaremos para apresentar o conteúdo que criamos no sistema.
+O **BootstrapClick** é o controle de evento de Click dos nossos componentes.
 
 ## Exemplo completo
 Nesse exemplo, padrão para interfaces com o controle de lista, temos um conjunto de Sections e alguns textblocks.
