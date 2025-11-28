@@ -2,7 +2,7 @@
 
 O **gx_designsystem** é um recurso para construção de interfaces Web que pode ser utilizado em Kbs Genexus (18). O pacote inclui um Package, Classes CSS, SDTs, documentação técnica e exemplos, que auxilia na construção de interfaces em Genexus de forma mais simples. 
 
- ## começando...
+ ## Começando...
  A seguir apresentamos uma trilha básica para iniciar:
  
 1. Começe entendendo [o que é](/doc/oquee.md) o gxdesignsystem
