@@ -6,9 +6,9 @@ Diferente dos demais controles para incluir a carga da biblioteca diretamente no
 
 ```
 Event Start
-form.HeaderRawHTML = uc_carga()
-form.HeaderRawHTML += '<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>'
-do 'pie'
+ form.HeaderRawHTML = uc_carga()
+ form.HeaderRawHTML += '<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>'
+ do 'pie'
 EndEvent
 ```
 Mais informações, aqui [getting-started](https://www.chartjs.org/docs/latest/getting-started/)
