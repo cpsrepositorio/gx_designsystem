@@ -1,6 +1,18 @@
 # uc_chart
 O pacote inclui um conjunto de controles para gráficos utilizando a biblioteca (chats.js](https://www.chartjs.org/).
 
+## Setup
+Diferente dos demais controles para incluir a carga da biblioteca diretamente no Webpanel que utiliza o gráfico.
+
+```
+Event Start
+form.HeaderRawHTML = uc_carga()
+form.HeaderRawHTML += '<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>'
+do 'pie'
+EndEvent
+```
+Mais informações, aqui [getting-started](https://www.chartjs.org/docs/latest/getting-started/)
+
 ## Pie
 Os graficos redondos são claros e com muita utilidade, e muito simples de serem construídos, podendo ser cheios (pie) ou com um buraquinho no meio, rs, (doughnut).
 
@@ -89,5 +101,17 @@ Defina o **tipo** como **uc_charttipo.doughnut**
 &pie1.datasetborder = 2
 &pie1.dataset.FromJson('[10,4,3,4,2,2]')
 &pie1.datasetbgcolor.FromJson('["#323232","#3f3f3f","#545454","#707070","#a2a2a2","#bcbcbc"]')
+```
+## Cores
+As cores podem ser adicionadas livremente no chart.js, bastando defini-las de acordo com a preferência, e em seguida adicioná-las na coleção.
 
+### Formato
+O formato das cores pode ser obtido aqui neste documento [color-formats](https://www.chartjs.org/docs/latest/general/colors.html#color-formats)
+```
+&pie.datasetbgcolor.Add('#FF5733')
+&pie.datasetbgcolor.Add('#FFCA33')
+&pie.datasetbgcolor.Add('#B2FF33')
+&pie.datasetbgcolor.Add('#33F6FF')
+&pie.datasetbgcolor.Add('#3374FF')
+&pie.datasetbgcolor.Add('#4a83bc')
 ```
