@@ -67,8 +67,27 @@ Este ja vimos no exemplo anterior.
 &pie.dataset.Add('10')
 ```
 2) Com um **Json**
-Neste modelo, criamos a definição de uma coleção em Json e adicionamos no dataset. Programa-se menos, mas é um pouco mais complexo em termos de compreensão. Os caracteres [ e ] demarcam a coleção e os itens são separados por virgula.
+Neste modelo, criamos a definição de uma coleção em Json e adicionamos no dataset. Programa-se menos, mas é um pouco mais complexo em termos de compreensão. As chaves **[** e **]** demarcam a coleção e os itens são separados por virgula.
 ```
 &pie.dataset.FromJson('[1,9,3,5,2,10]')
 ```
 No cenário (2) temos um modo mais compacto e mais simples de ser obtido, caso os dados tenham sido carregados em um SDT previamente.
+Podemos utilizar uma variável que já represente a coleção ou uma string, como no exemplo, que forma a coleção.
+
+## Doughnut
+É exatamente o gráfico de **pie**, com as mesmas definições, coleções, ..., o que diferencia é apenas um furo no gráfico na apresentação.
+Defina o **tipo** como **uc_charttipo.doughnut**
+
+```
+&pie1.id = 'pd2'
+&pie1.tipo = uc_charttipo.doughnut
+&pie1.titulo = 'Cinza'
+&pie1.width = '200px;'
+&pie1.height = '200px;'
+&pie1.rotulos.FromJson('["item 1","item 2","item 3","item 4","item 5","item 5"]')
+&pie1.datasettitle = 'Itens'
+&pie1.datasetborder = 2
+&pie1.dataset.FromJson('[10,4,3,4,2,2]')
+&pie1.datasetbgcolor.FromJson('["#323232","#3f3f3f","#545454","#707070","#a2a2a2","#bcbcbc"]')
+
+```
