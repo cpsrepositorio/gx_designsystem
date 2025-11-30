@@ -32,11 +32,11 @@ Os graficos redondos são claros e com muita utilidade, e muito simples de serem
 A seguir um exemplo simples.
 ```
 sub 'pie'
- 	&pie.id 		= 'pizza1'
-	&pie.tipo 		= uc_charttipo.pie
-	&pie.titulo  	= 'Grafico Pizza'
-	&pie.width		= '300px;'
-	&pie.height		= '300px;'
+ 	&pie.id = 'pizza1'
+	&pie.tipo = uc_charttipo.pie
+	&pie.titulo = 'Grafico Pizza'
+	&pie.width = '300px;'
+	&pie.height = '300px;'
  
 	&pie.rotulos.Add("vermeio")
 	&pie.rotulos.Add("azur")
