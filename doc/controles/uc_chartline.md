@@ -1,6 +1,5 @@
-# uc_chart
+# uc_chart (linhas e barras)
 Além do conjunto de [gráficos redondos](/doc/controles/uc_chart.md), temos também uma série de outros gráficos de linhas, barras.
-
 
 ## Setup
 Diferente dos demais controles para incluir a carga da biblioteca diretamente no Webpanel que utiliza o gráfico.
