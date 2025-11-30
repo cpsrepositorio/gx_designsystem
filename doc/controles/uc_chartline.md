@@ -9,7 +9,7 @@ Diferente dos demais controles para incluir a carga da biblioteca diretamente no
 Event Start
  form.HeaderRawHTML = uc_carga()
  form.HeaderRawHTML += '<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>'
- do 'pie'
+ do 'line'
 EndEvent
 ```
 Mais informações, aqui [getting-started](https://www.chartjs.org/docs/latest/getting-started/)
@@ -66,3 +66,163 @@ Neste modelo, criamos a definição de uma coleção em Json e adicionamos no da
 ```
 No cenário (2) temos um modo mais compacto e mais simples de ser obtido, caso os dados tenham sido carregados em um SDT previamente.
 Podemos utilizar uma variável que já represente a coleção ou uma string, como no exemplo, que forma a coleção.
+
+## Bar
+Os gráficos de barras possuem a mesma estrutura dos gráficos de linhas, inclusive incluindo vários datasets.
+```
+sub 'bar'
+	&bar.id = 'b1'
+	&bar.titulo = ''
+	&bar.legenda = '' // top, center, bottom
+	&bar.width  = '300px'
+	&bar.height = '300px'
+	&bar.rotulos.Clear()
+	&bar.datasets.Clear()
+	&bar.dataset.Clear()
+	&bar.rotulos.FromJson("['a','b','c','d','e','f']")
+
+	/* (1) serie  ---------------------------------------*/
+	&dataset = new()
+	&dataset.tipo = uc_charttipo.bar
+	&dataset.titulo = 'TITULO1'
+	&dataset.border.size = 2	
+	&dataset.fill.tipo = ''
+	&dataset.fill.acima = ''
+	&dataset.fill.abaixo = ''
+	&dataset.bordercor = 'rgb(75, 192, 192)'
+	&dataset.point = uc_chartpoint.cross
+	&dataset.dados.FromJson('[1,9,3,2,5,4]')
+	&bar.datasets.Add(&dataset)
+	
+	/* (2) serie  ---------------------------------------*/
+	&dataset = new()
+	&dataset.tipo = uc_charttipo.bar
+	&dataset.titulo = 'TITULO1'
+	&dataset.border.size = 2	
+	&dataset.fill.tipo = ''
+	&dataset.fill.acima = ''
+	&dataset.fill.abaixo = ''
+	&dataset.bordercor = 'rgb(75, 192, 192)'
+	&dataset.point = uc_chartpoint.cross
+	&dataset.dados.FromJson('[11,12,8,7,10,14]')
+	&bar.datasets.Add(&dataset)
+	
+	html.Caption += '<h3 class="uc_mt30">Bar</h3><hr>'
+	html.Caption += '<div class="uc_flex-r uc_flex-w">'
+	html.Caption +=   UC.uc_chart(&bar.ToJson())
+	html.Caption += '</div>'
+endsub
+```
+
+## HorizontalBar
+E o gráfico horizontal é a mesma coisa, somente que os datasets são orientados na horizontal.
+
+```
+sub 'hbar'
+ &hbar.id = 'barh'
+	&hbar.titulo = ''
+	&hbar.legenda = '' // top, center, bottom
+	&hbar.width  = '300px'
+	&hbar.height = '300px'
+	&hbar.rotulos.Clear()
+	&hbar.datasets.Clear()
+	&hbar.dataset.Clear()
+	&hbar.rotulos.FromJson("['a','b','c','d','e','f']")
+
+	/* (1) barra  ---------------------------------------*/
+	&hbards = new()
+	&hbards.tipo = uc_charttipo.horizontalbar
+	&hbards.titulo = 'TITULO1'
+	&hbards.border.size = 2	
+	&hbards.fill.tipo = ''
+	&hbards.fill.acima = ''
+	&hbards.fill.abaixo = ''
+	&hbards.bordercor = 'rgb(75, 192, 192)'
+	&hbards.point = uc_chartpoint.cross
+	&hbards.dados.FromJson('[1,9,3,2,5,4]')
+	&hbar.datasets.Add(&hbards)
+	
+	/* (2) barra  ---------------------------------------*/
+	&hbards = new()
+	&hbards.tipo = uc_charttipo.horizontalbar
+	&hbards.titulo = 'TITULO2 '
+	&hbards.border.size = 2	
+	&hbards.fill.tipo = ''
+	&hbards.fill.acima = ''
+	&hbards.fill.abaixo = ''
+	&hbards.bordercor = 'rgb(175, 92, 192)'
+	&hbards.point = uc_chartpoint.triangle
+	&hbards.dados.Clear()
+	&hbards.dados.FromJson('[11,12,8,7,10,14]')
+	&hbar.datasets.Add(&hbards)
+
+	html.Caption += '<h3 class="uc_mt30">Hbar</h3><hr>'
+	html.Caption += '<div class="uc_flex-r uc_flex-w">'
+	html.Caption +=   UC.uc_chart(&hbar.ToJson())
+	html.Caption += '</div>'
+endsub
+```
+
+## Multi
+São gráficos com multiplas séries, sendo que cada uma pode ser de um tipo diferente, mas da mesma categoria, como linha, barra.
+Cada coleção é chamada de **dataset**
+
+```
+sub 'multi'
+	&multi.id = 'multi'
+	&multi.titulo = ''
+	&multi.legenda = '' // top, center, bottom
+	&multi.rotulos.Clear()
+	&multi.datasets.Clear()
+	&multi.dataset.Clear()
+	&multi.rotulos.FromJson("['a','b','c','d','e','f']")
+	&multi.datasetbgcolor.FromJson("['#33ff63','#FFCA33','#FF5733']")
+	
+	/* (1) serie  ---------------------------------------*/
+	&dataset = new()
+	&dataset.tipo = uc_charttipo.bar
+	&dataset.titulo = 'TITULO1'
+	&dataset.border.size = 2	
+	&dataset.fill.tipo = ''
+	&dataset.fill.acima = ''
+	&dataset.fill.abaixo = ''
+	&dataset.bordercor = 'rgb(75, 192, 192)'
+	&dataset.point = uc_chartpoint.cross
+	&dataset.dados.Clear()
+	&dataset.dados.FromJson('[1,9,3,2,5,4]')
+	&multi.datasets.Add(&dataset)
+	
+	/* (2) serie  ---------------------------------------*/
+	&dataset = new()
+	&dataset.tipo = uc_charttipo.line
+	&dataset.titulo = 'TITULO2 '
+	&dataset.border.size = 2	
+	&dataset.fill.tipo = ''
+	&dataset.fill.acima = ''
+	&dataset.fill.abaixo = ''
+	&dataset.bordercor = '#03d65b'
+	&dataset.point = uc_chartpoint.triangle
+	&dataset.dados.Clear()
+	&dataset.dados.FromJson('[11,12,8,7,10,14]')
+	&multi.datasets.Add(&dataset)
+	
+	/* (3) serie  ---------------------------------------*/
+	&dataset = new()
+	&dataset.tipo = uc_charttipo.line
+	&dataset.titulo = 'TITULO222'
+	&dataset.border.size = 2	
+	&dataset.fill.tipo = ''
+	&dataset.fill.acima = ''
+	&dataset.fill.abaixo = ''
+	&dataset.bordercor = '#d603be'
+	&dataset.point = uc_chartpoint.triangle
+	&dataset.dados.Clear()
+	&dataset.dados.FromJson('[12,2,5,7,12,8]')
+	&multi.datasets.Add(&dataset)
+
+	html.Caption += '<h3 class="uc_mt30">Multi</h3><hr>'
+	html.Caption += '<div class="uc_flex-r uc_flex-w">'
+	html.Caption +=   UC.uc_chart(&multi.ToJson())
+	html.Caption += '</div>'
+endsub
+```
