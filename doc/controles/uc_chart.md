@@ -68,6 +68,7 @@ endsub
 
 ## Informando as coleções
 Existem duas maneiras de agregar dados, cores ou rótulos no gráfico.
+
 1) Com o **Add**
 Este ja vimos no exemplo anterior.
 ```
