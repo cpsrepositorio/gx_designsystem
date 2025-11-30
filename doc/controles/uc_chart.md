@@ -69,8 +69,7 @@ endsub
 ## Informando as coleções
 Existem duas maneiras de agregar dados, cores ou rótulos no gráfico.
 
-1) Com o **Add**
-Este ja vimos no exemplo anterior.
+1) Com o **Add**, que vimos no exemplo anterior.
 ```
 &pie.dataset.Add('1')
 &pie.dataset.Add('9')
@@ -101,7 +100,8 @@ Defina o **tipo** como **uc_charttipo.doughnut**
 &pie1.datasettitle = 'Itens'
 &pie1.datasetborder = 2
 &pie1.dataset.FromJson('[10,4,3,4,2,2]')
-&pie1.datasetbgcolor.FromJson('["#323232","#3f3f3f","#545454","#707070","#a2a2a2","#bcbcbc"]')
+&pie1.datasetbgcolor.FromJson('["#323232","#3f3f3f","#545454",
+    "#707070","#a2a2a2","#bcbcbc"]')
 ```
 ## Cores
 As cores podem ser adicionadas livremente no chart.js, bastando defini-las de acordo com a preferência, e em seguida adicioná-las na coleção.
