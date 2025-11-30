@@ -1,5 +1,5 @@
-# uc_chart
-O pacote inclui um conjunto de controles para gráficos utilizando a biblioteca (chats.js](https://www.chartjs.org/).
+# uc_chart (redondos)
+O pacote inclui um conjunto de controles gráficos utilizando a biblioteca (chats.js](https://www.chartjs.org/).
 
 ## Setup
 Diferente dos demais controles para incluir a carga da biblioteca diretamente no Webpanel que utiliza o gráfico.
