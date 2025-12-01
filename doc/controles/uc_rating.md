@@ -13,6 +13,7 @@ O controle é simples, segue o padrão tradicional, e um conjunto de **itens** q
 ```
 
 Na montagem do objeto temos mais duas informações importantes: 1) o item selecionado **&uc_ratingIN.selected** que é utilizado para preencher as imagens à esquerda e a **&uc_ratingIN.selectedicone** que indica a imagem a ser substituida para indicar o preenchimento.
+O valor inicial de **&s** deve ser zero.
 
 ```
 sub 'rating'	
