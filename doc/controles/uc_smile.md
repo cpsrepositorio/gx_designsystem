@@ -19,7 +19,7 @@ sub 'smile'
  &uc_smileIN.interface 		= &Pgmname.Trim()
  &uc_smileIN.selected		= &s
  &uc_smileIN.selectedicone 	= ''
- &uc_smileIN.selectedclass	= 'uc_borderselected'
+ &uc_smileIN.selectedclass	= 'uc_smileselected'
  &uc_smileIN.itens.Clear()
 
  &smile=new()
