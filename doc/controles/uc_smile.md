@@ -1,54 +1,53 @@
 # uc_smile
-Temos aqui um controle com sentido de avaliação, que coloca várias estrelas vazias em uma linha e permite que o usuário clique sobre alguma delas, gerando um evento e o preenchimento das que se encontram à esquerda.
-Pode ser utilizada para criar uma avaliação baseada na seleção da quantidade de estrelas.
+Temos aqui um controle com sentido de avaliação, que coloca várias faces com diversos sentimentos, permitindo que o usuário expresse sua avaliação pela escolha do rosto que lhe pareça adequado.
 
 ## Exemplo
-O controle é simples, segue o padrão tradicional, e um conjunto de **itens** que inclui um icone e evento.
+O controle é simples, e muito semelhante ao [**uc_rating**](/doc/controles/uc_rating.md) segue o padrão tradicional, e um conjunto de **itens** que inclui um icone e evento.
 
 ```
-&rating=new()
-&rating.icone = '<i class="far fa-star"></i>'
-&rating.evento = 'STAR:1'
-&uc_ratingIN.itens.Add(&rating)
+&smile=new()
+&smile.icone = '<i class="fa-2x far fa-sad-cry"></i>'
+&smile.evento = 'SMILE:1'
+&uc_smileIN.itens.Add(&smile)
 ```
 
-Na montagem do objeto temos mais duas informações importantes: 1) o item selecionado **&uc_ratingIN.selected** que é utilizado para preencher as imagens à esquerda e a **&uc_ratingIN.selectedicone** que indica a imagem a ser substituida para indicar o preenchimento.
-O valor inicial de **&s** deve ser zero.
+Na montagem do objeto temos mais duas informações importantes: 1) o item selecionado **&uc_smileIN.selected** que é utilizado para aplicar uma classe de seleção, definida em  **&uc_smileIN.selectedclass**, para destacar a imagem das demais da lista. Caso opte por um icone distinto forneça-o em **&uc_smileIN.selectedicone**
 
 ```
-sub 'rating'	
- &uc_ratingIN.id = 'SMILE'
- &uc_ratingIN.interface = &Pgmname.Trim()
- &uc_ratingIN.selected = &s
- &uc_ratingIN.selectedicone = '<i class="fas fa-star"></i>'
- &uc_ratingIN.itens.Clear()
-	
-&rating=new()
-&rating.icone = '<i class="far fa-star"></i>'
-&rating.evento = 'STAR:1'
-&uc_ratingIN.itens.Add(&rating)
+sub 'smile'	
+ &uc_smileIN.id        		= 'SMILE'
+ &uc_smileIN.interface 		= &Pgmname.Trim()
+ &uc_smileIN.selected		= &s
+ &uc_smileIN.selectedicone 	= ''
+ &uc_smileIN.selectedclass	= 'uc_borderselected'
+ &uc_smileIN.itens.Clear()
 
- &rating=new()
- &rating.icone = '<i class="far fa-star"></i>'
- &rating.evento = 'STAR:2'
- &uc_ratingIN.itens.Add(&rating)
+ &smile=new()
+ &smile.icone = '<i class="fa-2x far fa-sad-cry"></i>'
+ &smile.evento = 'SMILE:1'
+ &uc_smileIN.itens.Add(&smile)
 	
- &rating=new()
- &rating.icone = '<i class="far fa-star"></i>'
- &rating.evento = 'STAR:3'
- &uc_ratingIN.itens.Add(&rating)
+ &smile=new()
+ &smile.icone = '<i class="fa-2x far fa-frown"></i>'
+ &smile.evento = 'SMILE:2'
+ &uc_smileIN.itens.Add(&smile)
 	
- &rating=new()
- &rating.icone = '<i class="far fa-star"></i>'
- &rating.evento = 'STAR:4'
- &uc_ratingIN.itens.Add(&rating)
+ &smile=new()
+ &smile.icone = '<i class="fa-2x far fa-meh"></i>'
+ &smile.evento = 'SMILE:3'
+ &uc_smileIN.itens.Add(&smile)
+
+ &smile=new()
+ &smile.icone = '<i class="fa-2x far fa-smile"></i>'
+ &smile.evento = 'SMILE:4'
+ &uc_smileIN.itens.Add(&smile)
 	
- &rating=new()
- &rating.icone = '<i class="far fa-star"></i>'
- &rating.evento = 'STAR:5'
- &uc_ratingIN.itens.Add(&rating)
+ &smile=new()
+ &smile.icone = '<i class="fa-2x far fa-smile-beam"></i>'
+ &smile.evento = 'SMILE:5'
+ &uc_smileIN.itens.Add(&smile)
 	
- grid.caption = UC.uc_ratings(&uc_ratingIN.ToJson())
+ grid.caption = UC.uc_smiles(&uc_smileIN.ToJson())
 endsub
 ```
 
