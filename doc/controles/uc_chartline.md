@@ -51,20 +51,18 @@ endsub
 
 ## Informando as coleções
 Existem duas maneiras de agregar dados, cores ou rótulos no gráfico.
-1) Com o **Add**
+* Com o **Add**
 ```
 &linha.dataset.Add('1')
 &linha.dataset.Add('9')
 &linha.dataset.Add('3')
 ...
 ```
-2) Com um **Json**
-Neste modelo, criamos a definição de uma coleção em Json e adicionamos no dataset. Programa-se menos, mas é um pouco mais complexo em termos de compreensão. As chaves **[** e **]** demarcam a coleção e os itens são separados por virgula.
+* Com um **Json**, sendo que neste modelo, criamos a definição (texto) de uma coleção em Json e adicionamos no dataset. Programa-se menos, mas é um pouco mais complexo em termos de compreensão. As chaves **[** e **]** demarcam a coleção e os itens são separados por virgula.
 ```
 &linha.dataset.FromJson('[1,9,3,5,2,10]')
 ```
-No cenário (2) temos um modo mais compacto e mais simples de ser obtido, caso os dados tenham sido carregados em um SDT previamente.
-Podemos utilizar uma variável que já represente a coleção ou uma string, como no exemplo, que forma a coleção.
+No segundo modelo temos uma forma mais compacta e mais simples de definir. Caso os dados tenham sido carregados em um SDT previamente, poderemos utilizar uma variável que já represente a coleção ou uma string, como no exemplo, que forma a coleção.
 
 ## Bar
 Os gráficos de barras possuem a mesma estrutura dos gráficos de linhas, inclusive incluindo vários datasets.
@@ -85,9 +83,6 @@ sub 'bar'
 	&dataset.tipo = uc_charttipo.bar
 	&dataset.titulo = 'TITULO1'
 	&dataset.border.size = 2	
-	&dataset.fill.tipo = ''
-	&dataset.fill.acima = ''
-	&dataset.fill.abaixo = ''
 	&dataset.bordercor = 'rgb(75, 192, 192)'
 	&dataset.point = uc_chartpoint.cross
 	&dataset.dados.FromJson('[1,9,3,2,5,4]')
@@ -98,9 +93,6 @@ sub 'bar'
 	&dataset.tipo = uc_charttipo.bar
 	&dataset.titulo = 'TITULO1'
 	&dataset.border.size = 2	
-	&dataset.fill.tipo = ''
-	&dataset.fill.acima = ''
-	&dataset.fill.abaixo = ''
 	&dataset.bordercor = 'rgb(75, 192, 192)'
 	&dataset.point = uc_chartpoint.cross
 	&dataset.dados.FromJson('[11,12,8,7,10,14]')
@@ -133,9 +125,6 @@ sub 'hbar'
 	&hbards.tipo = uc_charttipo.horizontalbar
 	&hbards.titulo = 'TITULO1'
 	&hbards.border.size = 2	
-	&hbards.fill.tipo = ''
-	&hbards.fill.acima = ''
-	&hbards.fill.abaixo = ''
 	&hbards.bordercor = 'rgb(75, 192, 192)'
 	&hbards.point = uc_chartpoint.cross
 	&hbards.dados.FromJson('[1,9,3,2,5,4]')
@@ -182,9 +171,6 @@ sub 'multi'
 	&dataset.tipo = uc_charttipo.bar
 	&dataset.titulo = 'TITULO1'
 	&dataset.border.size = 2	
-	&dataset.fill.tipo = ''
-	&dataset.fill.acima = ''
-	&dataset.fill.abaixo = ''
 	&dataset.bordercor = 'rgb(75, 192, 192)'
 	&dataset.point = uc_chartpoint.cross
 	&dataset.dados.Clear()
@@ -196,9 +182,6 @@ sub 'multi'
 	&dataset.tipo = uc_charttipo.line
 	&dataset.titulo = 'TITULO2 '
 	&dataset.border.size = 2	
-	&dataset.fill.tipo = ''
-	&dataset.fill.acima = ''
-	&dataset.fill.abaixo = ''
 	&dataset.bordercor = '#03d65b'
 	&dataset.point = uc_chartpoint.triangle
 	&dataset.dados.Clear()
@@ -210,9 +193,6 @@ sub 'multi'
 	&dataset.tipo = uc_charttipo.line
 	&dataset.titulo = 'TITULO222'
 	&dataset.border.size = 2	
-	&dataset.fill.tipo = ''
-	&dataset.fill.acima = ''
-	&dataset.fill.abaixo = ''
 	&dataset.bordercor = '#d603be'
 	&dataset.point = uc_chartpoint.triangle
 	&dataset.dados.Clear()
