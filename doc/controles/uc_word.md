@@ -11,7 +11,7 @@ A inclusão de palavras na lista é muito simples, veja o exemplo abaixo.
 &word.event = 'Palavra1'
 &uc_wordin.words.Add(&word)
 ```
-Uma propriedade adicional, **&word.close = true**, pode ser utilizada para inserir uma imagem (um X) que representa o evento remover a palavra da lista.
+A seguir o exemplo completo.
 ```
 sub 'word'
  &uc_wordin.interface = &Pgmname
@@ -47,6 +47,7 @@ Desta forma para criar dinamicamente a lista de palavras poderiamos quebrar um p
 		&uc_wordin.words.Add(&word)
 	endfor
 ```
+Uma propriedade adicional, **&word.close = true**, pode ser utilizada para inserir uma imagem (um X) que representa o evento remover a palavra da lista.
 Abaixo a rotina completa.
 
 ```
