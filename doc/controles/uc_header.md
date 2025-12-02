@@ -11,3 +11,4 @@ sub 'header'
  html.Caption = UC.uc_header(&uc_headerIN.ToJson())
 endsub
 ```
+No caso do **uc_header** as classes estão padronizadas no próprio código, diferente do **uc_titulo** que permite a personalização.
