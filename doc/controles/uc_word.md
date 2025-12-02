@@ -31,7 +31,7 @@ sub 'word'
  &uc_wordin.words.Add(&word)
 
  grid.Caption  = UC.uc_words(&uc_wordin.ToJson())
- endsub
+endsub
 ```
 ## Carregando palavras
 O exemplo, ainda apresenta uma caixa de textos que utilizamos para colar um texto e em seguida criar a lista.
