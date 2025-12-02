@@ -37,15 +37,15 @@ sub 'word'
 O exemplo, ainda apresenta uma caixa de textos que utilizamos para colar um texto e em seguida criar a lista.
 Desta forma para criar dinamicamente a lista de palavras poderiamos quebrar um parágrafo, pelo espaço em branco, gerando uma coleção de palavras, e em seguida inserí-las no controle.
 ```
-	&palavras = &texto.SplitRegEx(" ")
-	for &palavra in &palavras
-		&word = new()
-		&word.text = &palavra
-		&word.classe = 'uc_worditem'
-		&word.event = &palavra
-		&word.close = true
-		&uc_wordin.words.Add(&word)
-	endfor
+&palavras = &texto.SplitRegEx(" ")
+for &palavra in &palavras
+ &word = new()
+ &word.text = &palavra
+ &word.classe = 'uc_worditem'
+ &word.event = &palavra
+ &word.close = true
+ &uc_wordin.words.Add(&word)
+endfor
 ```
 Uma propriedade adicional, **&word.close = true**, pode ser utilizada para inserir uma imagem (um X) que representa o evento remover a palavra da lista.
 Abaixo a rotina completa.
