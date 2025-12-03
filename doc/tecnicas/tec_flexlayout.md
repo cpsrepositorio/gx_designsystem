@@ -5,14 +5,31 @@ Para se obter maior controle na interface Genexus é necessário alterar o Desig
 
 ## Sections
 A organização das seções de nossa interface deve ser feita preferencialmente com controles tipo Section.
-Um conjunto de classes de controle de layout (uc_flex-r, uc_flex-c) e outros de dimensionamento e margens (uc_p, uc_m, uc_w)
 
+Um conjunto de classes de controle de layout (uc_flex-r, uc_flex-c) e outros de dimensionamento e margens (uc_p, uc_m, uc_w), são suficientes para contruir interfaces complexas.
+
+A inserção de Sections dentro de outras Sections também será necessário para dividir as áreas da interface.
+
+## Classes de posicionamento em linha
+As classes de posicionamento em linha são obtidas pelo **display:flex; flex-direction:row;** que são programadas em **uc_flex-r**
+![padrao](https://raw.githubusercontent.com/cpsrepositorio/gx_designsystem/refs/heads/main/doc/imagens/uc_flexr.png)
+
+| classe     | programação      | efeito  |
+|------------|------------------|---------|
+|**uc_flex-jcs** |{justify-content:flex-start; align-items: flex-start;} |Posicionamento do objeto no inicio da linha |
+|**uc_flex-jcsb** | {justify-content:space-between;}|Posicionamento de mais de um objeto em porções equivalentes na interface. Se dois objetos, coloca cada um nas pontas da linha.|
+|**uc_flex-jcc** |{justify-content:center;} |Centraliza os objetos na linha.|
+|**uc_flex-jce**	 |{justify-content:flex-end;} |Posiciona os objetos no fim da linha |
+
+
+## Classes de posicionamento em coluna
+As classes de posicionamento em coluna são obtidas pelo **display:flex; flex-direction:column;** que são programadas em **uc_flex-c**
 ![padrao](https://raw.githubusercontent.com/cpsrepositorio/gx_designsystem/refs/heads/main/doc/imagens/section.png)
 
-
-
+## Dimensionamento e margens
+As seções devem ser dimensionadas para produzir o efeito desejado na interface.
 ![padrao](https://raw.githubusercontent.com/cpsrepositorio/gx_designsystem/refs/heads/main/doc/imagens/uc_flexc.png)
-![padrao](https://raw.githubusercontent.com/cpsrepositorio/gx_designsystem/refs/heads/main/doc/imagens/uc_flexr.png)
+
 
 
 
@@ -25,10 +42,7 @@ Em Genexus, é usual colocar uma Section na interface e em seguida definir a cla
 * **uc_flex-c**				{display:flex; flex-direction:column;}
 * **uc_flex-w**				{flex-wrap:wrap;}
 * **uc_flex-nw** 			{flex-wrap:nowrap;}
-* **uc_flex-jcs** 			{justify-content:flex-start; align-items: flex-start;}
-* **uc_flex-jcsb**			{justify-content:space-between;}
-* **uc_flex-jcc**			{justify-content:center;}
-* **uc_flex-jce**	 		{justify-content:flex-end;}
+
 * **uc_flex-aic**			{align-items:center;}
 * **uc_flex-eq**            {flex: 1;}
 * **uc_flex-db**            {flex: 2;}
