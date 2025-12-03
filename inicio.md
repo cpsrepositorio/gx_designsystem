@@ -9,15 +9,20 @@ O **gx_designsystem** é um recurso para construção de interfaces Web que pode
 2. Instale os recursos necessários na sua kb Genexus [instalacao](/doc/instalacao.md)
 3. Vamos para o importante [alomamae](/doc/alomamae.md) para ver como tudo funciona
 4. Planeje e construa sua interface [webpanel](/doc/tecnicas/tec_webpanel.md)
-5. Estude e utilize os controles, aqui tem uma lista: [indice de controles](/doc/indexcontrole.md)
-6. Infelizmente tem coisas esquisitas para aprender, [eventos](/doc/eventos.md), por exemplo.
-7. Depois que ficar craque no assunto vamos ao checklist para os herois que desejam contribuir no projeto [o que falta fazer](/doc/oquefalta.md)
+5. Entenda sobre Flex layout, Sections e classes de dimensionamento e margens, [Sections e Classes](doc/tecnicas/tec_sectionseclasses.md).
+6. Voce também precisa entender sobre a carga das classes de estilo [Carga das classes](gx_designsystem/doc/classes.md)
+7. Estude e utilize os controles, aqui tem uma lista: [indice de controles](/doc/indexcontrole.md)
+8. Infelizmente tem coisas esquisitas para aprender, [eventos](/doc/eventos.md), por exemplo.
+9. Depois que ficar craque no assunto vamos ao checklist para os herois que desejam contribuir no projeto [o que falta fazer](/doc/oquefalta.md)
+
+Temos também alguns exemplos que podem te ajudar a planejar sua interface:
+1. [Estratégias de interface](/doc/tecnicas/tec_estrategiasinterface.md), sobre Master page, Webnel, Webcomponent, sidebar, navbar
+2. [Como organizar o webpanel](gx_designsystem/doc/tecnicas/tec_comoorganizarowebpanel.md), sobre estrutura principal do sistema, evento start, load, grid, eventos.
 
 Depois das devidas apresentações, vamos evoluir para um nivel superior, tratando carga de registros, estratégias de interface, estratégias de encriptação.
 
 *  [Estratégias](/doc/tecnicas/tec_estrategias.md)
 *  [Estratégias de carga de registros](/doc/tecnicas/tec_estrategiascarga.md)
-*  [Estratégias de interface](/doc/tecnicas/tec_estrategiasinterface.md)
 *  [Estratégias de controle de eventos](/doc/tecnicas/tec_estrategiaseventos.md)
 
 ## Interfaces com Genexus
