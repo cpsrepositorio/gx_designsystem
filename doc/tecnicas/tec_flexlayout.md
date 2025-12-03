@@ -1,7 +1,20 @@
 # Flex Layout
-Para se obter maior controle na interface Genexus é necessário alterar o Design do objeto MainTable para Flex, executando uma operação Convert to Flex. Botão direito sobre a interface, selecione a MainTable e execute o Convert to Flex.
+Para se obter maior controle na interface Genexus é necessário alterar o Design do objeto MainTable para Flex, executando uma operação Convert to Flex. Botão direito sobre a interface, selecione a MainTable e execute o Convert to Flex. O Genexus aceita vários tipos de layouts, veja a documentação [aqui](gx_designsystem/doc/layout.md)
 
 É até possível utilizar o ResponsiveTable nas interfaces com os controles, mas o resultado vai exigir mais ajustes nos CSS, porque o Genexus vai incluir os controles de Bootstrap na interface e muito mais classes interferindo.
+
+## Sections
+A organização das seções de nossa interface deve ser feita preferencialmente com controles tipo Section.
+Um conjunto de classes de controle de layout (uc_flex-r, uc_flex-c) e outros de dimensionamento e margens (uc_p, uc_m, uc_w)
+
+![padrao](https://raw.githubusercontent.com/cpsrepositorio/gx_designsystem/refs/heads/main/doc/imagens/section.png)
+
+
+
+![padrao](https://raw.githubusercontent.com/cpsrepositorio/gx_designsystem/refs/heads/main/doc/imagens/uc_flexc.png)
+![padrao](https://raw.githubusercontent.com/cpsrepositorio/gx_designsystem/refs/heads/main/doc/imagens/uc_flexr.png)
+
+
 
 Flex Layout não é coisa de outro mundo para entender, parte do principio de definir uma DIV com os objetos em **Row** ou **Column**, fora isso o que temos é alinhamento, dimensionamento dos objetos. É até simples.
 
