@@ -1,10 +1,7 @@
-# Flex Layout
-Para se obter maior controle na interface Genexus é necessário alterar o Design do objeto MainTable para Flex, executando uma operação Convert to Flex. Botão direito sobre a interface, selecione a MainTable e execute o Convert to Flex. O Genexus aceita vários tipos de layouts, veja a documentação [aqui](gx_designsystem/doc/layout.md)
-
-É até possível utilizar o ResponsiveTable nas interfaces com os controles, mas o resultado vai exigir mais ajustes nos CSS, porque o Genexus vai incluir os controles de Bootstrap na interface e muito mais classes interferindo.
+# Sections e classes
 
 ## Sections
-A organização das seções de nossa interface deve ser feita preferencialmente com controles tipo Section.
+A organização das seções de nossa interface deve ser feita preferencialmente com controles tipo Section, e para se obter maior controle na interface Genexus é necessário alterar o Design do objeto MainTable para Flex, executando uma operação Convert to Flex. Botão direito sobre a interface, selecione a MainTable e execute o Convert to Flex. O Genexus aceita vários tipos de layouts, veja a documentação [aqui](gx_designsystem/doc/layout.md)
 
 Um conjunto de classes de controle de layout (uc_flex-r, uc_flex-c) e outros de dimensionamento e margens (uc_p, uc_m, uc_w), são suficientes para contruir interfaces complexas.
 
@@ -38,10 +35,11 @@ As seções devem ser dimensionadas para produzir o efeito desejado na interface
 
 ![padrao](https://raw.githubusercontent.com/cpsrepositorio/gx_designsystem/refs/heads/main/doc/imagens/section.png)
 
+### Margens
 Classes que determinam a larguras dos objetos.
 | classe        | programação da classe | 
 |---------------|-----------------------|
-|**uc_w100***  |{width:100%;} |
+|**uc_w100**  |{width:100%;} |
 |**uc_w90** |{width:90%;}|
 |**uc_w80** |{width:80%;} |
 |**uc_w75** |{width:75%;} |
@@ -85,31 +83,36 @@ Margens gerais, que aplicam a mesma largura em todos os lados do objeto.
 |**uc_m2**| {margin:2px;}|
 |**uc_m1**| {margin:1px;}|
 
-Além das margens gerais temos também as margens especificas que definem a largura de uma determinada margem. As dimensões são as mesmas 
+Além das margens gerais temos também as margens especificas que definem a largura de uma determinada margem, cujas dimensões são as mesmas da tabela anterior.
 | classe        | programação da classe| 
 |---------------|----------------------|
-|**uc_mt<nnn>**   |Define a margem do topo, onde <nnn> podem ser os valores [1,2,3,5,10,15,20,30,40,50,60,70,80,90,100] |
-|**uc_mr<nnn>**   |Define a margem da direita, onde <nnn> podem ser os valores [1,2,3,5,10,15,20,30,40,50,60,70,80,90,100] |
-|**uc_mb<nnn>**   |Define a margem da base, onde <nnn> podem ser os valores [1,2,3,5,10,15,20,30,40,50,60,70,80,90,100] |
-|**uc_ml<nnn>**   |Define a margem da esquerda, onde <nnn> podem ser os valores [1,2,3,5,10,15,20,30,40,50,60,70,80,90,100] |
+|**uc_mtnnn**   |Define a margem do topo, onde nnn podem ser os valores [1,2,3,5,10,15,20,30,40,50,60,70,80,90,100] |
+|**uc_mrnnn**   |Define a margem da direita, onde nnn podem ser os valores [1,2,3,5,10,15,20,30,40,50,60,70,80,90,100] |
+|**uc_mbnnn**   |Define a margem da base, onde nnn podem ser os valores [1,2,3,5,10,15,20,30,40,50,60,70,80,90,100] |
+|**uc_mlnnn**   |Define a margem da esquerda, onde nnn podem ser os valores [1,2,3,5,10,15,20,30,40,50,60,70,80,90,100] |
 
 
+### Padding
+Classes que determinam o valor de espaçamento (padding)
+| classe        | programação da classe | 
+|---------------|-----------------------|
+|**uc_p100**  |{padding:100px;} |
+|**uc_p50** |{padding:50px;} |
+|**uc_p40** |{padding:40px;} |
+|**uc_p30** |{padding:30px;} |
+|**uc_p20** |{padding:20px;} |
+|**uc_p10** |{padding:10px;} |
+|**uc_p5** |{padding:5px;} |
+|**uc_p1** |{padding:1px;} |
 
-Flex Layout não é coisa de outro mundo para entender, parte do principio de definir uma DIV com os objetos em **Row** ou **Column**, fora isso o que temos é alinhamento, dimensionamento dos objetos. É até simples.
-
-Em Genexus, é usual colocar uma Section na interface e em seguida definir a classe para torná-la uma **Row** ou **Column**. Utilizamos as classes definidas em uc_flex.css, para trabalhar com esse layout.
-
-
-* **uc_flex-aic**			{align-items:center;}
-* **uc_flex-eq**            {flex: 1;}
-* **uc_flex-db**            {flex: 2;}
-
-Portanto, para criar uma linha, basta inserir uma Section e na propriedade Class informar **uc_flex-r**, em seguida, para acrescentar alinhamentos utilize  **uc_flex-jcsb** ou **uc_flex-jcc** ou **uc_flex-jce**.
-
-As larguras das colunas podem ser definidas com as classes **uc_flex-eq** e **uc_flex-db**, ou ainda, por meio das classes em uc_root.css, de largura:
+Além das classes de espaçamento gerais temos também as de espaçamentos especificas, cujas dimensões são as mesmas da tabela anterior.
+| classe        | programação da classe| 
+|---------------|----------------------|
+|**uc_ptnnn**   |Define o espaçamento do topo, onde nnn podem ser os valores [1,5,10,15,20,30,40,50,100] |
+|**uc_prnnn**   |Define o espaçamento da direita, onde nnn podem ser os valores [1,5,10,15,20,30,40,50,100] |
+|**uc_pbnnn**   |Define o espaçamento da base, onde nnn podem ser os valores [1,5,10,15,20,30,40,50,100] |
+|**uc_plnnn**   |Define o espaçamento da esquerda, onde nnn podem ser os valores [1,5,10,15,20,30,40,50,100] |
 
 
-
-Genexus permite inserir Section dentro de outra Section, então fica mais simples montar tudo.
 
 Veja um exemplo na construção de uma master page cheia de Sections em [MasterPage](/doc/tecnicas/tec_masterpage.md)
