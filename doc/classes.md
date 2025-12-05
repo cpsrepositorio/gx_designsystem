@@ -1,4 +1,4 @@
-# Classes
+# Classes de estilo
 Os controles são definidos visualmente por classes do tipo css, que estão armazenados em diversos arquivos que são carregados a partir da chamada de **uc.uc_cssCARGA()**
 
 É possível colocar a pasta com esses arquivos no próprio sistema, mas recomendamos a utilização de uma das instalações disponíveis, para que se tenha o padrão das classes.
