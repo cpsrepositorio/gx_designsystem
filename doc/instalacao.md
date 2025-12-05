@@ -6,9 +6,9 @@ Para utilizar os componentes será necessário instalar o pacote UC em sua últi
 As interceptações dos cliques na interface é por meio do UserControl BootstrapClick.
 Para utilizar será necessário instalar no Genexus, através do procedimento a seguir.
 
-[uc](https://raw.githubusercontent.com/cpsrepositorio/gx_designsystem/refs/heads/main/doc/recursos/uc_18.2.9.21.zip)
+[uc](https://raw.githubusercontent.com/cpsrepositorio/gx_designsystem/refs/heads/main/recursos/uc_18.2.9.21.zip)
 
-1. Descompactar o arquivo [bootstrapclick.zip](https://raw.githubusercontent.com/cpsrepositorio/gx_designsystem/refs/heads/main/doc/recursos/BootstrapClick.zip) em uma pasta no seu computador
+1. Descompactar o arquivo [bootstrapclick.zip](https://raw.githubusercontent.com/cpsrepositorio/gx_designsystem/refs/heads/main/recursos/BootstrapClick.zip) em uma pasta no seu computador
 2. Descompactar o arquivo, vai gerar uma pasta BootstrapClick e dentro dela alguns arquivos (UserControl)
 3. Fechar o Genexus
 4. Abrir um CMD do Windows e posicionar na pasta C:\Program Files (x86)\GeneXus\GeneXus18\UserControls
