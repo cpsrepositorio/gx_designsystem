@@ -52,7 +52,8 @@ A lista de registros é carregada para o controle **uc_listapaginada**, que incl
 | &uc_listIN.paggingtrec	|count(nome)| total de registros da tabela que está sendo paginada. Um Count(<nome do atributo>) já retorna o total de registros de uma tabela.|
 
 O **for &reg in &registros** percorre a lista de registros retornado pelo DataProvider, e o inclui na lista.
-
+O total de registros da tabela deve ser informado através de **&uc_listIN.paggingtrec**, que pode ser facilmente obtido pelo **count(nome_do_atributo)**, sendo que é importante informar um atributo secundário da tabela que se deseja recuperar.
+O controle vai dividir o total de registros pelo tamanho das paginas para obter a última pagina, e assim realizar o controle de incremento até chegar ao final.
 ```
 sub 'grid'
  /* botão INS */
