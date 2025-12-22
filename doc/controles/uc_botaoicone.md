@@ -76,6 +76,8 @@ Os eventos padrões definidos no controle são apresentados a seguir
 |PLAY|Executar|`<i class="fas fa-play"></i>`|
 |INFO|Informações|`<i class="fas fa-info"></i>`|
 |POWER|Ligar|`<i class="fas fa-power-off"></i>`|
+|POSTITCHEIO|Postit (solido)|`<i class="fas fa-sticky-note"></i>`|
+|POSTITVAZIO|Postit (vazio) |`<i class="far fa-sticky-note"></i>`|
 
 ### Interceptação de eventos
 Os eventos gerados pela barra de botão são associados a cada botão individual, sendo formado por uma string separada por dois pontos (:) no seguinte formato:
