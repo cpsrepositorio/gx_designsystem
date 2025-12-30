@@ -45,3 +45,14 @@ No exemplo, foram utilizadas classes **uc_w20** e **uc_w80** para definir a larg
 	&uc_text2colin.conteudoclasse = 'uc_80 uc_border-bottom'
 ```
 Maiores informações sobre as classes utilizadas:
+
+| classe | significado |
+|--------|-------------|
+|.uc_border-bottom {border-bottom: var(--uc_border);}| Borda padrão apenas na parte inferior |
+|.uc_border-top {border-top: var(--uc_border);}|Borda padrão apenas na parte superior|
+|.uc_border-left {border-left: var(--uc_border);}|Borda padrão apenas na lateral esquerda|
+|.uc_border-right {border-right: var(--uc_border);}|Borda padrão apenas na lateral direita|
+|.uc_border {border: var(--uc_border);}|Borda padrão em todas as laterais|
+|var(--uc_border)|Borda padrão, definida no uc_root.css|
+
+
