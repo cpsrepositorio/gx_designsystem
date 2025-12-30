@@ -23,13 +23,15 @@ Para utilizar o pacote você pode optar por criar um projeto do zero (criando um
 ## Instalação do pacote de componentes
 Obtenha a última versão do pacote de modulos e o instale a partir dos seguintes procedimentos.
 
-1. Baixe a última versão do pacote de componentes [UC.zip](https://raw.githubusercontent.com/cpsrepositorio/gx_designsystem/refs/heads/main/recursos/UC.zip)
-2. Abra no Gx o Knowledge Manager->Manage Module References.
+Aqui voce encontra a última versão do pacote de componentes: [UC.zip](https://raw.githubusercontent.com/cpsrepositorio/gx_designsystem/refs/heads/main/recursos/UC.zip)
+
+1. Baixe a última versão do pacote de componentes 
+2. Abra no Gx o Knowledge Manager->Manage Module References
 3. Selecione do lado esquerdo a opção LOCAL, e com o botão direito do mouse, selecione UPLOAD FROM FILE
-4. Aponte para o arquivo OPC do pacote de controles. O arquivo possui um nome similar a UC_nn.nnn.nn onde os valores de n refletem a versão do componente, como por exemplo: UC_18.1.9.20.opc.
+4. Aponte para o arquivo OPC do pacote de controles. O arquivo possui um nome similar a UC_nn.nnn.nn onde os valores de n refletem a versão do componente, como por exemplo: UC_18.1.9.20.opc
 5. Uma vez selecionado pressione INSTALL
-6. Aguardar o término da instalação.
-7. Ao término, se no ZIP for disponibilizado um arquivo XZP, realize também a importação do mesmo no Knowledge Manager - Import, em seguida localize o arquivo XPZ e o importe.
+6. Aguardar o término da instalação
+7. Ao término, se no ZIP for disponibilizado um arquivo XZP, realize também a importação do mesmo no Knowledge Manager - Import, em seguida localize o arquivo XPZ e o importe
 
 ## Configure as classes de estilo e execute a Kb
 
