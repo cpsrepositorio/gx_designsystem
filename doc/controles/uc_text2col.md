@@ -8,7 +8,7 @@ O mesmo pode ser utilizado para incluir conteúdo estruturado em um uc_card, ou 
 	&uc_text2colin.interface = ''
 	&uc_text2colin.classe = 'uc_w100'
 	&uc_text2colin.tituloclasse = 'uc_w20 uc_textopequeno uc_border-bottom'
-	&uc_text2colin.conteudoclasse = 'uc_80 uc_border-bottom'
+	&uc_text2colin.conteudoclasse = 'uc_w80 uc_border-bottom'
 	
 	&linha = new()
 	&linha.titulo   = ''
@@ -42,7 +42,7 @@ As classes são globais e afetam todas as linhas e colunas da 'tabela'.
 No exemplo, foram utilizadas classes **uc_w20** e **uc_w80** para definir a largura das colunas em **20%** e **80%**, além de **uc_border-bottom** para definir uma linha somente na parte inferior.
 ```
 	&uc_text2colin.tituloclasse = 'uc_w20 uc_textopequeno uc_border-bottom'
-	&uc_text2colin.conteudoclasse = 'uc_80 uc_border-bottom'
+	&uc_text2colin.conteudoclasse = 'uc_w80 uc_border-bottom'
 ```
 Maiores informações sobre as classes utilizadas:
 
