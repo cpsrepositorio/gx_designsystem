@@ -24,7 +24,29 @@ O mesmo pode ser utilizado para incluir conteúdo estruturado em um uc_card, ou 
 	html.Caption  = '<h5>uc_text2col</h5>'
 	html.Caption += UC.uc_tabelasimples(&uc_text2colin.ToJson())
 ```
+## Simplificado
+Uma forma de simplificar a carga das linhas é utilizar a estratégia de uma coleção, porém, para separar o titulo do conteúdo, utilizamos o ; (ponto-e-virgula).
 
+	&linhas.add('titulo;Mussum Ipsum, cacilds vidis litro abertis.')
+
+Utilize a propriedade **&uc_text2colin.conteudo = &linhas.ToJson()** para incluir a coleção no controle e temos uma forma bem simples de definir o conteúdo da tabela.
+
+```
+	&uc_text2colin.id = ''
+	&uc_text2colin.interface = ''
+	&uc_text2colin.classe = 'uc_w100'
+	&uc_text2colin.tituloclasse = 'uc_w20 uc_textopequeno uc_border-bottom'
+	&uc_text2colin.conteudoclasse = 'uc_w80 uc_border-bottom'
+	&uc_text2colin.lines.Clear()
+	
+	&linhas.clear()
+	&linhas.add('titulo;Mussum Ipsum, cacilds vidis litro abertis.')
+	&linhas.add('objetivo;Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Detraxit consequat et quo num tendi nada. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.')
+	&uc_text2colin.conteudo = &linhas.ToJson() 
+	
+	html.Caption += '<h5>uc_text2col (simplificado)</h5>'
+	html.Caption += UC.uc_texto2col(&uc_text2colin.ToJson())
+```
 ## Com botões
 Apesar da simplicidade do controle, existe um recurso de posicionamento que possibilita incluir coisas interessantes.
 Nesse exemplo definimos uma barra simples de botão e a apresentamos na lateral direita.
