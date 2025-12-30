@@ -4,10 +4,10 @@ Os controles são definidos visualmente por classes do tipo css, que estão arma
 É possível colocar a pasta com esses arquivos no próprio sistema, mas recomendamos a utilização de uma das instalações disponíveis, para que se tenha o padrão das classes.
 
 ## Criando um cssLOAD()
-A forma mais simples de realizar a operação de chamada a carga de CSS é criar uma procedure.
+A forma mais simples de realizar a operação de chamada a carga de CSS é criar uma procedure, **uc_cssload**, por exemplo, e chamá-la em todo webpanel.
+Nesta procedure definir o caminho onde se localizam os estilos dos controles, e em seguida carregá-los em um **form.HeaderRawHTML = uc_cssLOAD()**
 
 **uc_cssLOAD**
-
 ```
 &stylepath =' https://siga.cps.sp.gov.br/style'
 &html  	 = UC.uc_cssCARGA(&stylepath)
