@@ -12,24 +12,117 @@ O mesmo pode ser utilizado para incluir conteúdo estruturado em um uc_card, ou 
 	
 	&linha = new()
 	&linha.titulo   = ''
-	&linha.conteudo = 'botao'
-	&linha.posicao = 'right'
+	&linha.titulo   = 'titulo'
+	&linha.conteudo = 'Mussum Ipsum, cacilds.'
 	&uc_text2colin.lines.Add(&linha)
 	
 	&linha = new()
 	&linha.titulo   = 'objetivo'
-	&linha.conteudo = 'Mussum Ipsum, cacilds vidis litro abertis. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Detraxit consequat et quo num tendi nada. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.'
-	&uc_text2colin.lines.Add(&linha)
-	
-	&linha = new()
-	&linha.titulo   = 'objetivo'
-	&linha.conteudo = 'Mussum Ipsum, cacilds vidis litro abertis. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Detraxit consequat et quo num tendi nada. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.'
+	&linha.conteudo = 'Mussum Ipsum, cacilds vidis litro abertis. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed no.'
 	&uc_text2colin.lines.Add(&linha)
 
 	html.Caption  = '<h5>uc_text2col</h5>'
 	html.Caption += UC.uc_tabelasimples(&uc_text2colin.ToJson())
 ```
 
+## Com botões
+Apesar da simplicidade do controle, existe um recurso de posicionamento que possibilita incluir coisas interessantes.
+Nesse exemplo definimos uma barra simples de botão e a apresentamos na lateral direita.
+```
+	/* button bar ------------------------------*/
+	&uc_botaoiconeIN = new()
+	&uc_botaoiconeIN.id = 'TABELAS'
+	&uc_botaoiconeIN.interface = &Pgmname	
+	&uc_botaoiconeIN.classebar = 'uc_flex-r uc_flex-nowrap'
+	&uc_botaoiconeIN.classebotao = 'uc_btspace uc_bt-icon uc_pointer'
+	
+	&botoes.Clear()
+	&botoes.add('ABRIR:')
+	&botoes.add('EDITAR:')
+	&botoes.add('APAGAR:')
+	&uc_botaoiconeIN.botoes = &botoes.ToJson()
+	
+	&uc_text2colin = new()
+	&uc_text2colin.id = ''
+	&uc_text2colin.interface = ''
+	&uc_text2colin.classe = 'uc_w100'
+	&uc_text2colin.tituloclasse = 'uc_w20 uc_textopequeno uc_border-bottom'
+	&uc_text2colin.conteudoclasse = 'uc_w80 uc_border-bottom'
+	
+	&linha = new()
+	&linha.titulo   = '&nbsp;'
+	&linha.conteudo = UC.uc_botaoicone(&uc_botaoiconeIN.ToJson())
+	&linha.posicao = 'right'
+	&uc_text2colin.lines.Add(&linha)
+	
+	&linha = new()
+	&linha.titulo   = 'titulo'
+	&linha.conteudo = 'Mussum Ipsum, cacilds vidis litro abertis.'
+	&uc_text2colin.lines.Add(&linha)
+
+	&linha = new()
+	&linha.titulo   = 'objetivo'
+	&linha.conteudo = 'Mussum Ipsum, cacilds vidis litro abertis. Nullam volutpat risus nec leo commodo, ut interdu'
+	&uc_text2colin.lines.Add(&linha)
+
+	html.Caption += '<h5 class="uc_mt30">uc_text2col (com botoes)</h5>'
+	html.Caption += UC.uc_tabelasimples(&uc_text2colin.ToJson())
+```
+
+## Em cards
+Outro extemplo interessante é o uso do uc_text2col em um card, permitindo que sejam apresentados conteúdos de forma estruturada. 
+
+```
+	/* button bar ------------------------------*/
+	&uc_botaoiconeIN = new()
+	&uc_botaoiconeIN.id = 'TABELAS'
+	&uc_botaoiconeIN.interface = &Pgmname	
+	&uc_botaoiconeIN.classebar = 'uc_flex-r uc_flex-nowrap'
+	&uc_botaoiconeIN.classebotao = 'uc_btspace uc_bt-icon uc_pointer'
+	&botoes.Clear()
+	&botoes.add('ABRIR:')
+	&botoes.add('EDITAR:')
+	&botoes.add('APAGAR:')
+	&uc_botaoiconeIN.botoes = &botoes.ToJson()
+	
+	/* texto */
+	&uc_text2colin = new()
+	&uc_text2colin.id = ''
+	&uc_text2colin.interface = ''
+	&uc_text2colin.classe = 'uc_w300'
+	&uc_text2colin.tituloclasse = 'uc_w20 uc_textopequeno uc_mb5 uc_mt5'
+	&uc_text2colin.conteudoclasse = 'uc_w80 uc_mb5 uc_mt5'
+	
+	&linha = new()
+	&linha.titulo   = '&nbsp;'
+	&linha.conteudo = UC.uc_botaoicone(&uc_botaoiconeIN.ToJson())
+	&linha.posicao = 'right'
+	&uc_text2colin.lines.Add(&linha)
+	&linha = new()
+	&linha.titulo   = 'titulo'
+	&linha.conteudo = 'Mussum Ipsum, cacilds vidis litro abertis.'
+	&uc_text2colin.lines.Add(&linha)
+	&linha = new()
+	&linha.titulo   = 'objetivo'
+	&linha.conteudo = 'Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Detraxit consequat et quo num tendi nada. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.'
+	&uc_text2colin.lines.Add(&linha)
+	
+	/* card ----------------------------------*/
+	&uc_cardin.id = 'CARDS'
+	&uc_cardin.interface = &programa
+	&uc_cardin.classe	  = 'uc_card'
+	&uc_cardin.classesize = 'uc_card300'
+	&uc_cardin.classecontainer = 'uc_flex-r uc_flex-wrap uc_card_gap' 
+	&card = new()
+	&card.titulo 	= '#001/25'
+	&card.texto 	= UC.uc_texto2col(&uc_text2colin.ToJson())
+	&uc_cardin.cards.add(&card)
+	
+	html.Caption += '<h5 class="uc_mt30">uc_text2col (com card)</h5>'
+	html.Caption += uc.uc_card(&uc_cardin.ToJson())
+```
+
+	
 ## Classes
 Cada &linha deve conter pelo menos duas propriedades, titulo e conteúdo. Titulo à esquerda e conteúdo à direita na tabela.
 
