@@ -23,6 +23,13 @@ for &i = 1 to 3
 endfor
 html.Caption = UC.uc_lista(&uc_listin.ToJson())
 ```
+
+|var|tipo|
+|-----------------|---------------------------|
+|&item | &uc_listin.item |
+|&uc_listin|uc_listin|
+
+
 ## Lista com toolbar
 Outra possibilidade é incluir na parte superior, em uma área chamada toolbar uma barra de botões, titulos, ou outras coisas de seu interesse.
 
@@ -61,6 +68,14 @@ sub 'toolbar'
  &uc_botaoin.botoes.Add(&botao)
 endsub	
 ```
+
+
+|var|tipo|
+|-----------------|---------------------------|
+|&botao | &uc_botaoin.botao |
+|&uc_botaoin|uc_botaoin|
+
+
 Observe que é possível posicionar o conteúdo desta linha com a propriedade **&uc_listin.classetoolbox**, que nesse exemplo, utilizamos o flex-layout para posicionar o botão à direita **uc_flex-r uc_flex-jce uc_mb10**.
 
 Inicialmente os registros na lista não são 'clicáveis', mas ao se adicionar uma propriedade evento, como por exemplo, **&item.evento = 'SELECIONAR:'+&i.ToString().Trim()**, a linha passa a responder a cliques, assim o exemplo ficou um pouco mais completo, incluindo a operação NOVO e SELECIONAR.
