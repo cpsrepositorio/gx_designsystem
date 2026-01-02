@@ -24,6 +24,13 @@ Cada **&grupo** possui três coleções com a finalidade de definir a estrutura 
   &titulos.add("titulo")
   &grupo.titulos = &titulos.tojson()
 ```
+
+|var |tipo|
+|----|-----|
+|&titulos|varchar(40) collection|
+|&grupo|uc_tabelaagrupadain.grupo | 
+
+
 2. **&grupo.widths**, representa o tamanho (width) de cada coluna na tabela, cujo total não pode ser maior que 100%. Por questões de responsividade, é melhor utilizar % ao invés de pixel. Caso inclua botões no final, será necessário adicionar um Width a mais na lista, com a largura da barra de botões.  Observe no exemplo que existem dois titulos e três larguras definidas. Utilize uma coleção de Varchar(10) para definir as larguras.
 ```
   &widths.clear()
@@ -32,6 +39,12 @@ Cada **&grupo** possui três coleções com a finalidade de definir a estrutura 
   &widths.add("30%") // para o toolbar
   &grupo.widths  =  &widths.tojson()
 ```
+
+|var |tipo|
+|----|-----|
+|&widths|varchar(40) collection|
+|&grupo|uc_tabelaagrupadain.grupo | 
+
 3. **&grupo.linhas**, compreende o conteúdo a ser inserido em cada linha da tabela em construção. Como os conteúdos poderão ser obtidos de tabelas, talvez seja necessário um for each, para percorrer cada linha a ser inserida. Dessa forma esta operação será um pouco mais complexa que as anteriores.
 Primeiramente deve-se criar a coleção com os conteúdos de cada célula da linha. Essa coleção de células deve ser inserida na linha ao final **&linha.linha = &celulas.ToJson()**
 
@@ -44,6 +57,12 @@ for &n = 1 to 10
   &linha.linha = &celulas.ToJson()
   ...
 ```
+
+|var |tipo|
+|----|-----|
+|&celulas|varchar(40) collection|
+|&linha|uc_tabelaagrupadain.grupo.linha | 
+
 Em seguida associamos um evento linha, definindo o valor da Ação e em seguida chave do evento que será retornada. Os botões são ligados por meio de true em (Open, Update, Delete). 
 ```
    ...
@@ -108,6 +127,9 @@ sub 'ex'
 	grid.Caption += UC.uc_tabelaagrupada(&uc_tabelaagrupadain.ToJson())
 endsub
 ```
+|var |tipo|
+|----|-----|
+|&uc_tabelaagrupadain|uc_tabelaagrupadain|
 
 ## Mais um exemplo
 Não que seria necessário, mas incluimos aqui mais um exemplo para uma suposta Matriz Curricular, e nesse exemplo incluimos mais um recurso do controle que estaremos apresentando logo a seguir: **&uc_tabelaagrupadain.selected_color**
