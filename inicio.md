@@ -22,8 +22,8 @@ Temos uma trilha formativa com vídeos para exemplificar o uso do pacote de cont
 
 | Assunto        |  Link                                      | Conteúdo                                                                          |
 |----------------|--------------------------------------------|-----------------------------------------------------------------------------------|
-| Botão icone    | [**Aula 1**](https://youtu.be/54zNXZInaas) <a href="https://example.com/" target="_blank">Website</a>| Apresentação da construção de uma interface simples com botão em formato de ícone|
-| Card           | [**Aula 2**](https://youtu.be/LTCTCcN7U1w) | Apresentação da construção de um simples card|
+| Botão icone    | <a href="https://youtu.be/54zNXZInaas" target="_blank">**Aula 1**</a>| Apresentação da construção de uma interface simples com botão em formato de ícone|
+| Card           | <a href="https://youtu.be/LTCTCcN7U1w" target="_blank">**Aula 2**</a> | Apresentação da construção de um simples card|
 | Card (toolbox) | [**Aula 2**](https://youtu.be/NwLOJCMSus4) | Finalização da apresentação dos cards, incluindo um toolbox com alinhamento centralizado|
 | Card destaque  | [**Aula 3**](https://youtu.be/fhbMoOUoC4E) | Apresentação de cards para apresentação de valores destacados|
 | Lista          | [**Aula 4**](https://youtu.be/KFRgNyHNNAk) | Apresentação de conteúdo em formato de lista|
