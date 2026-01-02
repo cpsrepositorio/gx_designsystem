@@ -11,6 +11,12 @@ São compostos por **titulo** e **texto**.
 &uc_helpin.paragrafos.Add(&paragrafo)
 ```
 
+|var|tipo|
+|-----------------|---------------------------|
+|&paragrafo | &uc_helpin.paragrafo |
+|&uc_helpin|uc_helpin|
+
+
 ## Materiais adicionais
 Os links são informados em uma variável **&adicional**.
 ```
@@ -20,6 +26,12 @@ Os links são informados em uma variável **&adicional**.
  &adicional.link = 'https://www.youtube.com/watch?v=S1YABU0ssog'
  &uc_helpin.adicionais.Add(&adicional)
 ```
+
+|var|tipo|
+|-----------------|---------------------------|
+|&paragrafo | &uc_helpin.adicional |
+|&uc_helpin|uc_helpin|
+
 
 ## Exemplo completo
 O controle é formado por um texto principal (titulo) e um secundário (subtitulo) apresentado logo abaixo.
@@ -84,6 +96,48 @@ do 'menu'
 	
 html.caption += UC.uc_help(&uc_helpin.ToJson())
 ```
+E a carga do menu é programada na sub abaixo.
+
+```
+sub 'menu'
+	&uc_menuin.id     = 'MENU'
+	&uc_menuin.interface  = &Pgmname.Trim()
+	&uc_menuin.classe = 'uc_menu-v uc_menu-vl'
+	&uc_menuin.itens.Clear()
+	
+	&menuitem = new()
+	&menuitem.icone  = '<i class="fas fa-house-damage uc_pointer"></i>'
+	&menuitem.titulo = 'relatorio'
+	&uc_menuin.itens.Add(&menuitem)
+	
+	&menuitem = new()
+	&menuitem.icone  = '<i class="fas fa-running uc_pointer"></i>'
+	&menuitem.titulo = 'follow-up'
+	&uc_menuin.itens.Add(&menuitem)
+	
+	&menuitem = new()
+	&menuitem.icone  = '<i class="fab fa-windows uc_pointer"></i>'
+	&menuitem.titulo = 'produto'
+	&uc_menuin.itens.Add(&menuitem)
+	
+	&menuitem = new()
+	&menuitem.icone  = '<i class="fas fa-network-wired uc_pointer"></i>'
+	&menuitem.titulo = 'ip'
+	&uc_menuin.itens.Add(&menuitem)
+	
+	&menuitem = new()
+	&menuitem.icone  = '<i class="fas fa-history uc_pointer"></i>'
+	&menuitem.titulo = 'histórico'
+	&uc_menuin.itens.Add(&menuitem)
+endsub
+```
+
+|var|tipo|
+|-----------------|---------------------------|
+|&menuitem | &uc_menuin.item |
+|&uc_menuin|uc_menuin|
+
+
 ## Conteúdo colapsado
 Colapsar um conteúdo significa ocultar, sendo assim, podemos esperar a ação do usuário para apresentar o texto.
 Serão necessárias tres propriedades para determinar o conteúdo colapsado, **&uc_helpin.colapsado=true**, em seguida o titulo e o icone que convida o usuário a clicar.
