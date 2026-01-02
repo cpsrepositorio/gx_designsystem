@@ -29,7 +29,6 @@ Temos uma trilha formativa com vídeos para exemplificar o uso do pacote de cont
 | Lista          | <a href="https://youtu.be/KFRgNyHNNAk" target="_blank">**Aula 4**</a>  | Apresentação de conteúdo em formato de lista|
 | Tabela         | <a href="https://youtu.be/Xjpb5RieSo4" target="_blank">**Aula 5**</a> | Apresentação de conteúdo em formato de tabela|
 
-
 ### Controles de navegação e eventos
 
 | Assunto        |  Link                                      | Conteúdo                                                                          |
