@@ -20,10 +20,10 @@ No exemplo abaixo temos um titulo, texto e imagem, com a classe **uc_card** que 
 html.Caption  = '<h5>uc_card</h5>'
 html.Caption += UC.uc_card(&uc_cardin.ToJson())
 ```
-|var|tipo|
+| var | tipo |
 |-----------------|---------------------------|
-|&uc_cardin | uc_cardin|
-|&card|uc_cardin.card |
+| &uc_cardin | uc_cardin|
+| &card | uc_cardin.card |
 
 ## Cinza
 Um pequeno ajuste da classe, desta vez para **uc_card_gray**.
