@@ -49,5 +49,14 @@ A seguir um exemplo de um menu horizontal.
 
 grid.Caption  = '<div>'+UC.uc_appmenu(&uc_menuIN.ToJson()) + '</div>'
 ```
+
+|var|tipo|
+|-----------------|---------------------------|
+|&item | uc_menuin.item|
+|&uc_menuin | uc_menuin |
+|&uc_botaoiconeIN|uc_botaoiconein|
+|&botoes|varchar(40) collection|
+
+
 Observe que quando **&item.evento** é definido passa a gerar o evento de todo card, independente se houver algum botão na toolbox.
 
