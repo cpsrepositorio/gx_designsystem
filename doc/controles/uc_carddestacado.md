@@ -101,6 +101,11 @@ A classe ainda informa um valor adicional &card.classe = 'uc_card-destacado-blue
 html.Caption = '<h5>uc_card-destacado</h5>'
 html.Caption +=  UC.uc_carddestaque(&uc_carddestacadoin.ToJson())
 ```
+|var|tipo|
+|-----------------|---------------------------|
+|&uc_carddestacadoin | uc_carddestacadoin|
+|&card|uc_carddestacadoin.card |
+
 ## Borda a esquerda ou direita
 Trocando para o conjunto de classes lborder na definição da classe, **&card.classe = 'uc_card-lborder-red'**, temos a borda na cor desejada e o fundo do cartão em branco.
 ```
