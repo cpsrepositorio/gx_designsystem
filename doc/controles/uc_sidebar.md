@@ -44,6 +44,12 @@ sub  'sidebar'
  sidebar.Caption = UC.uc_sidebar(&uc_sidebarin.ToJson())
 endsub
 ```
+
+|var|tipo|
+|-----------------|---------------------------|
+|&item | uc_sidebarin.item|
+|&uc_sidebarin | uc_sidebarin |
+
 ## Classes
 A classe **uc_sidebar** define o formato, dimensões e a expansão dos itens com o posicionamento do mouse, porém, é possível incluir outras classes, como por exemplo, cores.
 
