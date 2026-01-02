@@ -18,6 +18,8 @@ O **gx_designsystem** é um recurso para construção de interfaces Web que pode
 ## Aprendendo
 Temos uma trilha formativa com vídeos para exemplificar o uso do pacote de controles.
 
+### Controles basicos
+
 | Assunto        |  Link                                      | Conteúdo                                                                          |
 |----------------|--------------------------------------------|-----------------------------------------------------------------------------------|
 | Botão icone    | [**Aula 1**](https://youtu.be/54zNXZInaas) | Apresentação da construção de uma interface simples com botão em formato de ícone|
@@ -26,6 +28,16 @@ Temos uma trilha formativa com vídeos para exemplificar o uso do pacote de cont
 | Card destaque  | [**Aula 3**](https://youtu.be/fhbMoOUoC4E) | Apresentação de cards para apresentação de valores destacados|
 | Lista          | [**Aula 4**](https://youtu.be/KFRgNyHNNAk) | Apresentação de conteúdo em formato de lista|
 | Tabela         | [**Aula 5**](https://youtu.be/Xjpb5RieSo4) | Apresentação de conteúdo em formato de tabela|
+
+### Controles de navegação e eventos
+
+| Assunto        |  Link                                      | Conteúdo                                                                          |
+|----------------|--------------------------------------------|-----------------------------------------------------------------------------------|
+| Sidebar        | [**Aula 6**]() | Criação de um menu do tipo sidebar|
+| Navbar         | [**Aula 7**]() | Barra de navegação|
+| Masterpage     | [**Aula 9**]() | Master pages |
+| Eventos        | [**Aula 10**]() | Controle de eventos|
+
 
 ### Exemplos
 Temos também alguns exemplos que podem te ajudar a planejar sua interface:
