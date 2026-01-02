@@ -2,7 +2,8 @@
 Cards são elementos que incluem imagens, titulos e textos em um cartão.
 
 ## Simples
-No exemplo abaixo temos um titulo, texto e imagem, com a classe **uc_card** que inclui uma borda.
+No exemplo abaixo temos um titulo, texto e imagem, com a classe **uc_card** que inclui uma borda. 
+
 ```
 &uc_cardin.classe	  = 'uc_card'
 &uc_cardin.classesize = 'uc_card300'
@@ -19,6 +20,11 @@ No exemplo abaixo temos um titulo, texto e imagem, com a classe **uc_card** que 
 html.Caption  = '<h5>uc_card</h5>'
 html.Caption += UC.uc_card(&uc_cardin.ToJson())
 ```
+|var|tipo|
+|-----------------|---------------------------|
+|&uc_cardin | uc_cardin|
+|&card|uc_cardin.card |
+
 ## Cinza
 Um pequeno ajuste da classe, desta vez para **uc_card_gray**.
 ```
@@ -90,6 +96,14 @@ Um toolbox também pode ser inserido, incluindo botões.
 html.Caption += '<h5 class="uc_mt30">Clear com botões</h5>'
 html.Caption += UC.uc_card(&uc_cardin.ToJson())
 ```
+|var|tipo|
+|-----------------|---------------------------|
+|&uc_botaoin | uc_botaoIN |
+|&botao |uc_botaoIN.botao |
+|&uc_cardin | uc_cardin|
+|&card|uc_cardin.card |
+
+
 ## Footer
 O controle também permite incluir um rodapé, que pode ser utilizado para incluir o toolbox, por exemplo.
 ```
