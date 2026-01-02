@@ -15,7 +15,8 @@ O **gx_designsystem** é um recurso para construção de interfaces Web que pode
 8. Infelizmente tem coisas esquisitas para aprender, [eventos](/doc/eventos.md), por exemplo.
 9. Depois que ficar craque no assunto vamos ao checklist para os herois que desejam contribuir no projeto [o que falta fazer](/doc/oquefalta.md)
 
-Temos uma trilha em formato de vídeo.
+## Aprendendo
+Temos uma trilha formativa com vídeos para exemplificar o uso do pacote de controles.
 
 | Assunto        |  Link                                      | Conteúdo                                                                          |
 |----------------|--------------------------------------------|-----------------------------------------------------------------------------------|
@@ -26,11 +27,12 @@ Temos uma trilha em formato de vídeo.
 | Lista          | [**Aula 4**](https://youtu.be/KFRgNyHNNAk) | Apresentação de conteúdo em formato de lista|
 | Tabela         | [**Aula 5**]() | Apresentação de conteúdo em formato de tabela|
 
-
+### Exemplos
 Temos também alguns exemplos que podem te ajudar a planejar sua interface:
 1. [Estratégias de interface](/doc/tecnicas/tec_estrategiasinterface.md), sobre Master page, Webnel, Webcomponent, sidebar, navbar
 2. [Como organizar o webpanel](gx_designsystem/doc/tecnicas/tec_comoorganizarowebpanel.md), sobre estrutura principal do sistema, evento start, load, grid, eventos.
 
+### Estratégias
 Depois das devidas apresentações, vamos evoluir para um nivel superior, tratando carga de registros, estratégias de interface, estratégias de encriptação.
 
 *  [Estratégias](/doc/tecnicas/tec_estrategias.md)
