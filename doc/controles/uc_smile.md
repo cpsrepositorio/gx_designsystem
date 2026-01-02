@@ -10,6 +10,10 @@ O controle é simples, e muito semelhante ao [**uc_rating**](/doc/controles/uc_r
 &smile.evento = 'SMILE:1'
 &uc_smileIN.itens.Add(&smile)
 ```
+|var|tipo|
+|-----------------|---------------------------|
+|&smile | uc_smilein.item|
+|&uc_smileIN | uc_smilein |
 
 Na montagem do objeto temos mais duas informações importantes: 1) o item selecionado **&uc_smileIN.selected** que é utilizado para aplicar uma classe de seleção, definida em  **&uc_smileIN.selectedclass**, para destacar a imagem das demais da lista. Caso opte por um icone distinto forneça-o em **&uc_smileIN.selectedicone**
 
