@@ -24,10 +24,11 @@ Temos uma trilha formativa com vídeos para exemplificar o uso do pacote de cont
 |----------------|--------------------------------------------|-----------------------------------------------------------------------------------|
 | Botão icone    | <a href="https://youtu.be/54zNXZInaas" target="_blank">**Aula 1**</a>| Apresentação da construção de uma interface simples com botão em formato de ícone|
 | Card           | <a href="https://youtu.be/LTCTCcN7U1w" target="_blank">**Aula 2**</a> | Apresentação da construção de um simples card|
-| Card (toolbox) | [**Aula 2**](https://youtu.be/NwLOJCMSus4) | Finalização da apresentação dos cards, incluindo um toolbox com alinhamento centralizado|
-| Card destaque  | [**Aula 3**](https://youtu.be/fhbMoOUoC4E) | Apresentação de cards para apresentação de valores destacados|
-| Lista          | [**Aula 4**](https://youtu.be/KFRgNyHNNAk) | Apresentação de conteúdo em formato de lista|
-| Tabela         | [**Aula 5**](https://youtu.be/Xjpb5RieSo4) | Apresentação de conteúdo em formato de tabela|
+| Card (toolbox) | <a href="https://youtu.be/NwLOJCMSus4" target="_blank">**Aula 2**</a>  | Finalização da apresentação dos cards, incluindo um toolbox com alinhamento centralizado|
+| Card destaque  | <a href="https://youtu.be/fhbMoOUoC4E" target="_blank">**Aula 3**</a> | Apresentação de cards para apresentação de valores destacados|
+| Lista          | <a href="https://youtu.be/KFRgNyHNNAk" target="_blank">**Aula 4**</a>  | Apresentação de conteúdo em formato de lista|
+| Tabela         | <a href="https://youtu.be/Xjpb5RieSo4" target="_blank">**Aula 5**</a> | Apresentação de conteúdo em formato de tabela|
+
 
 ### Controles de navegação e eventos
 
