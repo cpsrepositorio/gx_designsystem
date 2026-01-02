@@ -25,7 +25,7 @@ Temos uma trilha formativa com vídeos para exemplificar o uso do pacote de cont
 | Card (toolbox) | [**Aula 2**](https://youtu.be/NwLOJCMSus4) | Finalização da apresentação dos cards, incluindo um toolbox com alinhamento centralizado|
 | Card destaque  | [**Aula 3**](https://youtu.be/fhbMoOUoC4E) | Apresentação de cards para apresentação de valores destacados|
 | Lista          | [**Aula 4**](https://youtu.be/KFRgNyHNNAk) | Apresentação de conteúdo em formato de lista|
-| Tabela         | [**Aula 5**]() | Apresentação de conteúdo em formato de tabela|
+| Tabela         | [**Aula 5**](https://youtu.be/Xjpb5RieSo4) | Apresentação de conteúdo em formato de tabela|
 
 ### Exemplos
 Temos também alguns exemplos que podem te ajudar a planejar sua interface:
