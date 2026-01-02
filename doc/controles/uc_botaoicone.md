@@ -29,6 +29,12 @@ A seguir um exemplo.
 	
 grid.Caption = UC.uc_botaoicone(&uc_botaoiconeIN.ToJson())
 ```
+
+|var|tipo|
+|-----------------|---------------------------|
+|&uc_botaoiconeIN | uc_botaoiconein|
+|&botoes|varchar(40) collection |
+
 Para produzir a lista de botões, é definida uma variável simples, **&botoes** que é uma collection de Varchar(40), adicionando (add) a lista de botões que se deseja incluir. 
 
 Os numeros que aparecem, por exemplo, PLAY:5, é o ID do registro que será enviado ao controle de eventos para identificar informação adicional para processamento.
