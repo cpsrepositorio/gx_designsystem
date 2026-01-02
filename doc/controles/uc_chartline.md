@@ -49,6 +49,10 @@ sub 'line'
 endsub
 ```
 
+|var|tipo|
+|-----------------|---------------------------|
+|&linha | uc_chart|
+
 ## Informando as coleções
 Existem duas maneiras de agregar dados, cores ou rótulos no gráfico.
 * Com o **Add**
@@ -105,6 +109,11 @@ sub 'bar'
 endsub
 ```
 
+|var|tipo|
+|-----------------|---------------------------|
+|&bar | uc_chart|
+|&dataset|uc_chart.dataset |
+
 ## HorizontalBar
 E o gráfico horizontal é a mesma coisa, somente que os datasets são orientados na horizontal.
 
@@ -150,6 +159,11 @@ sub 'hbar'
 	html.Caption += '</div>'
 endsub
 ```
+
+|var|tipo|
+|-----------------|---------------------------|
+|&hbar | uc_chart|
+|&hbards|uc_chart.dataset |
 
 ## Multi
 São gráficos com multiplas séries, sendo que cada uma pode ser de um tipo diferente, mas da mesma categoria, como linha, barra.
@@ -205,3 +219,7 @@ sub 'multi'
 	html.Caption += '</div>'
 endsub
 ```
+|var|tipo|
+|-----------------|---------------------------|
+|&multi | uc_chart|
+|&dataset|uc_chart.dataset |
