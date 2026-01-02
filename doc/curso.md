@@ -1,5 +1,5 @@
 # curso 
 Aula 1 - Botão icone
-![Alt Text](https://youtu.be/54zNXZInaas)
+[Alt Text](https://youtu.be/54zNXZInaas)
 
 Apresentação da construção de uma interface simples com botão em formato de ícone.
