@@ -66,6 +66,10 @@ sub 'pie'
 endsub
 ```
 
+|var|tipo|
+|-----------------|---------------------------|
+|&pie | uc_chart|
+
 ## Informando as coleções
 Existem duas maneiras de agregar dados, cores ou rótulos no gráfico.
 
