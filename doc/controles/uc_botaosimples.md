@@ -48,6 +48,13 @@ Nesse exemplo o controle é utilizado para produzir uma barra com dois botões a
 
 grid.Caption = UC.uc_botaosimples(&uc_botaosimplesin.ToJson())
 ```
+
+|var|tipo|
+|-----------------|---------------------------|
+|&uc_botaosimplesin | uc_botaosimplesin|
+|&botao|uc_botaosimplesin.botao |
+|&info | varchar(40) collection |
+
 ## Botões comuns
 Os botões comuns são os que possuem um icone e texto, e por serem um pouco maior, não é recomendado que sejam totalmente redondos, portanto utilize a classe **classeicon   = 'uc_bt'**
 
