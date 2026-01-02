@@ -16,6 +16,12 @@ Um botão simples pode ser obtido pela definição das classes Titulo, Icone, Ev
 	
 grid.Caption = UC.uc_botao(&uc_botaoin.ToJson())
 ```
+
+|var|tipo|
+|-----------------|---------------------------|
+|&uc_botaoin | uc_botaoin|
+|&botao|uc_botaoin.botao |
+
 ## Botão colorido
 Os botões podem também ser coloridos.
 ```
