@@ -11,6 +11,11 @@ A inclusão de palavras na lista é muito simples, veja o exemplo abaixo.
 &word.event = 'Palavra1'
 &uc_wordin.words.Add(&word)
 ```
+|var |tipo|
+|----|-----|
+|&word|uc_wordin.word|
+|&uc_wordin|uc_wordin|
+
 A seguir o exemplo completo.
 ```
 sub 'word'
@@ -89,6 +94,14 @@ Event Bootstrapclick1.Click
  do 'remover'	
 EndEvent
 ```
+
+|var |tipo|
+|----|-----|
+|&uc_btclick|uc_btclick|
+|&uc_btclickparms|uc_btclickparms|
+|&url|varchar(128)|
+|&isok|boolean|
+
 Uma subrotina **'remover'** é chamada para retirar a palavra da lista e em seguida para reconstruir o controle na interface. Esse método precisa de aprimoramento, principalmente para eliminar as palavras iguais na lista.
 ```
 sub 'remover'
@@ -105,4 +118,8 @@ sub 'remover'
 endsub
 ```
 
+|var |tipo|
+|----|-----|
+|&palavras|varchar(40) collection|
+|&palavra|varchar(40)|
 
