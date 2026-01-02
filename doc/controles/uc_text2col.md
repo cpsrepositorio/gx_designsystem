@@ -24,6 +24,12 @@ O mesmo pode ser utilizado para incluir conteúdo estruturado em um uc_card, ou 
 	html.Caption  = '<h5>uc_text2col</h5>'
 	html.Caption += UC.uc_tabelasimples(&uc_text2colin.ToJson())
 ```
+
+|var |tipo|
+|----|-----|
+|&uc_text2colin|uc_text2colin|
+|&linha|uc_text2colin.linha|
+
 ## Simplificado
 Uma forma de simplificar a carga das linhas é utilizar a estratégia de uma coleção, porém, para separar o titulo do conteúdo, utilizamos o ; (ponto-e-virgula).
 
@@ -47,6 +53,12 @@ Utilize a propriedade **&uc_text2colin.conteudo = &linhas.ToJson()** para inclui
 	html.Caption += '<h5>uc_text2col (simplificado)</h5>'
 	html.Caption += UC.uc_texto2col(&uc_text2colin.ToJson())
 ```
+
+|var |tipo|
+|----|-----|
+|&uc_text2colin|uc_text2colin|
+|&linhas|varchar(512) collection|
+
 ## Com botões
 Apesar da simplicidade do controle, existe um recurso de posicionamento que possibilita incluir coisas interessantes.
 Nesse exemplo definimos uma barra simples de botão e a apresentamos na lateral direita.
@@ -90,6 +102,13 @@ Nesse exemplo definimos uma barra simples de botão e a apresentamos na lateral 
 	html.Caption += '<h5 class="uc_mt30">uc_text2col (com botoes)</h5>'
 	html.Caption += UC.uc_tabelasimples(&uc_text2colin.ToJson())
 ```
+
+|var |tipo|
+|----|-----|
+|&uc_text2colin|uc_text2colin|
+|&linhas|varchar(512) collection|
+|&uc_botaoiconeIN|uc_botaoiconein|
+|&botoes|varchar(40) collection|
 
 ## Em cards
 Outro extemplo interessante é o uso do uc_text2col em um card, permitindo que sejam apresentados conteúdos de forma estruturada. 
@@ -144,7 +163,15 @@ Outro extemplo interessante é o uso do uc_text2col em um card, permitindo que s
 	html.Caption += uc.uc_card(&uc_cardin.ToJson())
 ```
 
-	
+|var |tipo|
+|----|-----|
+|&uc_text2colin|uc_text2colin|
+|&linhas|varchar(512) collection|
+|&uc_botaoiconeIN|uc_botaoiconein|
+|&botoes|varchar(40) collection|
+|&uc_cardin|uc_cardin|
+|&card|uc_cardin.card|
+
 ## Classes
 Cada &linha deve conter pelo menos duas propriedades, titulo e conteúdo. Titulo à esquerda e conteúdo à direita na tabela.
 
