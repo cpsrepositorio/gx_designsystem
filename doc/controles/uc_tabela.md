@@ -15,20 +15,20 @@ A seguir um exemplo completo.
 	/* ---------------------------------------------------------- */	
 	&uc_tabelain.header.Clear()
 			
-	&tabhead = new()
-	&tabhead.text  = 'Titulo'
-	&tabhead.width = '50%'
-	&uc_tabelain.header.Add(&tabhead)
+	&tabtitulo = new()
+	&tabtitulo.text  = 'Titulo'
+	&tabtitulo.width = '50%'
+	&uc_tabelain.header.Add(&tabtitulo)
 		
-	&tabhead = new()
-	&tabhead.text  = 'Conteudo'
-	&tabhead.width = '40%'
-	&uc_tabelain.header.Add(&tabhead)
+	&tabtitulo = new()
+	&tabtitulo.text  = 'Conteudo'
+	&tabtitulo.width = '40%'
+	&uc_tabelain.header.Add(&tabtitulo)
 
-	&tabhead = new()
-	&tabhead.text  = ''
-	&tabhead.width = '10%'
-	&uc_tabelain.header.Add(&tabhead)
+	&tabtitulo = new()
+	&tabtitulo.text  = ''
+	&tabtitulo.width = '10%'
+	&uc_tabelain.header.Add(&tabtitulo)
 		
 	/* ---------------------------------------------------------- */	
 	&uc_tabelaIN.lines.Clear()
@@ -72,26 +72,26 @@ O cabeçalho é inserido em uma coleção, do tipo **uc_tabelain.cell**, no exem
 ```
 &uc_tabelain.header.Clear()
 		
-&tabhead = new()
-&tabhead.text = 'Titulo'
-&tabhead.width = '50%'
-&uc_tabelain.header.Add(&tabhead)
+&tabtitulo = new()
+&tabtitulo.text = 'Titulo'
+&tabtitulo.width = '50%'
+&uc_tabelain.header.Add(&tabtitulo)
 	
-&tabhead = new()
-&tabhead.text = 'Conteudo'
-&tabhead.width = '40%'
-&uc_tabelain.header.Add(&tabhead)
+&tabtitulo = new()
+&tabtitulo.text = 'Conteudo'
+&tabtitulo.width = '40%'
+&uc_tabelain.header.Add(&tabtitulo)
 
-&tabhead = new()
-&tabhead.text = ''
-&tabhead.width = '10%'
-&uc_tabelain.header.Add(&tabhead)
+&tabtitulo = new()
+&tabtitulo.text = ''
+&tabtitulo.width = '10%'
+&uc_tabelain.header.Add(&tabtitulo)
 ```
 
 |var |tipo|
 |----|-----|
 |&uc_tabelain|uc_tabelain|
-|&tabhead|uc_tabelain.cell|
+|&tabtitulo|uc_tabelain.cell|
 
 As linhas normalmente são extraidas de uma tabela, portanto, um **for each** ou **for in** deve ser programado para percorrer a coleção.
 
