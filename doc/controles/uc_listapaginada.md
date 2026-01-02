@@ -25,7 +25,6 @@ where Id =&id when &id<>0
  Endereco	
  Cidade
 }
-
 ```
 O **count=&pgsize** determina o total de registros a ser retornado, e **skip=(&pg-1)*&pgsize** calcula o primeiro registro da lista em função da pagina a ser carrega.
 Na chamada ao DataProvider se deve passar o **&pgsize** que é fixado no Start, e o **&pg** que altera conforme a navegação do usuário. 
@@ -38,6 +37,12 @@ sub 'load'
  do 'grid'
 endsub
 ```
+
+|var|tipo|
+|-----------------|---------------------------|
+|&registros | cargaSDT collection|
+
+
 A chamada ao **cargaDP** retorna os registros da página carregada, e aqui podemos acionar um truquezinho, e utilizar um SDT padrão para não ter que criar, para cada tabela uma estrutura específica. Lembre-se que o controle é uma lista que apresenta um titulo apenas, portanto, não precisariamos de um tipo específico. Ver [row](/doc/tecnicas/row.md) para maiores detalhes
 
 ## Montagem da lista
@@ -102,6 +107,17 @@ sub 'grid'
  html.Caption = UC.uc_listapaginada(&uc_listin.ToJson())
 endsub
 ```
+
+|var|tipo|
+|-----------------|---------------------------|
+|&registros | cargaSDT collection|
+|&reg | cargaSDT |
+|&uc_botaoiconein | uc_botaoiconein|
+|&botoes|varchar(40) collection|
+|&uc_listin|uc_listin|
+|&item|uc_listin.item|
+
+
 ## Evento de paginação
 A paginação no controle exige mais um pequeno detalhe, na interceptação do Bootstrapclick.
 
@@ -132,3 +148,11 @@ Event Bootstrapclick1.Click
   )
 EndEvent
 ```
+
+|var|tipo|
+|-----------------|---------------------------|
+|&pg | numeric(4)|
+|&uc_btclickparms | uc_btclickparms |
+|&uc_btclick | uc_btclick|
+
+
