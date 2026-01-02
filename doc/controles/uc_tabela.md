@@ -6,6 +6,66 @@ Cada linha representa um certo registro e as colunas as propriedades que se dese
 
 A tabela é um controle um pouco mais complexo, uma vez que exige a definição de um cabeçalho, com propriedades e em seguida adiconar as células de cada linha.
 
+A seguir um exemplo completo.
+```
+	&uc_tabelain.id 				= 'TABELA'
+	&uc_tabelain.interface 			= &Pgmname.ToUpper()
+	&uc_tabelain.class 				= 'minimalistBlack uc_w100'
+
+	/* ---------------------------------------------------------- */	
+	&uc_tabelain.header.Clear()
+			
+	&tabhead = new()
+	&tabhead.text  = 'Titulo'
+	&tabhead.width = '50%'
+	&uc_tabelain.header.Add(&tabhead)
+		
+	&tabhead = new()
+	&tabhead.text  = 'Conteudo'
+	&tabhead.width = '40%'
+	&uc_tabelain.header.Add(&tabhead)
+
+	&tabhead = new()
+	&tabhead.text  = ''
+	&tabhead.width = '10%'
+	&uc_tabelain.header.Add(&tabhead)
+		
+	/* ---------------------------------------------------------- */	
+	&uc_tabelaIN.lines.Clear()
+	for &i = 1 to 5
+		
+		&tablin = new()
+		
+		&tabcel = new()
+		&tabcel.text = 'Titulo'+&i.ToString().Trim()
+		&tablin.cells.Add(&tabcel)
+		
+		&tabcel = new()
+		&tabcel.text = 'Conteudo'+&i.ToString().Trim()
+		&tablin.cells.Add(&tabcel)
+		
+		&uc_botaoiconein.id 			= 'id'
+		&uc_botaoiconein.interface 		= 'interface'	
+		&uc_botaoiconein.classebar 		= 'uc_flex-r uc_flex-nowrap'
+		&uc_botaoiconein.classebotao  	= 'uc_btspace uc_bt-icon uc_pointer'
+		&uc_botaoiconein.classeicon   	= ''
+	   	&botoes.Clear()
+		&botoes.add('ABRIR:'+&i.ToString())
+		&uc_botaoiconein.botoes = &botoes.ToJson()
+		
+		&tabcel = new()
+		&tabcel.text = UC.uc_botaoicone(&uc_botaoiconein.ToJson())
+		&tabcel.classe = 'uc_flex-r uc_flex-jce'
+		&tablin.cells.Add(&tabcel)
+		
+		&uc_tabelain.lines.Add(&tablin)
+		
+	endfor
+	grid.Caption  = '<div class="uc_flex-c">'
+	grid.Caption += '<h5 class="uc_mt30">minimalistBLACK</h5>'
+	grid.Caption += UC.uc_tabela(&uc_tabelain.ToJson())
+```
+
 ## Header
 O cabeçalho é inserido em uma coleção, do tipo **uc_tabelain.cell**, no exemplo a seguir, a variavel **&tabhead** é desse tipo. Observe que cada coluna da tabela pode conter um **width** para determinar sua largura.
 
