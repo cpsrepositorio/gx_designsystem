@@ -27,6 +27,12 @@ O cabeçalho é inserido em uma coleção, do tipo **uc_tabelain.cell**, no exem
 &tabhead.width = '10%'
 &uc_tabelain.header.Add(&tabhead)
 ```
+
+|var |tipo|
+|----|-----|
+|&uc_tabelain|uc_tabelain|
+|&tabhead|uc_tabelain.cell|
+
 As linhas normalmente são extraidas de uma tabela, portanto, um **for each** ou **for in** deve ser programado para percorrer a coleção.
 
 ## Lines
@@ -59,6 +65,12 @@ for &i = 1 to 5
  &uc_tabelain.lines.Add(&tablin)	
 endfor
 ```
+|var |tipo|
+|----|-----|
+|&uc_tabelain|uc_tabelain|
+|&tablin|uc_tabelain.line|
+|&tabcel|uc_tabelain.line.cell|
+
 O codigo inclui uma barra de botões em cada registro.
 
 ## Cores
