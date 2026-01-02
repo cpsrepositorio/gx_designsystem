@@ -21,6 +21,12 @@ Cada **&grupo** possui três coleções com a finalidade de definir a estrutura 
 &titulos.add("titulo")
 &grupo.titulos = &titulos.tojson()
 ```
+
+|var|tipo|
+|-----------------|---------------------------|
+|&titulos | uc_chart|
+|&grupo|uc_grupotabelasIN.grupo| 
+
 2. **&grupo.widths**, representa o tamanho (width) de cada coluna na tabela, cujo total não pode ser maior que 100%. Por questões de responsividade, é melhor utilizar % ao invés de pixel. Um detalhe importante deve ser levado em conta, porque caso se associe um evento a cada linha de conteúdo, será necessário definir a largura do toolbar, adicionando, neste caso, um item a mais que o titulo. Observe no exemplo que existem dois titulos e três larguras definidas. Utilize uma coleção de Varchar(10) para definir as larguras.
 ```
 &widths.clear()
@@ -29,6 +35,11 @@ Cada **&grupo** possui três coleções com a finalidade de definir a estrutura 
 &widths.add("10%") 
 &grupo.widths  =  &widths.tojson()
 ```
+
+|var|tipo|
+|-----------------|---------------------------|
+|&widths | varchar(40) collection |
+
 3. **&grupo.linhas**, compreende o conteúdo a ser inserido em cada linha da tabela em construção. Como os conteúdos poderão ser obtidos de tabelas, talvez seja necessário um for each, para percorrer cada linha a ser inserida. Dessa forma esta operação será um pouco mais complexa que as anteriores.
 Primeiramente deve-se criar a coleção com os conteúdos de cada célula.
 ```
@@ -39,6 +50,11 @@ for &n = 1 to 10
   &linhas.add('10')
   ...
 ```
+
+|var|tipo|
+|-----------------|---------------------------|
+|&linhas | varchar(40) collection |
+
 Em seguida, opcionalmente, o evento associado a linha. Meio estranho, mas bastante otimizado, pois se define o parâmetro que permite identificar em que linha ocorreu a ação, por meio da **&linha.evento = 'id'+&n.ToString().Trim()**, e em seguida os botões de evento com **&linha.toolbar.open = true**. Os botões do toolbar podem ser três, até aqui, OPEN, UPDATE e DELETE, mas poderão ser expandidos conforme necessidade.
 ```
   ...
