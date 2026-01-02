@@ -15,7 +15,7 @@ O controle **uc_sidebar** pode incluir id, interface e uma classe que determina
 sub  'sidebar'
  &uc_sidebarin.id = 'SIDEBAR'
  &uc_sidebarin.interface = &Pgmname.ToUpper()
- &uc_sidebarin.classe = 'uc_sidebar'
+ &uc_sidebarin.classe = 'uc_sidebar uc_sidebarwhite'
 
  &item = new()
  &item.titulo	= 'Mapeamento'
