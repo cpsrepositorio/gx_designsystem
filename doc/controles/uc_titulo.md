@@ -14,6 +14,10 @@ sub 'titulo'
  html.Caption = UC.uc_titulo(&uc_tituloIN.ToJson())
 endsub
 ```
+|var |tipo|
+|----|-----|
+|&uc_tituloIN|uc_tituloIN|
+
 Observe que tanto em  **&uc_tituloIN.titulo** quanto em **&uc_tituloIN.texto** podemos inserir qualquer coisa, inclusive outro controle, como uma barra de botões por exemplo.
 
 ## Barra ao invés de texto
@@ -46,5 +50,10 @@ sub 'barra'
  html.Caption += UC.uc_titulo(&uc_tituloIN.ToJson())
 endsub
 ```
+|var |tipo|
+|----|-----|
+|&uc_tituloIN|uc_tituloIN|
+|&uc_botaoiconeIN|uc_botaoiconein|
+|&botoes|varchar(40) collection|
 
 
