@@ -57,6 +57,13 @@ sub 'menu'
  html.Caption  = UC.uc_menu(&uc_menuIN.ToJson())
 endsub
 ```
+
+|var|tipo|
+|-----------------|---------------------------|
+|&menuitem | uc_menuin.item|
+|&uc_menuin | uc_menuin |
+
+
 A linha **html.Caption  = UC.uc_menu(&uc_menuIN.ToJson())**, inclui o menu num textblock na interface.
 
 ### Estilo
