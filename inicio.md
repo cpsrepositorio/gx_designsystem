@@ -3,7 +3,7 @@
 O **gx_designsystem** é um recurso para construção de interfaces Web que pode ser utilizado em Kbs Genexus (18). O pacote inclui um Package, Classes CSS, SDTs, documentação técnica e exemplos, que auxilia na construção de interfaces em Genexus de forma mais simples. 
 
 ## Começando
- A seguir apresentamos uma trilha básica para iniciar:
+ A seguir apresentamos uma trilha básica para iniciar na utilização do pacote de componentes:
  
 1. Começe entendendo [o que é](/doc/oquee.md) o gxdesignsystem
 2. Instale os recursos necessários na sua kb Genexus [instalacao](/doc/instalacao.md)
@@ -14,6 +14,8 @@ O **gx_designsystem** é um recurso para construção de interfaces Web que pode
 7. Estude e utilize os controles, aqui tem uma lista: [indice de controles](/doc/indexcontrole.md)
 8. Infelizmente tem coisas esquisitas para aprender, [eventos](/doc/eventos.md), por exemplo.
 9. Depois que ficar craque no assunto vamos ao checklist para os herois que desejam contribuir no projeto [o que falta fazer](/doc/oquefalta.md)
+
+Temos uma trilha em formato de vídeo: [Curso em Vídeo](/doc/curso.md)
 
 Temos também alguns exemplos que podem te ajudar a planejar sua interface:
 1. [Estratégias de interface](/doc/tecnicas/tec_estrategiasinterface.md), sobre Master page, Webnel, Webcomponent, sidebar, navbar
