@@ -36,7 +36,7 @@ Temos uma trilha formativa com vídeos para exemplificar o uso do pacote de cont
 | Navbar         | [**Aula 6**](https://youtu.be/6Gz06wzxLTw) | Barra de navegação|
 | Sidebar        | [**Aula 7**](https://youtu.be/GaYjtrYXC3w) | Criação de um menu lateral do tipo sidebar|
 | Masterpage     | [**Aula 8**](https://youtu.be/laTPWCwhB2A) | Master pages com o Navbar e Sidebar |
-| Eventos        | [**Aula 9**]() | Controle de eventos|
+| Eventos        | [**Aula 9**](https://youtu.be/K7zgVbjEMjU) | Controle de eventos da master page e webpanels |
 
 
 ### Exemplos
