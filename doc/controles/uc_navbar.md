@@ -1,5 +1,7 @@
 # uc_navbar
-Navbar é a barra de apresentação do sistema, localizada normalmente na parte superior, que contém itens e botões. 
+Navbar é a barra de apresentação do sistema, localizada normalmente na parte superior, que contém itens e botões.
+
+O controle é responsivo e utiliza um menu tipo 'hamburger' para apresentar os itens quando a janela é reduzida.
 
 O controle **uc_navbar** foi montado com duas regiões de conteudo, à esquerda com informações sobre o programa, logotipo e itens. E na direita, com informações sobre perfil, alertas, itens e o botão sair.
 
