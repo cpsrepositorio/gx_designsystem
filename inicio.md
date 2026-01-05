@@ -33,10 +33,10 @@ Temos uma trilha formativa com vídeos para exemplificar o uso do pacote de cont
 
 | Assunto        |  Link                                      | Conteúdo                                                                          |
 |----------------|--------------------------------------------|-----------------------------------------------------------------------------------|
-| Sidebar        | [**Aula 6**]() | Criação de um menu do tipo sidebar|
-| Navbar         | [**Aula 7**]() | Barra de navegação|
-| Masterpage     | [**Aula 9**]() | Master pages |
-| Eventos        | [**Aula 10**]() | Controle de eventos|
+| Navbar         | [**Aula 6**]() | Barra de navegação|
+| Sidebar        | [**Aula 7**]() | Criação de um menu do tipo sidebar|
+| Masterpage     | [**Aula 8**]() | Master pages |
+| Eventos        | [**Aula 9**]() | Controle de eventos|
 
 
 ### Exemplos
