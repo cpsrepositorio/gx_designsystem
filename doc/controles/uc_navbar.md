@@ -72,7 +72,7 @@ A barra permite inserir itens especiais, como um sino para representar a ocorrê
 Abaixo o exemplo completo.
 ```
 &uc_navbarin.id = 'NAV'
-&uc_navbarin.programa	= &programa.trim()
+&uc_navbarin.interface	= &programa.trim()
 &uc_navbarin.classe = 'uc_nav uc_navblack uc_w100'
 &uc_navbarin.logo = 'logo'
 &uc_navbarin.logolink = 'http://...'
