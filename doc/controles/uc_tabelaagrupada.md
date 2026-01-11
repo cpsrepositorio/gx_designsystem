@@ -61,7 +61,7 @@ for &n = 1 to 10
 |var |tipo|
 |----|-----|
 |&celulas|varchar(40) collection|
-|&linha|uc_tabelaagrupadain.grupo.linha | 
+|&linha|uc_tabelaagrupadaIN.grupo.linha| 
 
 Em seguida associamos um evento linha, definindo o valor da Ação e em seguida chave do evento que será retornada. Os botões são ligados por meio de true em (Open, Update, Delete). 
 ```
