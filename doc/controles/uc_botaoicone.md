@@ -84,7 +84,7 @@ Os eventos padrões definidos no controle são apresentados a seguir
 |POWER|Ligar|`<i class="fas fa-power-off"></i>`|
 |POSTITCHEIO|Postit (solido)|`<i class="fas fa-sticky-note"></i>`|
 |POSTITVAZIO|Postit (vazio) |`<i class="far fa-sticky-note"></i>`|
-|CHECKED|Item selecionado |`<i class="far fa-check-square"></i>`|
+|CHECKED|Item selecionado |`<i class="fas fa-check-square"></i>`|
 |UNCHECKED|Item não selecionado |`<i class="far fa-square"></i>`|
 			
 ### Interceptação de eventos
