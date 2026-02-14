@@ -62,13 +62,12 @@ sub 'pie'
 	&pie.datasetbgcolor.Add('#4a83bc')
 
 	html.Caption += UC.uc_chart(&pie.ToJson())
-
 endsub
 ```
 
 |var|tipo|
 |-----------------|---------------------------|
-|&pie | uc_chart|
+|&pie | uc_chartIN|
 
 ## Informando as coleções
 Existem duas maneiras de agregar dados, cores ou rótulos no gráfico.
